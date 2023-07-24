@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .main-header{
+            /* width: 100%; */
+            background-color: #069;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            /* overflow-x: hidden; */
+        }
+        .logo img{
+            vertical-align: top;
+        }
+
+        .main-nav{
+            /* position: absolute;
+            width: 90%;
+            margin: 0 5%;
+            background-color: #fa0;
+            top: 100%;
+            left: 0; */
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .main-nav a{
+            padding: 10px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+        /* .main-nav a + a{
+            border-top:1px solid aliceblue;
+        } */
+        #menu-switch{
+            display: none;
+        }
+        @media screen and (max-width:767px){
+            /* .main-header{
+                width: 375px;
+                overflow-x: hidden;
+            } */
+            .hb label{
+            width: 40px;
+            height: 40px;
+            background-color: #f05;
+            display: block;
+            position: relative;
+        }
+        .main-nav{
+            position: absolute;
+            width: 90%;
+            height: calc(100vh - 60px);
+            background-color: #fa0;
+            top: 100%;
+            right: 0;
+            translate:-100%;
+            flex-direction: column;
+            transition: 1s;
+            opacity: 0;
+        }
+        .main-nav a + a{
+            border-top:1px solid aliceblue;
+        }
+        #menu-switch:checked + .main-header .main-nav{
+            translate: 0 0;
+            opacity: 1;
+        }
+        .hb span{
+            width: 80%;
+            height: 4px;
+            background-color: #fff;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+        .hb span:nth-child(1){
+            translate: 0px -10px;
+            rotate: 0deg;
+            transition: translate .3s .3s,
+                        rotate .3s 0s;
+        }
+        .hb span:nth-child(2){
+            opacity: 1;
+            transition: opacity .3s .6s;
+        }
+        .hb span:nth-child(3){
+            translate: 0px 10px;
+            rotate: 0deg;
+            transition: translate  .3s .3s,
+                        rotate .3s 0s;
+        }
+        #menu-switch:checked + .main-header .hb span:nth-child(1){
+            translate: 0 0;
+            rotate: 45deg;
+            transition: translate  .3s .3s,
+                        rotate .3s .6s;
+        }
+        #menu-switch:checked + .main-header .hb span:nth-child(2){
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        #menu-switch:checked + .main-header .hb span:nth-child(3){
+            translate: 0 0;
+            rotate: -45deg;
+            transition: translate .3s .3s,
+                        rotate .3s .6s;
+        }
+        }
+        @media screen and (min-width:768px){
+            .hb{
+                display: none;
+            }
+            .main-nav{
+                flex-direction: row;
+            }
+            /* .main-nav a +a{
+                border-top: 0;
+            } */
+        }   
+                @media screen and (min-width: 768px) and (hover:hover) {
+            .main-nav a:hover{
+                color: #f00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-switch">
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">
+                <img src="https://picsum.photos/80/40" alt="">
+            </a>
+        </div>
+        <div class="hb">
+            <label for="menu-switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        
+        <nav class="main-nav">
+            <a href=""></a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+
+    </header>
+</body>
+</html>

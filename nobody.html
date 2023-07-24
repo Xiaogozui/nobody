@@ -5,235 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nobody Theatricl Studio|無名小卒劇團</title>
     <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="hb-menu.css">
     <style>
         .home-blocks.main{
+            /* border: #383 1px solid; */
             width: 100%;
-            height: 790px;
+            background-image: url("root_inside.jpg");
+            background-size: cover;
             position: relative;
-            /* display: flex;
-            flex-direction: column;
-            justify-content: space-around; */
-        }
-        .home-blocks.programme{
-            width: 100%;
-            height: 800px;
-            position: relative;
-            display: block;
-        }
-        .home-blocks.programme>svg:first-child{
-            position: absolute;
-            top: 30px;
-            left: 582px;
-            z-index: 0;
-        }
-        .home-blocks.programme>svg:nth-child(2){
-            position: absolute;
-            z-index: 0;
-            top: -630px;
-            left: 3px;
-            z-index: 0;
-        }
-        .home-blocks.ticket{
-            width: 100%;
-            height: 800px;
-            position: relative;
-            display: block;
-        }
-        .home-blocks.ticket>svg:first-child{
-            position: absolute;
-            top: 57px;
-            left: 440px;
-            z-index: 0;
-        }
-        .home-blocks.ticket>svg:nth-child(2){
-            position: absolute;
-            z-index: 0;
-            top: 145px;
-            margin: auto;
-            z-index: 0;
-        }
-        .home-blocks.merchandise{
-            width: 100%;
-            height: 1220px;
-            position: relative;
-            /* display: block; */
-        }
-        .home-blocks.merchandise>svg:first-child{
-            position: absolute;
-            top: 50px;
-            left: 240px;
-            z-index: 0;
-        }
-        .home-blocks.merchandise>svg:nth-child(2){
-            position: absolute;
-            z-index: 0;
-            top: 195px;
-            margin: auto;
-            z-index: 0;
-        }
-        .home-blocks.faq{
-            width: 100%;
-            height: 920px;
-            position: relative;
-        }
-        .home-blocks.faq>svg:first-child{
-            width: 100%;
-            position: absolute;
-            top: 105px;
-            margin: auto;
-            z-index: 0;
-        }
-        .home-blocks.faq>svg:nth-child(2){
-            position: absolute;
-            z-index: 0;
-            top: -340px;
-            right: -1300px;
-            z-index: 0;
-        }
-        .pic_premieum{
-            width: 100%;
-            height: 850px;
-            
-        }
-        .pic_premieum img{
-                width:100%;
-                height: 100%;
-                object-fit:cover;
-                top: 0;
-                margin: auto;
-            }
-        
-        .big-logo{
-            width: 100%;
-            margin-top: 190px;
-            position: absolute;
             display: flex;
-            justify-content: center;
-            z-index: 1;
+            flex-direction: column;
         }
         .pic_premieum-frame{
-            width: 100%;
-            height: 850px;
-            background-color: #0006;
-            position: absolute;
+            /* border: #FFC42C 1px solid; */
             top: 0;
-        }
-        .home-main-btn-group{
-            /* background-color: #fa0; */
-            width: 46.875%;
-            top: 420px;
-            right: 0;
-            left: 0;
-            margin: auto;
+            width: 100%;
+            height: 100%;
+            background-color: #0006;
+            display: inline-block;
+            z-index: 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            position: absolute;
-            
-        }
-        .home-main-btn-group-white_border {
-            /* width: 220px; */
-            background-color: #000;
-            border: 3px solid #FFF;
-            background: rgba(0, 0, 0, 0.50);
-            margin: 10px;
-            text-align: center;
-            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            padding: 0 20px 0 20px; 
         }
-        .home-main-btn-group-white_border.yellow_border{
-            border: 3px solid #FFC42C
+        .big-logo{
+            padding-top: 160px;
+            padding: auto;
+            display: inline-block;
+            margin-top: 190px;
+            margin: auto;
+            z-index: 2;
         }
-        .home-main-btn-group-white_border .longest{
-            width: 300px;
+        .home-blocks.programme{
+            margin-top: 50px;
+            width: 100%;
         }
-        .home-main-btn-group-white_border p{
-            font-family:Helvetica, sans-serif;
-            font-size: .9em;
-            font-weight: 700;
-            padding-bottom: 3px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-        #yellow_border p{
-            color: #FFC42C;
-        }
-        .home-main-btn-group-white_border .ch{
-            font-size: 24px;
-        }
-        .home-main-btn-group-white_border .en{
-            font-size: 14px;
-        }
-        .pic-change-btn{
-            width: 305px;
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 94.936709%;
-            /* top: 668px; */
-            /* top: 84.556962%; */
-            left: 0px;
-            right: 0;
+        .home-title.programme{
+            /* background-color: #383; */
+            width: 62.5%;
             margin: auto;
         }
-        .pic-change-btn span{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .pic-change-btn span div{
-            width: 10px;
-            height: 10px;
-            background-color: #FFC42C;
-            margin: 10px;
-            border-radius: 50px;
-        }
-
-        .home-title {
-            font-family: Helvetica, sans-serif;
-            position: absolute;
-            top: 100px;
-            left: 360px;          
-        }
-        .home-title > h1{
-            color: #FFC42C;
-            font-size: 36px;
-        }
-        .home-title > h2{
-            width: 100%;
-            margin-top: 20px;
-            margin-left: 203px;
-            color: #D9D9D9;
-            font-size: 24px;
-        }
-
-        .home-title.ticket-shop h2{
-            margin-left: 100px;
-        }
-        .home-title.merchandise h1:nth-child(2){
-            margin-left: 80px;
-        }
-        .home-title.faq{
-            width: 100%;
-            top: 160px;
+        .home-blocks.programme .red_light{
+            /* position: absolute;
             left: 0;
-            right: 0;
-            padding-left: 5px;
+            width: 20%; */
+        }
+        .home-title.programme .wrap{
             /* background-color: #fff; */
-            margin: auto;
-            text-align: center;
+            display: flex;
+        }
+        .home-title.programme .wrap>*{
+            display: inline-block;
+            /* border: #383 1px solid; */
+        }
+        .home-title.programme h2{
+            /* border: #383 1px solid; */
+            /* box-sizing: border-box; */
+            padding:0 5px ;
+            position: relative;
+        }
+        .home-title.programme h3{
+            margin-top: 0px;
+            padding: 0px 0 0 100px;
+        }
+        .home-title.programme .title_decor{
+            position: absolute;
+            top: -45px;
+            z-index: -1;
         }
         .card_group{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            position: absolute;
-            top: 250px;
-            left: 0;
-            right: 0;
-            margin: auto;
+            padding: 50px 0 0 0;
+            /* margin-top: 230px; */
         }
         .card_group .card{
             width: 390px;
@@ -253,6 +100,7 @@
             background: #0008;
             border: #FFC42C 1px solid;
             position: absolute;
+            padding: 20px;
             top: 0;
             bottom: 0;
             left: 0;
@@ -262,170 +110,249 @@
             font-family: Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            box-sizing: border-box;
         }
         .tag-new_release {
             padding: 5px 20px;
-            font-size: 21px;
+            font-size: 16px;
             border: 3px solid #FFC42C;
             color: #FFC42C;
         }
         .card_group .card .info_frame span:nth-child(2){
-            font-size: 36px;
+            font-size: 2rem;
+            text-align: justify-all;
+        }
+        .card_group .card .info_frame span p:first-child{
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-align: justify-all;
         }
         .card_group .card .info_frame span:nth-child(3){
             width: 110px;
             display: flex;
-            justify-content: space-between;
-            font-size: 16px;
+            justify-content: space-evenly;
         }
         .card_group .card .info_frame span:nth-child(3) p{
             color: #FFC42C;
 
         }
         .view_more{
-            position: absolute;
+            /* position: absolute; */
             display: flex;
             justify-content: center;
-            top: 680px;
-            left: 0;
-            right: 0;
+            /* left: 0;
+            right: 0; */
+            padding: 50px;
             margin: auto;
             text-align: center;
+            margin-bottom: 20px;
         }
         .btn-style-18px-12px{
             font-family: Helvetica, sans-serif;
             border: 3px solid #FFC42C;
-            padding: 10px 53px 10px 53px;
-            font-size: 18px;
+            padding: 8px 45px;
+            text-align: center;
         }
         .btn-style-18px-12px span p:first-child{
-            font-size: 18px;
+            font-size: 16px;
             color: #FFC42C;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .btn-style-18px-12px span p:last-child{
-            font-size: 12px;
+            font-size: 13px;
             color: #FFC42C;
         }
-        /* .home-ticket_shop{
-            width: 1920px;
-            height: 800px;
-            font-family: Helvetica, sans-serif;
+        {}
+        .home-blocks.ticket{
+            /* margin: 100px; */
+            /* border: #FFC42C 1px solid; */
+            width: 100%;
+        }
+        .home-title.ticket-shop{
+            /* background-color: #383; */
+            width: 62.5%;
+            margin: auto;
+        }
+        .home-blocks.ticket .green_light{
+            /* padding: -100px;
+            margin-top: -100px; */
+            width: 120%;
+            margin:auto;
+        }
+        .home-title.ticket-shop .wrap{
+            /* background-color: #fff; */
+            display: flex;
+        }
+        .home-title.ticket-shop .wrap>*{
+            display: inline-block;
+            /* border: #383 1px solid; */
+        }
+        .home-title.ticket-shop h2{
+            /* border: #383 1px solid; */
+            /* box-sizing: border-box; */
+            padding:0 5px ;
             position: relative;
-        } */
-        .home-ticket_shop .home-title {
+        }
+        .home-title.ticket-shop h3{
+            margin-top: 0px;
+            padding: 0px 0 0 100px;
+        }
+        .home-title.ticket-shop .title_decor{
             position: absolute;
+            top: -45px;
+            z-index: -1;
+        }
+        .home-ticket_shop .home-title {
+            /* position: absolute; */
             top: 100px;
             left: 360px;
             
         }
-        .home-ticket_shop .home-title h1{
+        .home-ticket_shop .home-title h2{
             color: #FFC42C;
             font-size: 36px;
             margin-bottom: 15px;
         }
-        .home-ticket_shop .home-title h2{
+        .home-ticket_shop .home-title h3{
             margin-left: 100px;
             color: #D9D9D9;
         }
+        {}
         .ticket_group{
-            width: 995px;
-            position: absolute;
-            top: 285px;
-            left: 0;
-            right: 0;
+            /* border: #FFC42C 1px solid; */
+            width: 52%;
+            /* padding-top: 200px; */
             margin: auto;
-            display: flex;
+            padding: 50px 0 50px 0;
             flex-wrap: wrap;
         }
         .ticket_group .ticket_wrap{
+            /* background-color: rgb(58, 58, 95); */
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
             margin-bottom: 75px;
         }
-        .ticket_group .pic{
+        .ticket_group .ticket_wrap .pic{
+            /* border: #FFC42C 1px solid; */
             width: 385px;
             height: 195px;
-            margin-right: 20px;
+            margin-right: 10px;
         }
-        .ticket_group .pic img{
+        .ticket_group .ticket_wrap .pic img{
             width:100%;
             height: 100%;
             object-fit:cover;
             top: 0;
         }
-        .ticket_group .ticket_wrap .info{
-            width: 290px;
-            height: 100%;
+        .ticket_group .ticket_wrap .info-row{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-bottom: 75px;
         }
-        .ticket_group .ticket_wrap .num_select{
-            height: 100%;
+        .ticket_group .ticket_wrap .align-bottom{
+            /* border: #D9D9D9 1px solid; */
             display: flex;
-            margin-left: 15px;
             align-items: end;
-            margin-bottom: 75px;
+            width: 100%;
         }
         .info .title p:first-child{
-            font-size: 27px;
+            font-size: 21px;
             font-weight: 800;
-            margin-bottom: 5px;
+            margin-bottom: .1rem;
         }
         .info .title p:nth-child(2){
             font-size: 18px;
-            margin-bottom: 5px;
+            margin-bottom: .1rem;
         }
         .info .title p:last-child{
-            margin-top: 10px;
-            font-size: 30px;
+            font-size: 21px;
             color: #FFC42C;
         }
         .ticket_wrap  .hint{
-            font-size: 16px;
+            /* border: #4AFFD3 1px solid; */
+            font-size: .1rem;
+            padding: 5px 5px 0 5px;
         }
-        
-        .num_select .select_box{
-            background-color: #D9D9D9;
-            width: 82px;
-            height: 54px;
-            font-size:21px ;
+        .ticket_wrap .align-bottom .num_selects{
+            display: flex;
+        }
+        .ticket_wrap .select_box{
+            background-color: #eeee;
+            /* width: 30px; */
+            /* height: 30px; */
+            font-size: 16px;
+            margin-right: 5px ;
             text-align: center;
         }
-        .num_select button{
-            width: 130px;
+        .ticket_wrap button{
+            /* width: 100%; */
             background-color: #000;
-            border: 3px solid #FFC42C;
-            padding: 6px;
-            margin-left: 10px;
+            border: 1px solid #FFC42C;
+            padding: 5px 10px;
+            /* margin:0 20px 0 0px; */
         }
-        .num_select button p:first-child{
-            font-size: 18px;
+        .ticket_wrap button p:first-child{
+            /* font-size: 14px; */
             color: #FFC42C;
         }
-        .num_select button p:last-child{
-            font-size: 12px;
+        .ticket_wrap button p:last-child{
+            /* font-size: 9px; */
             color: #FFC42C;
         }
-        .mer_group{
-            /* background-color: #29f; */
-            /* width: 51.822917%; */
-            width: 995px;
-            position: absolute;
-            top: 320px;
-            left: 0;
-            right: 0;
+
+        /* --------------------------購物區-------------------------------- */
+        {}
+        .home-blocks.merchandise{
+            width: 100%;
+            /* display: block; */
+        }
+        .home-title.merchandise{
+            /* background-color: #383; */
+            width: 62.5%;
             margin: auto;
-            display: flex;
-            flex-wrap: wrap;
         }
-        .mer_group .mer_card{
+        .ticket_group .mer_wrap{
+            /* background-color: rgb(58, 58, 95); */
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            margin-bottom: 75px;
+        }
+        .home-title.merchandise h2:nth-child(2){
+            padding-left: 80px;
+            position: relative;
+        }
+        .home-title.merchandise .title_decor{
+            position: absolute;
+            top: -95px;
+            left: -120px;
+            z-index: -1;
+        }
+        .home-title.merchandise h3{
+            padding-left: 160px;
+        }
+        .home-title.merchandise .green_light{
+            width: 120%;
+            margin:auto;
+        }
+        .mer_group{
+            /* border: #FFC42C 1px solid; */
+            width: 52%;
+            margin: auto;
+            padding: 50px 0 50px 0;
+            flex-wrap: wrap;
+        }
+        .mer_group .mer_wrap{
+            /* background-color: rgb(58, 58, 95); */
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
             margin-bottom: 75px;
         }
         .mer_group .pic{
@@ -455,84 +382,220 @@
             position: absolute;
             z-index: -1;
         } */
-        .mer_group .pic img{
+        .mer_group .mer_wrap .pic img{
             width:100%;
             height: 100%;
-            object-fit: cover;
-            background-color: #fff;
+            object-fit:cover;
             top: 0;
         }
-        .mer_group .mer_card .info{
-            width: 100%;
-            height: 100%;
+        .mer_group .mer_wrap .info-row{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            /* margin-left: 50px; */
-            margin-bottom: 75px;
         }
-        .mer_group .mer_card .num_select{
+        .mer_group .mer_wrap .align-bottom{
+            /* border: #D9D9D9 1px solid; */
             display: flex;
-            align-items: end;   
-        }
-        .faq .wrap{
-            top: 290px;
-            /* background-color: #a0a; */
-            width: 845px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            padding-left: 50px;
-            position: absolute;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
             align-items: end;
+            width: 100%;
         }
-        .faq .area{
-            /* background-color: #00f; */
+        .info .title p:nth-child(2){
+            font-size: 14px;
+            margin-bottom: .1rem;
+        }
+        .mer_wrap .align-bottom .num_selects{
             display: flex;
-            
         }
-        .faq .container{
-            /* border: #a00 3px solid; */
+        .mer_wrap .select_box{
+            background-color: #eeee;
+            /* width: 30px; */
+            /* height: 30px; */
+            font-size: 16px;
+            margin-right: 5px ;
+            text-align: center;
+        }
+        
+        .mer_wrap button{
+            /* width: 100%; */
+            background-color: #000;
+            border: 1px solid #FFC42C;
+            padding: 5px 10px;
+            /* margin:0 20px 0 0px; */
+        }
+        .mer_wrap button p:first-child{
+            /* font-size: 14px; */
+            color: #FFC42C;
+        }
+        .mer_wrap button p:last-child{
+            /* font-size: 9px; */
+            color: #FFC42C;
+        }
+
+
+        .home-main-btn-group{
+            width: 75%;
+            padding-top: 20px;
+            margin: auto;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 5px;
-            /* align-items: center; */
+            justify-content: center; 
+            z-index: 1;           
         }
-        .faq .container h1{
+        .home-main-btn-group-white_border {
+            background-color: #000;
+            border: 3px solid #FFF;
+            background: rgba(0, 0, 0, 0.50);
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            text-align: justify-all;
+            padding: 5px 25px; 
+        }
+        .home-main-btn-group-white_border:nth-child(5){
+            padding: 4px 10px 1px 10px;
+        }
+        .home-main-btn-group-white_border.yellow_border{
+            padding: 5px 35px 4px;
+            border: 3px solid #FFC42C
+        }
+        .home-main-btn-group-white_border .longest{
+            width: 300px;
+        }
+        .home-main-btn-group-white_border p{
+            font-family:Helvetica, sans-serif;
+            font-weight: 700;
+            padding-bottom: 3px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        #yellow_border p{
+            color: #FFC42C;
+        }
+        .home-main-btn-group-white_border .ch{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .home-main-btn-group-white_border .en{
+            font-size: 14px;
+            font-weight: 550;
+        }
+        .pic-change-btn{
+            width: 305px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin: auto;
+        }
+        .pic-change-btn span{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .pic-change-btn span div{
+            width: 10px;
+            height: 10px;
+            background-color: #FFC42C;
+            margin: 10px;
+            border-radius: 50px;
+        }
+
+        {}
+        .home-blocks.faq{
+            width: 100%;
+            position: relative;
+            /* padding: 20px 0; */
+        }
+        .home-title.faq{
+            width: 62.5%;
+            margin: auto;
+            text-align: center;
+        }
+        .home-title.faq h2{
+            /* border: #383 1px solid; */
+            /* box-sizing: border-box; */
+            letter-spacing: .2rem;
+            position: relative;
+            text-align: center;
+        }
+        .home-title.faq h2:after{
+            content: '';
+            width: 30%;
+            border-top: #4AFFD3 1px solid;
+            top: 50%;
+            right: -10px;
+            position: absolute;
+        }
+        .home-title.faq h2:before{
+            content: '';
+            width: 30%;
+            border-top: #4AFFD3 1px solid;
+            top: 50% ;
+            left: -10px;
+            position: absolute;
+        }
+        .home-title.faq h2 .title_decor{
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        .faq .wrap{
+            /* background-color: #fff; */
+            width: 62.5%;
+            margin: auto;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20%;
+        }
+        .faq .col{
+            width: 100%;
+            margin: 10px;
+        }
+        .faq .col h3{
+            text-align: center;
+            padding: 10px;
+            font-size: 2em;
+        }
+        .faq .container{
+            background-color: #aaa4;
+            height: 100%;
+            width: 100%;
+            margin:auto;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq .container h3{
             margin-bottom: 35px;
         }
-        .faq article{
-            background-color: #aaa4;
-            width: 380px;
-            height: 300px;
-            display: flex;
-        }
-        .faq p{
-            width: 235px;
+        .faq span{
+            width: 55%;
             text-align: center;
+            inset: 0;
             margin: auto;
+            top: 50%;
+            text-align: center;
+            line-height: 1.5em;
             font-size: 16px;
-
         }
         .faq .arrow{
-            height: 300px;
+            bottom: 0;
             display: flex;
-            padding: 0 10px;
             flex-direction: column;
             justify-content: center;
-            /* background-color: #fa0; */
-            margin: 0 5px;
+            rotate: 90deg;
         }
         .faq button{
             background-color: #0000;
             border: #0000;
-            margin: 10px 0;
+            scale: 50%;
         }
     </style>
 
@@ -542,8 +605,7 @@
     <main id="NB-PLATFORM" class="masterPageWrapper">
         <header>
             <nav class="m-header">
-                <div     class="m-header-logo">
-                    
+                <div class="m-header-logo">
                     <a href="#">
                         <div class="animative_player">
                             <svg id="NB-header_logo" height="132" viewBox="0 0 363 132" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -613,15 +675,6 @@
                                 <path d="M11.8368 10.3748L9.49991 8.03828C9.39444 7.93282 9.25146 7.87423 9.10145 7.87423H8.71939C9.36631 7.04697 9.75071 6.00644 9.75071 4.87452C9.75071 2.18182 7.56852 0 4.87536 0C2.18219 0 0 2.18182 0 4.87452C0 7.56723 2.18219 9.74905 4.87536 9.74905C6.00747 9.74905 7.04817 9.36471 7.87558 8.7179V9.09989C7.87558 9.24988 7.93417 9.39283 8.03965 9.49829L10.3765 11.8348C10.5969 12.0551 10.9531 12.0551 11.1711 11.8348L11.8345 11.1716C12.0548 10.9513 12.0548 10.5951 11.8368 10.3748ZM4.87536 7.87423C3.2182 7.87423 1.87514 6.53374 1.87514 4.87452C1.87514 3.21765 3.21586 1.87482 4.87536 1.87482C6.53251 1.87482 7.87558 3.21531 7.87558 4.87452C7.87558 6.53139 6.53485 7.87423 4.87536 7.87423Z" fill="white"/>
                             </svg>
                         </div>
-                        <div class="m-header lan_selector">
-                            <button class="m-header lan_selecto btn">
-                                <span>EN</span>
-                            </button>
-                            <span>|</span>
-                            <button class="m-header lan_selecto btn">
-                                <span>TC</span>
-                            </button>
-                        </div>
                         <div class="m-header icon-btn">
                             <a href="#" class="m-header-cart-btn">
                                 <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -644,166 +697,152 @@
             </nav>
         </header>
         <div class="home-blocks main">
-            <div class="big-logo">
-                <a href="#">
-                    <svg width="206" height="204" viewBox="0 0 206 204" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2.25" y="2.25" width="95.9286" height="95.0358" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
-                    <rect x="2.25" y="107.607" width="95.9286" height="94.1429" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
-                    <rect x="107.607" y="2.25" width="95.9286" height="95.0358" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
-                    <rect x="107.607" y="107.607" width="95.9286" height="94.1429" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9885 33.431L11.9885 7.38477L19.9415 7.38477L19.9415 33.431L11.9885 33.431Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M87.8408 17.6243L13.5792 17.6243L13.5792 15.139L87.8408 15.139L87.8408 17.6243Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M87.1448 43.2727L11.2926 43.2727L11.2926 39.2962L87.1448 39.2962L87.1448 43.2727Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M87.8409 60.8689H11.9886V56.8924H87.8409V60.8689Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M59.4404 81.8694H11.8215V77.8929H59.4404V81.8694Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4212 55.5999L23.4212 30.9454L31.3742 30.9454L31.3742 55.5999L23.4212 55.5999Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.6194 55.5999L40.6194 30.9454L48.5724 30.9454L48.5724 55.5999L40.6194 55.5999Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.8182 55.5999L57.8182 30.9454L65.7712 30.9454L65.7712 55.5999L57.8182 55.5999Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0164 55.5999L75.0164 30.9454L82.9694 30.9454L82.9694 55.5999L75.0164 55.5999Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M74.9667 87.2133C79.3316 87.2133 82.87 83.6748 82.87 79.31C82.87 74.9451 79.3316 71.4066 74.9667 71.4066C70.6018 71.4066 67.0633 74.9451 67.0633 79.31C67.0633 83.6748 70.6018 87.2133 74.9667 87.2133ZM74.9667 92.1839C82.0768 92.1839 87.8407 86.4201 87.8407 79.31C87.8407 72.1998 82.0768 66.436 74.9667 66.436C67.8566 66.436 62.0927 72.1998 62.0927 79.31C62.0927 86.4201 67.8566 92.1839 74.9667 92.1839Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M170.064 18.1884H118.481V14.2548H174.126V46.5013L119.515 77.8043L117.446 74.4191L170.064 44.2585V18.1884Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M171.446 85.7219C179.792 85.7219 186.557 78.9566 186.557 70.6112C186.557 62.2657 179.792 55.5004 171.446 55.5004C163.101 55.5004 156.336 62.2657 156.336 70.6112C156.336 78.9566 163.101 85.7219 171.446 85.7219ZM171.446 92.1838C183.361 92.1838 193.019 82.5254 193.019 70.6112C193.019 58.6969 183.361 49.0385 171.446 49.0385C159.532 49.0385 149.874 58.6969 149.874 70.6112C149.874 82.5254 159.532 92.1838 171.446 92.1838Z" fill="white"/>
-                    <path d="M176.317 71.506C176.317 74.2512 174.092 76.4767 171.347 76.4767C168.602 76.4767 166.376 74.2512 166.376 71.506C166.376 68.7608 168.602 66.5354 171.347 66.5354C174.092 66.5354 176.317 68.7608 176.317 71.506Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M124.722 46.1558V7.38477L132.675 7.38477V46.1558H124.722Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M168.464 46.1557H126.81V42.1791H168.464V46.1557Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M166.397 46.0295L166.397 14.2548L174.126 14.2548L174.126 46.0295L166.397 46.0295Z" fill="white"/>
-                    <path d="M79.9936 161.67C79.9936 164.325 77.7956 166.478 75.0842 166.478C72.3728 166.478 70.1748 164.325 70.1748 161.67C70.1748 159.014 72.3728 156.862 75.0842 156.862C77.7956 156.862 79.9936 159.014 79.9936 161.67Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3285 183.905V112.769H45.465V184.244L45.451 184.407C45.3984 185.015 45.282 185.954 45.0936 186.92C44.9247 187.786 44.6243 189.081 44.0693 190.152C43.1073 192.007 42.2158 192.864 41.5681 193.487C41.537 193.516 41.5065 193.546 41.4765 193.575C40.6562 194.366 40.1619 194.724 38.9749 195.487C37.2761 196.579 34.8819 197.152 34.3011 197.291C34.2808 197.296 34.2627 197.3 34.2469 197.304C33.307 197.531 32.3417 197.569 31.938 197.569H19.3263V189.721H31.9304C31.9339 189.721 31.9494 189.721 31.9762 189.72C32.0159 189.718 32.0656 189.714 32.1186 189.71C32.1723 189.705 32.2185 189.699 32.2537 189.694C32.2696 189.691 32.2797 189.69 32.2843 189.689C32.5616 189.622 33.0228 189.507 33.5086 189.347C34.0598 189.167 34.3725 189.015 34.4615 188.958C34.9963 188.614 35.2073 188.469 35.3362 188.371C35.4216 188.306 35.4957 188.245 35.7231 188.026C35.7626 187.988 35.7987 187.953 35.8318 187.921C36.0879 187.674 36.1675 187.598 36.2759 187.467C36.3743 187.347 36.5435 187.12 36.7887 186.648C36.788 186.65 36.7876 186.65 36.7875 186.65C36.7869 186.65 36.8288 186.557 36.8935 186.335C36.9628 186.097 37.0324 185.802 37.0973 185.47C37.2123 184.88 37.2895 184.292 37.3285 183.905Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2927 183.935L11.2927 127.241L19.4173 127.241L19.4173 183.935L11.2927 183.935Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0841 175.72C83.007 175.72 89.4298 169.43 89.4298 161.67C89.4298 153.91 83.007 147.62 75.0841 147.62C67.1611 147.62 60.7383 153.91 60.7383 161.67C60.7383 169.43 67.1611 175.72 75.0841 175.72ZM75.0841 181.34C86.1762 181.34 95.1681 172.533 95.1681 161.67C95.1681 150.807 86.1762 142 75.0841 142C63.9919 142 55 150.807 55 161.67C55 172.533 63.9919 181.34 75.0841 181.34Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M156.133 123.113C157.949 123.113 159.421 121.671 159.421 119.893C159.421 118.114 157.949 116.672 156.133 116.672C154.318 116.672 152.845 118.114 152.845 119.893C152.845 121.671 154.318 123.113 156.133 123.113ZM156.133 127.016C160.151 127.016 163.407 123.827 163.407 119.893C163.407 115.958 160.151 112.769 156.133 112.769C152.116 112.769 148.86 115.958 148.86 119.893C148.86 123.827 152.116 127.016 156.133 127.016Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M151.251 183.956V161.561H159.222V184.33L159.206 184.508C159.148 185.126 159.02 186.072 158.814 187.047C158.629 187.919 158.297 189.238 157.683 190.329C156.641 192.18 155.682 193.029 154.995 193.636C154.96 193.667 154.926 193.697 154.892 193.727C154.024 194.498 153.51 194.841 152.244 195.591C150.494 196.627 148.006 197.176 147.382 197.314C147.362 197.318 147.344 197.322 147.327 197.326C146.394 197.533 145.421 197.569 145.018 197.569H137.601V189.762H145.018C145.017 189.762 145.017 189.762 145.018 189.762C145.023 189.762 145.051 189.762 145.098 189.759C145.151 189.757 145.217 189.753 145.287 189.747C145.358 189.741 145.423 189.734 145.478 189.726C145.505 189.723 145.527 189.719 145.543 189.716C145.559 189.714 145.566 189.712 145.565 189.712C145.869 189.645 146.396 189.524 146.955 189.356C147.573 189.169 147.968 189 148.12 188.91C148.699 188.568 148.939 188.416 149.092 188.309C149.2 188.234 149.29 188.164 149.538 187.944C149.58 187.906 149.62 187.871 149.655 187.84C149.932 187.594 150.026 187.511 150.148 187.375C150.258 187.253 150.437 187.03 150.694 186.575C150.694 186.574 150.733 186.491 150.796 186.294C150.867 186.068 150.94 185.785 151.009 185.461C151.129 184.895 151.21 184.331 151.251 183.956Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M193.697 129.358H116.677V125.455H193.697V129.358Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M168.411 144.166V132.774H176.382V144.285L176.38 144.339C176.298 147.199 174.806 153.646 168.992 157.41C163.728 160.817 159.052 161.1 155.752 160.775L156.551 153.007C158.455 153.195 161.191 153.101 164.597 150.897C167.422 149.068 168.352 145.611 168.411 144.166Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M178.108 144.167V132.774H170.137V144.284L170.138 144.338C170.219 147.179 171.682 153.624 177.433 157.397C180.234 159.233 183.483 160.114 186.207 160.528C188.953 160.945 191.487 160.936 193.107 160.774L192.298 153.008C191.35 153.103 189.498 153.128 187.429 152.813C185.339 152.496 183.347 151.879 181.869 150.91C179.093 149.089 178.166 145.63 178.108 144.167Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M141.963 144.166V132.774H133.992V144.285L133.993 144.339C134.075 147.199 135.567 153.646 141.382 157.41C146.646 160.817 151.322 161.1 154.622 160.775L153.823 153.007C151.919 153.195 149.183 153.101 145.777 150.897C142.952 149.068 142.021 145.611 141.963 144.166Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M132.266 144.167V132.774H140.237V144.284L140.235 144.338C140.155 147.179 138.692 153.624 132.94 157.396C130.14 159.233 126.891 160.114 124.167 160.528C121.421 160.945 118.886 160.936 117.267 160.774L118.076 153.008C119.024 153.102 120.876 153.128 122.945 152.813C125.035 152.496 127.027 151.879 128.505 150.91C131.281 149.089 132.208 145.63 132.266 144.167Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M192.9 170.538L117.574 170.538L117.574 166.635L192.9 166.635L192.9 170.538Z" fill="white"/>
-                    <path d="M107.357 24.3214V2H129.679" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M107.357 129.679V107.357H129.679" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M2 129.679V107.357H24.3214" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M2 24.3214V2H24.3214" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M107.357 75.2143V97.5358H129.679" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M107.357 179.679V202H129.679" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M2 179.679V202H24.3214" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M2 75.2143V97.5358H24.3214" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M203.786 24.3214V2H181.464" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M203.786 129.679V107.357H181.464" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M98.4286 129.679V107.357H76.1072" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M98.4286 24.3214V2H76.1072" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M203.786 75.2143V97.5358H181.464" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M203.786 179.679V202H181.464" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M98.4286 179.679V202H76.1072" stroke="#4AFFD3" stroke-width="3"/>
-                    <path d="M98.4286 75.2143V97.5358H76.1072" stroke="#4AFFD3" stroke-width="3"/>
-                    </svg>
-                </a>                    
-            </div>
-            <div class="pic_premieum">
-                <img src="醜男子.jpg" alt="#">
-            </div>
-            <div class="pic_premieum-frame"></div>
-            <div class="home-main-btn-group">
-                <a href="#" class="home-main-btn-group-white_border">
+            <div class="pic_premieum-frame">
+                <div class="big-logo">
+                    <a href="#">
+                        <svg width="206" height="204" viewBox="0 0 206 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.25" y="2.25" width="95.9286" height="95.0358" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
+                        <rect x="2.25" y="107.607" width="95.9286" height="94.1429" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
+                        <rect x="107.607" y="2.25" width="95.9286" height="95.0358" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
+                        <rect x="107.607" y="107.607" width="95.9286" height="94.1429" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9885 33.431L11.9885 7.38477L19.9415 7.38477L19.9415 33.431L11.9885 33.431Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M87.8408 17.6243L13.5792 17.6243L13.5792 15.139L87.8408 15.139L87.8408 17.6243Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M87.1448 43.2727L11.2926 43.2727L11.2926 39.2962L87.1448 39.2962L87.1448 43.2727Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M87.8409 60.8689H11.9886V56.8924H87.8409V60.8689Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M59.4404 81.8694H11.8215V77.8929H59.4404V81.8694Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4212 55.5999L23.4212 30.9454L31.3742 30.9454L31.3742 55.5999L23.4212 55.5999Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.6194 55.5999L40.6194 30.9454L48.5724 30.9454L48.5724 55.5999L40.6194 55.5999Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M57.8182 55.5999L57.8182 30.9454L65.7712 30.9454L65.7712 55.5999L57.8182 55.5999Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0164 55.5999L75.0164 30.9454L82.9694 30.9454L82.9694 55.5999L75.0164 55.5999Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M74.9667 87.2133C79.3316 87.2133 82.87 83.6748 82.87 79.31C82.87 74.9451 79.3316 71.4066 74.9667 71.4066C70.6018 71.4066 67.0633 74.9451 67.0633 79.31C67.0633 83.6748 70.6018 87.2133 74.9667 87.2133ZM74.9667 92.1839C82.0768 92.1839 87.8407 86.4201 87.8407 79.31C87.8407 72.1998 82.0768 66.436 74.9667 66.436C67.8566 66.436 62.0927 72.1998 62.0927 79.31C62.0927 86.4201 67.8566 92.1839 74.9667 92.1839Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M170.064 18.1884H118.481V14.2548H174.126V46.5013L119.515 77.8043L117.446 74.4191L170.064 44.2585V18.1884Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M171.446 85.7219C179.792 85.7219 186.557 78.9566 186.557 70.6112C186.557 62.2657 179.792 55.5004 171.446 55.5004C163.101 55.5004 156.336 62.2657 156.336 70.6112C156.336 78.9566 163.101 85.7219 171.446 85.7219ZM171.446 92.1838C183.361 92.1838 193.019 82.5254 193.019 70.6112C193.019 58.6969 183.361 49.0385 171.446 49.0385C159.532 49.0385 149.874 58.6969 149.874 70.6112C149.874 82.5254 159.532 92.1838 171.446 92.1838Z" fill="white"/>
+                        <path d="M176.317 71.506C176.317 74.2512 174.092 76.4767 171.347 76.4767C168.602 76.4767 166.376 74.2512 166.376 71.506C166.376 68.7608 168.602 66.5354 171.347 66.5354C174.092 66.5354 176.317 68.7608 176.317 71.506Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M124.722 46.1558V7.38477L132.675 7.38477V46.1558H124.722Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M168.464 46.1557H126.81V42.1791H168.464V46.1557Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M166.397 46.0295L166.397 14.2548L174.126 14.2548L174.126 46.0295L166.397 46.0295Z" fill="white"/>
+                        <path d="M79.9936 161.67C79.9936 164.325 77.7956 166.478 75.0842 166.478C72.3728 166.478 70.1748 164.325 70.1748 161.67C70.1748 159.014 72.3728 156.862 75.0842 156.862C77.7956 156.862 79.9936 159.014 79.9936 161.67Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3285 183.905V112.769H45.465V184.244L45.451 184.407C45.3984 185.015 45.282 185.954 45.0936 186.92C44.9247 187.786 44.6243 189.081 44.0693 190.152C43.1073 192.007 42.2158 192.864 41.5681 193.487C41.537 193.516 41.5065 193.546 41.4765 193.575C40.6562 194.366 40.1619 194.724 38.9749 195.487C37.2761 196.579 34.8819 197.152 34.3011 197.291C34.2808 197.296 34.2627 197.3 34.2469 197.304C33.307 197.531 32.3417 197.569 31.938 197.569H19.3263V189.721H31.9304C31.9339 189.721 31.9494 189.721 31.9762 189.72C32.0159 189.718 32.0656 189.714 32.1186 189.71C32.1723 189.705 32.2185 189.699 32.2537 189.694C32.2696 189.691 32.2797 189.69 32.2843 189.689C32.5616 189.622 33.0228 189.507 33.5086 189.347C34.0598 189.167 34.3725 189.015 34.4615 188.958C34.9963 188.614 35.2073 188.469 35.3362 188.371C35.4216 188.306 35.4957 188.245 35.7231 188.026C35.7626 187.988 35.7987 187.953 35.8318 187.921C36.0879 187.674 36.1675 187.598 36.2759 187.467C36.3743 187.347 36.5435 187.12 36.7887 186.648C36.788 186.65 36.7876 186.65 36.7875 186.65C36.7869 186.65 36.8288 186.557 36.8935 186.335C36.9628 186.097 37.0324 185.802 37.0973 185.47C37.2123 184.88 37.2895 184.292 37.3285 183.905Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2927 183.935L11.2927 127.241L19.4173 127.241L19.4173 183.935L11.2927 183.935Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0841 175.72C83.007 175.72 89.4298 169.43 89.4298 161.67C89.4298 153.91 83.007 147.62 75.0841 147.62C67.1611 147.62 60.7383 153.91 60.7383 161.67C60.7383 169.43 67.1611 175.72 75.0841 175.72ZM75.0841 181.34C86.1762 181.34 95.1681 172.533 95.1681 161.67C95.1681 150.807 86.1762 142 75.0841 142C63.9919 142 55 150.807 55 161.67C55 172.533 63.9919 181.34 75.0841 181.34Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M156.133 123.113C157.949 123.113 159.421 121.671 159.421 119.893C159.421 118.114 157.949 116.672 156.133 116.672C154.318 116.672 152.845 118.114 152.845 119.893C152.845 121.671 154.318 123.113 156.133 123.113ZM156.133 127.016C160.151 127.016 163.407 123.827 163.407 119.893C163.407 115.958 160.151 112.769 156.133 112.769C152.116 112.769 148.86 115.958 148.86 119.893C148.86 123.827 152.116 127.016 156.133 127.016Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M151.251 183.956V161.561H159.222V184.33L159.206 184.508C159.148 185.126 159.02 186.072 158.814 187.047C158.629 187.919 158.297 189.238 157.683 190.329C156.641 192.18 155.682 193.029 154.995 193.636C154.96 193.667 154.926 193.697 154.892 193.727C154.024 194.498 153.51 194.841 152.244 195.591C150.494 196.627 148.006 197.176 147.382 197.314C147.362 197.318 147.344 197.322 147.327 197.326C146.394 197.533 145.421 197.569 145.018 197.569H137.601V189.762H145.018C145.017 189.762 145.017 189.762 145.018 189.762C145.023 189.762 145.051 189.762 145.098 189.759C145.151 189.757 145.217 189.753 145.287 189.747C145.358 189.741 145.423 189.734 145.478 189.726C145.505 189.723 145.527 189.719 145.543 189.716C145.559 189.714 145.566 189.712 145.565 189.712C145.869 189.645 146.396 189.524 146.955 189.356C147.573 189.169 147.968 189 148.12 188.91C148.699 188.568 148.939 188.416 149.092 188.309C149.2 188.234 149.29 188.164 149.538 187.944C149.58 187.906 149.62 187.871 149.655 187.84C149.932 187.594 150.026 187.511 150.148 187.375C150.258 187.253 150.437 187.03 150.694 186.575C150.694 186.574 150.733 186.491 150.796 186.294C150.867 186.068 150.94 185.785 151.009 185.461C151.129 184.895 151.21 184.331 151.251 183.956Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M193.697 129.358H116.677V125.455H193.697V129.358Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M168.411 144.166V132.774H176.382V144.285L176.38 144.339C176.298 147.199 174.806 153.646 168.992 157.41C163.728 160.817 159.052 161.1 155.752 160.775L156.551 153.007C158.455 153.195 161.191 153.101 164.597 150.897C167.422 149.068 168.352 145.611 168.411 144.166Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M178.108 144.167V132.774H170.137V144.284L170.138 144.338C170.219 147.179 171.682 153.624 177.433 157.397C180.234 159.233 183.483 160.114 186.207 160.528C188.953 160.945 191.487 160.936 193.107 160.774L192.298 153.008C191.35 153.103 189.498 153.128 187.429 152.813C185.339 152.496 183.347 151.879 181.869 150.91C179.093 149.089 178.166 145.63 178.108 144.167Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M141.963 144.166V132.774H133.992V144.285L133.993 144.339C134.075 147.199 135.567 153.646 141.382 157.41C146.646 160.817 151.322 161.1 154.622 160.775L153.823 153.007C151.919 153.195 149.183 153.101 145.777 150.897C142.952 149.068 142.021 145.611 141.963 144.166Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M132.266 144.167V132.774H140.237V144.284L140.235 144.338C140.155 147.179 138.692 153.624 132.94 157.396C130.14 159.233 126.891 160.114 124.167 160.528C121.421 160.945 118.886 160.936 117.267 160.774L118.076 153.008C119.024 153.102 120.876 153.128 122.945 152.813C125.035 152.496 127.027 151.879 128.505 150.91C131.281 149.089 132.208 145.63 132.266 144.167Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M192.9 170.538L117.574 170.538L117.574 166.635L192.9 166.635L192.9 170.538Z" fill="white"/>
+                        <path d="M107.357 24.3214V2H129.679" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M107.357 129.679V107.357H129.679" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M2 129.679V107.357H24.3214" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M2 24.3214V2H24.3214" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M107.357 75.2143V97.5358H129.679" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M107.357 179.679V202H129.679" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M2 179.679V202H24.3214" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M2 75.2143V97.5358H24.3214" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M203.786 24.3214V2H181.464" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M203.786 129.679V107.357H181.464" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M98.4286 129.679V107.357H76.1072" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M98.4286 24.3214V2H76.1072" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M203.786 75.2143V97.5358H181.464" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M203.786 179.679V202H181.464" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M98.4286 179.679V202H76.1072" stroke="#4AFFD3" stroke-width="3"/>
+                        <path d="M98.4286 75.2143V97.5358H76.1072" stroke="#4AFFD3" stroke-width="3"/>
+                        </svg>
+                    </a>                    
+                </div>
+                <div class="home-main-btn-group"> 
+                    <a href="#" class="home-main-btn-group-white_border">
+                        <span>
+                            <p class="ch">2023 強打新戲</p>
+                            <p class="en">PROGRAMMES OF 2023</p>
+                        </span>
+                    </a>
+                    <a href="nobody_contact.html" class="home-main-btn-group-white_border">
+                        <span>
+                            <p class="ch">小卒月票</p>
+                            <p class="en">MONTHLY PASS</p>
+                        </span>
+                    </a>
+                    <a href="news.html" class="home-main-btn-group-white_border">
+                        <span>
+                            <p class="ch">小卒優惠</p>
+                            <p class="en">GET TICKETS</p>
+                        </span>
+                    </a>
+                    <a href="about-us.html" class="home-main-btn-group-white_border">
+                        <span>
+                            <p class="ch">精選周邊</p>
+                            <p class="en">MERCHANDISE</p>
+                        </span>
+                    </a>
+                    <a href="portfolio.html" class="home-main-btn-group-white_border">
+                        <p>
+                            <p class="ch">FAQ+</p>
+                        </p>
+                    </a>
+                    <a href="nobody_become-a-member.html" id="yellow_border" class="home-main-btn-group-white_border yellow_border">
+                        <span>
+                            <p class="ch">成為無名小卒之友</p>
+                            <p class="en">BECOME A MEMBER</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="pic-change-btn">
                     <span>
-                        <p class="ch">2023 強打新戲</p>
-                        <p class="en">PROGRAMMES OF 2023</p>
+                        <button>
+                            <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.439709 8.93783L8.93705 0.440487C9.52437 -0.146829 10.4741 -0.146829 11.0551 0.440487L12.4672 1.85255C13.0545 2.43986 13.0545 3.38957 12.4672 3.97063L6.45033 10L12.4734 16.0231C13.0608 16.6104 13.0608 17.5601 12.4734 18.1412L11.0614 19.5595C10.4741 20.1468 9.52437 20.1468 8.9433 19.5595L0.445957 11.0622C-0.147607 10.4749 -0.147607 9.52515 0.439709 8.93783Z" fill="#FFC42C"/>
+                                </svg>
+                        </button>
                     </span>
-                </a>
-                <a href="#" class="home-main-btn-group-white_border">
                     <span>
-                        <p class="ch">小卒月票</p>
-                        <p class="en">MONTHLY PASS</p>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
                     </span>
-                </a>
-                <a href="#" class="home-main-btn-group-white_border">
                     <span>
-                        <p class="ch">小卒優惠</p>
-                        <p class="en">GET TICKETS</p>
+                        <button>
+                            <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3882 11.0622L4.89083 19.5595C4.30351 20.1468 3.35381 20.1468 2.77274 19.5595L1.36068 18.1475C0.773364 17.5601 0.773364 16.6104 1.36068 16.0294L7.37755 10L1.35443 3.97688C0.767117 3.38957 0.767117 2.43986 1.35443 1.8588L2.76649 0.440488C3.35381 -0.146828 4.30351 -0.146828 4.88458 0.440488L13.3819 8.93783C13.9755 9.52515 13.9755 10.4749 13.3882 11.0622Z" fill="#FFC42C"/>
+                                </svg>                            
+                        </button>
                     </span>
-                </a>
-                <a href="#" class="home-main-btn-group-white_border">
-                    <span>
-                        <p class="ch">精選周邊</p>
-                        <p class="en">MERCHANDISE</p>
-                    </span>
-                </a>
-                <a href="#" class="home-main-btn-group-white_border">
-                    <p>
-                        <p class="ch">FAQ+</p>
-                    </p>
-                </a>
-                <a href="#" id="yellow_border" class="home-main-btn-group-white_border yellow_border">
-                    <span>
-                        <p class="ch">成為無名小卒之友</p>
-                        <p class="en">BECOME A MEMBER</p>
-                    </span>
-                </a>
-                
-    
-    
-            </div>
-            <div class="pic-change-btn">
-                <span>
-                    <button>
-                        <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.439709 8.93783L8.93705 0.440487C9.52437 -0.146829 10.4741 -0.146829 11.0551 0.440487L12.4672 1.85255C13.0545 2.43986 13.0545 3.38957 12.4672 3.97063L6.45033 10L12.4734 16.0231C13.0608 16.6104 13.0608 17.5601 12.4734 18.1412L11.0614 19.5595C10.4741 20.1468 9.52437 20.1468 8.9433 19.5595L0.445957 11.0622C-0.147607 10.4749 -0.147607 9.52515 0.439709 8.93783Z" fill="#FFC42C"/>
-                            </svg>
-                    </button>
-                </span>
-                <span>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </span>
-                <span>
-                    <button>
-                        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3882 11.0622L4.89083 19.5595C4.30351 20.1468 3.35381 20.1468 2.77274 19.5595L1.36068 18.1475C0.773364 17.5601 0.773364 16.6104 1.36068 16.0294L7.37755 10L1.35443 3.97688C0.767117 3.38957 0.767117 2.43986 1.35443 1.8588L2.76649 0.440488C3.35381 -0.146828 4.30351 -0.146828 4.88458 0.440488L13.3819 8.93783C13.9755 9.52515 13.9755 10.4749 13.3882 11.0622Z" fill="#FFC42C"/>
-                            </svg>                            
-                    </button>
-                </span>
+                </div>
             </div>
         </div>
         <div class="home-blocks programme">
-            <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3335 86.7H72.0002V89.7H57.3335V86.7Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 75L60 89.6666L57 89.6666L57 75L60 75Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127.166 88.966L127.166 21.7661L59.2329 21.7661L59.2329 88.966L127.166 88.966ZM127.666 21.2661L58.7329 21.2661L58.7329 89.466L127.666 89.466L127.666 21.2661Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
-                </svg>
-                
-            <svg width="1559" height="1490" viewBox="0 0 1559 1490" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="330" width="67" height="1490" fill="url(#paint0_radial_157_2422)" fill-opacity="0.75"/>
-                <rect x="1559" y="758" width="44.0001" height="1560" transform="rotate(90 1559 758)" fill="url(#paint1_radial_157_2422)" fill-opacity="0.7"/>
-                <defs>
-                <radialGradient id="paint0_radial_157_2422" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(363.5 745) rotate(90) scale(745 33.5)">
-                <stop offset="0.0051882" stop-color="#FF2CAA" stop-opacity="0.72"/>
-                <stop offset="1" stop-color="#FF2CAA" stop-opacity="0"/>
-                </radialGradient>
-                <radialGradient id="paint1_radial_157_2422" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1581 1538) rotate(90) scale(780 22)">
-                <stop offset="0.0051882" stop-color="#FF2CAA" stop-opacity="0.72"/>
-                <stop offset="1" stop-color="#FF2CAA" stop-opacity="0"/>
-                </radialGradient>
-                </defs>
-                </svg>
-            <div class="home-title">
-                <h1>2023 強打新戲</h1>
-                <h2>PROGRAMMES OF 2023</h2>
+            <div class="home-title programme">
+                <div class="wrap">
+                    <div class="text">
+                        <h2>
+                            2023 強打新戲
+                            <svg class="title_decor" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3335 86.7H72.0002V89.7H57.3335V86.7Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 75L60 89.6666L57 89.6666L57 75L60 75Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127.166 88.966L127.166 21.7661L59.2329 21.7661L59.2329 88.966L127.166 88.966ZM127.666 21.2661L58.7329 21.2661L58.7329 89.466L127.666 89.466L127.666 21.2661Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
+                            </svg>                
+                        </h2>
+                        <h3>PROGRAMMES OF 2023</h3>
+                    </div>
+                </div>
             </div>
             <div class="card_group">
                 <div class="card">
                     <a href="#">
-                        <img src="tn_醜男子 版頭NEW.jpg" alt="">
+                        <img src="pic_ele/tn_醜男子 版頭NEW.jpg" alt="">
                         <div class="info_frame">
                             <span class="tag-new_release">New Release</span>
                             <span>
@@ -824,7 +863,7 @@
                 </div>
                 <div class="card">
                     <a href="">
-                        <img src="屋根裡＿簡介圖.jpeg" alt="">
+                        <img src="pic_ele/屋根裡＿簡介圖.jpeg" alt="">
                         <div class="info_frame">
                             <span class="tag-new_release">New Release</span>
                             <span>
@@ -845,7 +884,7 @@
                 </div>
                 <div class="card">
                     <a href="">
-                        <img src="Skirmishes劇照_3.jpg" alt="">
+                        <img src="pic_ele/Skirmishes劇照_3.jpg" alt="">
                         <div class="info_frame">
                             <span class="tag-new_release">New Release</span>
                             <span>
@@ -877,230 +916,252 @@
             </div>
         </div>
         <div class="home-blocks ticket">
-            <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3335 86.7H72.0002V89.7H57.3335V86.7Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 75L60 89.6666L57 89.6666L57 75L60 75Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M127.166 88.966L127.166 21.7661L59.2329 21.7661L59.2329 88.966L127.166 88.966ZM127.666 21.2661L58.7329 21.2661L58.7329 89.466L127.666 89.466L127.666 21.2661Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
-                </svg>
-            <svg width="1673" height="18" viewBox="0 0 1673 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="1673" height="18" fill="url(#paint0_radial_72_3640)" fill-opacity="0.75"/>
-                    <defs>
-                    <radialGradient id="paint0_radial_72_3640" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(836.5 9) rotate(90) scale(9 836.5)">
-                    <stop stop-color="#4AFFD3"/>
-                    <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
-                    </radialGradient>
-                    </defs>
-                    </svg>
             <div class="home-title ticket-shop">
-                <h1>售票亭</h1>
-                <h2>TICKET SHOP</h2>
+                <div class="wrap">
+                    <div class="text">                
+                        <h2>
+                            售票亭
+                            <svg class="title_decor" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3335 86.7H72.0002V89.7H57.3335V86.7Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M60 75L60 89.6666L57 89.6666L57 75L60 75Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M127.166 88.966L127.166 21.7661L59.2329 21.7661L59.2329 88.966L127.166 88.966ZM127.666 21.2661L58.7329 21.2661L58.7329 89.466L127.666 89.466L127.666 21.2661Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
+                                </svg>
+                        </h2>
+                        <svg class="green_light" width="1673" height="18" viewBox="0 0 1673 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1673" height="18" fill="url(#paint0_radial_72_3640)" fill-opacity="0.75"/>
+                            <defs>
+                            <radialGradient id="paint0_radial_72_3640" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(836.5 9) rotate(90) scale(9 836.5)">
+                            <stop stop-color="#4AFFD3"/>
+                            <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                            </radialGradient>
+                            </defs>
+                            </svg>
+                        <h3>TICKET SHOP</h3>
+                    </div>
+                </div>
             </div>
             <div class="ticket_group">
                 <div class="ticket_wrap">
                     <div class="pic">
                         <img src="work/main/假票.jpeg" alt="">
                     </div>
-                    <div class="info">
-                        <div class="title">
-                            <p class="title-ch">2023 月票</p>
-                            <p class="title-en">2023 Monthly Pass</p>
-                            <p class="title-price">$2999</p>
+                    <div class="info-row">
+                        <div class="info">
+                            <div class="title">
+                                <p class="title-ch">2023 月票</p>
+                                <p class="title-en">2023 Monthly Pass</p>
+                                <p class="title-price">$2999</p>
+                            </div>
                         </div>
-                        <div class="hint">
-                            <p>僅適用於工作坊，戲劇類型請另行購票。</p>
+                        <div class="align-bottom">
+                            <div class="num_selects">
+                                <input class="select_box" type="number" max="12" min="0" style="color: #000;">
+                                <button>
+                                    <p>加入購物車</p>
+                                    <p>Add To Cart</p>
+                                </button>
+                            </div>
+                            <div class="hint">
+                                <p>僅適用於工作坊，戲劇類型請另行購票。</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="num_select">
-                        <input class="select_box" type="number" max="12" min="0" style="color: #000;">
-                        <button>
-                            <p>加入購物車</p>
-                            <p>Add To Cart</p>
-                        </button>
                     </div>
                 </div>
                 <div class="ticket_wrap">
                     <div class="pic">
                         <img src="work/main/假票2.jpeg" alt="">
                     </div>
-                    <div class="info">
-                        <div class="title">
-                            <p class="title-ch">2024 早鳥票券</p>
-                            <p class="title-en">2024 Early-Bird-Pass </p>
-                            <p class="title-price">$500</p>
+                    <div class="info-row">
+                        <div class="info">
+                            <div class="title">
+                                <p class="title-ch">2024 早鳥票券</p>
+                                <p class="title-en">2024 Early-Bird-Pass </p>
+                                <p class="title-price">$500</p>
+                            </div>
                         </div>
-                        <div class="hint">
-                            <p>僅適用於工作坊，戲劇類型請另行購票。</p>
+                        <div class="align-bottom">
+                            <div class="num_selects">
+                                <input class="select_box" type="number" max="12" min="0" style="color: #000;">
+                                <button>
+                                    <p>加入購物車</p>
+                                    <p>Add To Cart</p>
+                                </button>
+                            </div>
+                            <div class="hint">
+                                <p>僅適用於工作坊，戲劇類型請另行購票。</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>    
+            </div>
+        </div>
+       <div class="home-blocks merchandise">
+            <div class="home-title merchandise">
+                <div class="wrap">
+                    <div class="text">
+                        <h2>無名周邊</h2>
+                        <h2>小卒選物
+                            <svg class="title_decor" width="244" height="244" viewBox="0 0 244 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5333 208.213L56.3911 208.213L56.3911 213.093L32.5333 213.093L32.5333 208.213Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4133 189.235L37.4133 213.093L32.5333 213.093L32.5333 189.235L37.4133 189.235Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M150.738 208.213L126.88 208.213L126.88 213.093L150.738 213.093L150.738 208.213Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M146.4 189.235L146.4 213.093L151.28 213.093L151.28 189.235L146.4 189.235Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5334 99.2267L56.3912 99.2267L56.3912 94.3467L32.5334 94.3467L32.5334 99.2267Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4133 118.746L37.4133 94.8887L32.5333 94.8887L32.5333 118.746L37.4133 118.746Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M150.737 102.968L126.88 102.968L126.88 98.0881L150.737 98.0881L150.737 102.968Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M146.4 122L146.4 98.1421L151.28 98.1421L151.28 122L146.4 122Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1429 99.2821L37.1429 208.594L147.648 208.594L147.648 99.2821L37.1429 99.2821ZM36.3295 209.407L148.461 209.407L148.461 98.4687L36.3295 98.4687L36.3295 209.407Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M95.9733 -1.2281e-07L95.9733 244L94.3467 244L94.3467 0L95.9733 -1.2281e-07Z" fill="#4AFFD3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M244 154.533L-9.05017e-08 154.533L0 152.907L244 152.907L244 154.533Z" fill="#4AFFD3"/>
+                                </svg> 
+                        </h2>
+                        <svg class="green_light" width="1673" height="18" viewBox="0 0 1673 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1673" height="18" fill="url(#paint0_radial_72_3640)" fill-opacity="0.75"/>
+                            <defs>
+                            <radialGradient id="paint0_radial_72_3640" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(836.5 9) rotate(90) scale(9 836.5)">
+                            <stop stop-color="#4AFFD3"/>
+                            <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                            </radialGradient>
+                            </defs>
+                            </svg>
+                        <h3>MERCHANDISE SELECTED</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mer_group">
+                <div class="mer_wrap">
+                    <div class="pic">
+                        <img src="work/main/jacket.jpeg" alt="">
+                    </div>
+                    <div class="info-row">
+                        <div class="info">
+                            <div class="title">
+                                <p class="title-ch">防潑水外套</p>
+                                <p class="title-en">2023無名小卒會員紀念外套，高防潑水機能，適應千變萬化的天氣。</p>
+                                <p class="title-price">$1050</p>
+                            </div>
+                        </div>
+                        <div class="align-bottom">
+                            <div class="num_selects">
+                                <input class="select_box" type="number" max="12" min="0" style="color: #000;">
+                                <button>
+                                    <p>加入購物車</p>
+                                    <p>Add To Cart</p>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="num_select">
-                        <input class="select_box" type="number" max="12" min="0" style="color: #000;">
-                        <button>
-                            <p>加入購物車</p>
-                            <p>Add To Cart</p>
-                        </button>
+                </div>
+                <div class="mer_wrap">
+                    <div class="pic">
+                        <img src="work/main/bag.jpeg" alt="">
+                    </div>
+                    <div class="info-row">
+                        <div class="info">
+                            <div class="title">
+                                <p class="title-ch">無名小卒簡約帆袋</p>
+                                <p class="title-en">35cm x 45cm</p>
+                                <p class="title-price">$399</p>
+                            </div>
+                        </div>
+                        <div class="align-bottom">
+                            <div class="num_selects">
+                                <input class="select_box" type="number" max="12" min="0" style="color: #000;">
+                                <button>
+                                    <p>加入購物車</p>
+                                    <p>Add To Cart</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mer_wrap">
+                    <div class="pic">
+                        <img src="work/main/post_card.jpeg" alt="">
+                    </div>
+                    <div class="info-row">
+                        <div class="info">
+                            <div class="title">
+                                <p class="title-ch">精選演出明信片組</p>
+                                <p class="title-en">無法挑選</p>
+                                <p class="title-price">$600</p>
+                            </div>
+                        </div>
+                        <div class="align-bottom">
+                            <div class="num_selects">
+                                <input class="select_box" type="number" max="12" min="0" style="color: #000;">
+                                <button>
+                                    <p>加入購物車</p>
+                                    <p>Add To Cart</p>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>    
             </div>
         </div>
-        <div class="home-blocks merchandise">
-            <svg width="244" height="244" viewBox="0 0 244 244" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5333 208.213L56.3911 208.213L56.3911 213.093L32.5333 213.093L32.5333 208.213Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4133 189.235L37.4133 213.093L32.5333 213.093L32.5333 189.235L37.4133 189.235Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M150.738 208.213L126.88 208.213L126.88 213.093L150.738 213.093L150.738 208.213Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M146.4 189.235L146.4 213.093L151.28 213.093L151.28 189.235L146.4 189.235Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5334 99.2267L56.3912 99.2267L56.3912 94.3467L32.5334 94.3467L32.5334 99.2267Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4133 118.746L37.4133 94.8887L32.5333 94.8887L32.5333 118.746L37.4133 118.746Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M150.737 102.968L126.88 102.968L126.88 98.0881L150.737 98.0881L150.737 102.968Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M146.4 122L146.4 98.1421L151.28 98.1421L151.28 122L146.4 122Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1429 99.2821L37.1429 208.594L147.648 208.594L147.648 99.2821L37.1429 99.2821ZM36.3295 209.407L148.461 209.407L148.461 98.4687L36.3295 98.4687L36.3295 209.407Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M95.9733 -1.2281e-07L95.9733 244L94.3467 244L94.3467 0L95.9733 -1.2281e-07Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M244 154.533L-9.05017e-08 154.533L0 152.907L244 152.907L244 154.533Z" fill="#4AFFD3"/>
-                </svg>
-            <svg width="1673" height="18" viewBox="0 0 1673 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1673" height="18" fill="url(#paint0_radial_72_3640)" fill-opacity="0.75"/>
-                <defs>
-                <radialGradient id="paint0_radial_72_3640" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(836.5 9) rotate(90) scale(9 836.5)">
-                <stop stop-color="#4AFFD3"/>
-                <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
-                </radialGradient>
-                </defs>
-                </svg>
-            <div class="home-title merchandise">
-                <h1>無名周邊</h1>
-                <h1>小卒選物</h1>
-                <h2>MERCHANDISE SELECTED</h2>
-            </div>
-            <div class="mer_group">
-                <div class="mer_card">
-                    <div class="pic">
-                        <img src="work/main/jacket.jpeg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">
-                            <p class="title-ch">防潑水外套</p>
-                            <p class="title-en">2023無名小卒會員紀念外套，高防潑水機能，適應千變萬化的天氣。</p>
-                            <p class="title-price">$1050</p>
-                        </div>
-                        <div class="num_select">
-                            <input class="select_box" type="number" max="12" min="0" style="color: #000;">
-                            <button>
-                                <p>加入購物車</p>
-                                <p>Add To Cart</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="mer_card">
-                    <div class="pic">
-                        <img src="work/main/bag.jpeg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">
-                            <p class="title-ch">無名小卒簡約帆袋</p>
-                            <p class="title-en">35cm x 45cm </p>
-                            <p class="title-price">$399</p>
-                        </div>
-                        <div class="num_select">
-                            <input class="select_box" type="number" max="12" min="0" style="color: #000;">
-                            <button>
-                                <p>加入購物車</p>
-                                <p>Add To Cart</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="mer_card">
-                    <div class="pic">
-                        <img src="work/main/post_card.jpeg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">
-                            <p class="title-ch">精選演出明信片組</p>
-                            <p class="title-en">隨機10張，無法挑選。 </p>
-                            <p class="title-price">$600</p>
-                        </div>
-                        <div class="num_select">
-                            <input class="select_box" type="number" max="12" min="0" style="color: #000;">
-                            <button>
-                                <p>加入購物車</p>
-                                <p>Add To Cart</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>        
-            </div>
-        </div>
-        <div class="home-blocks faq">
-            <svg width="230" height="150" viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M27 22L54 22L54 18L27 18L27 22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M31 43L31 19L27 19L27 43L31 43Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M27 127L54 127L54 131L27 131L27 127Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M31 106L31 130L27 130L27 106L31 106Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M204 22L177 22L177 18L204 18L204 22Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M200 43L200 19L204 19L204 43L200 43Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1426 20.2818L29.1426 129.594L200.372 129.594L200.372 20.2818L29.1426 20.2818ZM27.8823 130.407L201.632 130.407L201.632 19.4685L27.8823 19.4685L27.8823 130.407Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M204 127L177 127L177 131L204 131L204 127Z" fill="#4AFFD3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M200 106L200 130L204 130L204 106L200 106Z" fill="#4AFFD3"/>
-                <line x1="190" y1="75.5" x2="230" y2="75.5" stroke="#4AFFD3"/>
-                <line y1="76.5" x2="40" y2="76.5" stroke="#4AFFD3"/>
-                <line x1="114.5" y1="40" x2="114.5" stroke="#4AFFD3"/>
-                <line x1="114.5" y1="150" x2="114.5" y2="110" stroke="#4AFFD3"/>
-                </svg>
-            <svg width="2519" height="1005" viewBox="0 0 2519 1005" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1150" width="1005" height="54" transform="rotate(90 1150 0)" fill="url(#paint0_diamond_287_1003)"/>
-                <rect y="494" width="2519" height="54" fill="url(#paint1_diamond_287_1003)"/>
-                <defs>
-                <radialGradient id="paint0_diamond_287_1003" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1652.5 27) rotate(90) scale(27 502.5)">
-                <stop stop-color="#FF2CAA" stop-opacity="0.5"/>
-                <stop offset="1" stop-color="#FF2CAA" stop-opacity="0"/>
-                </radialGradient>
-                <radialGradient id="paint1_diamond_287_1003" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1259.5 521) rotate(90) scale(27 1259.5)">
-                <stop stop-color="#FF2CAA" stop-opacity="0.5"/>
-                <stop offset="1" stop-color="#FF2CAA" stop-opacity="0"/>
-                </radialGradient>
-                </defs>
-            </svg>
+      <div class="home-blocks faq">
             <div class="home-title faq">
-                <h1>FAQ+</h1>
+                <h2>&nbsp;FAQ+
+                    <svg class="title_decor" width="230" height="150" viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 22L54 22L54 18L27 18L27 22Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31 43L31 19L27 19L27 43L31 43Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 127L54 127L54 131L27 131L27 127Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31 106L31 130L27 130L27 106L31 106Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M204 22L177 22L177 18L204 18L204 22Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M200 43L200 19L204 19L204 43L200 43Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1426 20.2818L29.1426 129.594L200.372 129.594L200.372 20.2818L29.1426 20.2818ZM27.8823 130.407L201.632 130.407L201.632 19.4685L27.8823 19.4685L27.8823 130.407Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M204 127L177 127L177 131L204 131L204 127Z" fill="#4AFFD3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M200 106L200 130L204 130L204 106L200 106Z" fill="#4AFFD3"/>
+                        <line x1="190" y1="75.5" x2="230" y2="75.5" stroke="#4AFFD3"/>
+                        <line y1="76.5" x2="40" y2="76.5" stroke="#4AFFD3"/>
+                        <line x1="114.5" y1="40" x2="114.5" stroke="#4AFFD3"/>
+                        <line x1="114.5" y1="150" x2="114.5" y2="110" stroke="#4AFFD3"/>
+                        </svg>
+                </h2>
             </div>
             <div class="wrap">
-                <div class="area">
+                <div class="col">
+                    <h3>Q</h3>
                     <div class="container">
-                        <h1>Q</h1>
-                        <article>
-                            <p>如何重置我的密碼？</p>
-                        </article>
-                    </div>
-                    <div class="container">
-                        <h1>A</h1>
-                        <article>
-                            <p>要重置密碼，請回到登錄頁面並點選忘記密碼超連結。
-                               按照提供的說明和流程重置您的密碼。</p>
-                        </article>
+                        <span>如何重置我的密碼？</span>
+                        <div class="arrow">
+                            <button>
+                                <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 0.370605L25.9904 26.6206H0.00961876L13 0.370605Z" fill="white"/>
+                                    </svg>
+                            </button>
+                            <button>
+                                <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 27.1667L25.9904 0.916748H0.00961876L13 27.1667Z" fill="white"/>
+                                    </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="arrow">
-                    <button>
-                        <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 0.370605L25.9904 26.6206H0.00961876L13 0.370605Z" fill="white"/>
-                            </svg>
-                    </button>
-                    <button>
-                        <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 27.1667L25.9904 0.916748H0.00961876L13 27.1667Z" fill="white"/>
-                            </svg>
-                    </button>
+                <div class="col">
+                    <h3>A</h3>
+                    <div class="container"> 
+                        <span>
+                            要重置密碼，請回到登錄頁面並點選忘記密碼超連結。按照提供的說明和流程重置您的密碼。
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
+        <a href="" class="btt">        
+            <div class="btt">
+                <p>Back To Top</p>
+            </div>
+        </a>                    
         <footer>
             <div class="row">
                 <div class="subscribe">
@@ -1176,6 +1237,12 @@
                 <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
             </div>
         </footer>
+        <a href="#">
+            <div class="donate">
+                <p>Donate</p>
+            </div>
+        </a>
+
     </main>
 </body> 
 </html>
