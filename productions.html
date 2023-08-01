@@ -6,307 +6,224 @@
     <title>Document</title>
     <link rel="stylesheet" href="header_footer.css">
     <style>
-        .about-block{
-            width: 100%;
-            position: relative;
-        }
-        main{
-            width: 100%;
-            height: 650px;
-            clip-path: polygon(25% 0, 100% 0, 100% 100%, 60% 100%);
-            background-image: url("pic_ele/macbeth.jpeg");
-            background-size: cover;
-        }
-        .main-frame{
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 50%);
-        }
-        .home-title.about{
-            /* background-color: #383; */
-            top: -500px;
-            width: 62.50%;
-            margin: auto;
-        }
-        .home-title.about h3{
-            width: 100%;
-            display: flex;
-            padding-left: 150px;
-            position: relative;
-        }
-        .home-title.about .h3 h3::after{
-            content:'';
-            width: 120%;
-            border-bottom: #4AFFD3 1px solid;
-            position: absolute;
-            top: 40%;
-            left: 20%;
-        }
-        .introduction{
-            position: relative;
-            top: -450px;
-            left: 30px;
-            width: 62.5%;
-            margin: auto;
-        }
-        .introduction::before{
-            position: absolute;
-            content: "";
-            /* width: 120%; */
-            height: 110%;
-            border-left: #FFC42C 1px solid;
-            bottom: 1em;
-            left: 0;
-        }
-        
-        .introduction article{
-            background-color: #0006;
-            color: #ddd;
-            padding: 2.5em;
-            width: 50%;
+    .production-block{
+        /* border: #383 1px solid; */
+        width: 100%;
+        /* height: 100%; */
+        background-image: url("attic.jpg");
+        background-size: cover;
+        position: relative;
+        z-index: -2;
+    }
+    .main{
+        width: 70%;
+        /* height: 500px; */
+        /* background-color: #fff; */
+        padding-top: 150px;
+        inset: 0;
+        margin: auto;
+        /* margin-bottom: 20em; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main .info{
+        /* width: 30%; */
+        margin: .5em;
+        background-color: #000b;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main .info .top{
+        padding: 1.8em;
+        line-height: 3em;
+    }
+    .main .info .top p{
+        font-size: 13px;
+        line-height: 1.8em;
+    }
+    .main .info .btm{
             font-size: 13px;
-            line-height: 2em;
-            position: relative;
-        }
-        .introduction article::before{
-            content: '';
-            height: 25px;
-            width: 25px;
-            border-left: 1px solid #4AFFd0;
-            border-bottom: 1px solid #4AFFd0;
-            left: 1em;
-            bottom: 1em;
-            position: absolute;
-        }
-        .introduction article::after{
-            content: '';
-            height: 25px;
-            width: 25px;
-            border-right: 1px solid #4AFFd0;
-            border-top: 1px solid #4AFFd0;
-            right: 1em;
-            top: 1em;
-            position: absolute;
-        }
-        .home-title.core-member{
-            /* background-color: #383; */
-            top: -200px;
-            width: 62.50%;
-            margin: auto;
-        }
-        .core-member-block{
-            /* border: #ddd 1px solid; */
-            width: 62.5%;
-            inset: 0;
-            margin: auto;
-        }
-        .home-title.core-member h2{
-            width: 10px;
-            line-height: 1.2em;
-            position: relative;
-            margin-left: -20%;
-        }
-        .home-title.core-member h2 .greenlight{
-            width: 50px;
-            position: absolute;
-            top: -450%;
-            left: -5px;
-            z-index: -1;
-        }
-        .home-title.core-member h3{
-            width: 170px;
-            margin-left: -12%;
-            position: relative;
-        }
-        .home-title.core-member h3 .title-decor{
-            position: absolute;
-            top: -550%;
-            right: 0px;
-        }
-        .core-member-block .wrap{
-            margin-top: -100px;
-            padding: 0 0 100px 0;
-            /* background-color: #66a; */
-            display: flex;
-            justify-content: space-around;
-            align-items: start;
-        }
-        .category-group .title{
-            text-align: end;
-            margin: 0 0 2em -1em;
-        }
-        .category-group .title button{
-            position: relative;
-            border: transparent;
-            background-color: transparent;
-        }
-        .category-group .title button::after{
-            position: absolute;
-            content: '▷';
-            top: 40%;
-            right: -20px;
-        }
-        /* .category-group .title button::after{
-            position: absolute;
-            width: 100%;
-            border-top: #4AFFD3 1px solid;
-            top: 0;
-            right: 0;
-        } */
-
-        .category-group .title h3{
-            font-size: 21px;
-            position: relative;
-            float: right;
-        }
-        .category-group .title h4{
-            font-size: 12px;
-            font-weight: 500;
-        }
-        .core-member-block .wrap .item-group{
-            /* background-color: #fff; */
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            }
-        .core-member-block .wrap .item-group .col{
-            width: 30%;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            margin-top: -50px;
-        }
-        .core-member-block .wrap .item-group .col:nth-child(2){
-            margin-top: -200px;
-        }
-        .core-member-block .wrap .item-group .col:nth-child(3){
-            margin-top: -290px;
-        }
-        .item-group .item .pic{
-            border: #4AFFd0 1px solid;
-            margin: 5em;
-            width: 150px;
-            height: 150px;
-            position: relative;
-        }
-        .item-group .item .pic::before{
-            width: 90%;
-            height: 90%;
-            content: "";
-            background-color: #4Fd5;
-            border: #4AFFd0 1px solid;
-            position: absolute;
-            top: -5%;
-            left: -5%;
-            z-index: -1;
-        }
-        .item-group .item .pic::after{
-            content: "";
-            width: 20px;
-            height: 20px;
-            border-right: #4AFFd0 2px solid;
-            border-bottom: #4AFFd0 2px solid;
-            bottom: -.2em;
-            right: -.2em;
-            position: absolute;
-        }
-        .item-group .item .pic img{
-            width: 100%;
-            height: 100%;
+            padding: 1.8em;
+            line-height: 1.8em;
+    }
+    .main .info .btm p:first-child{
+            text-indent: -1em;
+            padding: 1em 1em 0em 0em;
+    }
+    .main .info .top p:last-child{
+            text-indent: -1em;
+            padding: 0em 3em 1em 5.3em;
+    }
+    .main .info .btm p:first-child{
+            text-indent: -1em;
+            padding: 1em 1em 0em 1em;
+    }
+    .pic-wrap{
+        margin: .5em;
+        padding: 0 1em;
+        background-color: #000a;
+        width: 50%;
+        display: flex;
+        /* flex: 1; */
+        flex-direction: column;
+        position: relative;
+        z-index: -2;
+    }
+    .pic-wrap::after{
+        content: "";
+        width: 7%;
+        height: 100%;
+        background-image:linear-gradient(90deg, #000 0% ,#0000 100%);
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .pic-wrap::before{
+        content: "";
+        width: 7%;
+        height: 100%;
+        background-image:linear-gradient(270deg, #000 0% ,#0000 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+    .l-pic{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+    }
+    .l-pic .pic{
+            width: 85%;
+            border: #4AFFD3 1px solid;
+            margin: .5em;
+    }
+    .pic img{
+            width:100%;
             object-fit:cover;
             top: 0;
-        }
-        .item-group .item .name{
-            text-align:center ;
-            margin-top: -4em;
-        } 
-        .item-group .item .name>*{
-            font-size: 16x ;
-            font-weight: 600;
-            color: #bbb;
-        } 
-        /* =========================================================== */
-        /* =========================================================== */
-        /* =========================================================== */
-        .history-block{
-            /* border: #ddd 1px solid; */
-            /* margin-top: 5em; */
-            width: 62.5%;
-            inset: 0;
-            margin: auto;
-        }
-        .home-title.history h2{
-            width: 10px;
-            line-height: 1.2em;
-            position: relative;
-        }
-        .home-title.history h3{
-            width: 300px;
-            margin-left: 2em;
-            position: relative;
-        }
-        .home-title.history h3 .title-decor{
-            position: absolute;
-            top: -550%;
-            right: 150px;
-        }
-        .history-block .wrap{
-            width: 100%;
-            /* background-color: #faf; */
-        }
-        .history-block .wrap .year-package{
-            width: 100%;
-            /* background-color:#00f; */
-            margin-top: 2em;
-            display: flex;
-            justify-content: flex-start;     
-        }
-        .history-block .wrap .year-package button{
-            padding: 0 5em;
-            /* background-color: #4AFFd0; */
-            margin-right: 2em;
-            position: relative;
-            border: transparent;
-            background-color: transparent;
-        }
-        .history-block .wrap .year-package button h3{
-            font-size: 21px;
-        }
-        .history-block .wrap .year-package button::after{
-            content: "▷";
-            position: absolute;
-            top: 25%;
-            right: 15%;
-        }
-        .history-block .wrap .year-package button::after{
-            content: "▷";
-            position: absolute;
-            top: 25%;
-            right: 15%;
-        }
-        .history-block .wrap .info-group{
-            border-top: #bbb 1px solid;
-            margin-top: 1em;
-        }
-        .history-block .wrap .info-group .info{
-            padding-top: 1em;
-        }
-        .history-block .wrap .info-group span{
-            font-size: 3px;
-            margin-top: 2em;
-        }
-        .sl{
-            width: 100%;
-            /* background-image: url("about/title-decor.svg");
-            background-size: cover; */
-        }
-        .sl svg{
-            width: 100%;
-            height: 100%;
-            object-fit:cover;
-            top: 0;
-        }
-
+    }
+    .pic-wrap .l-pic button{
+        scale: .8;
+        border: transparent;
+        background-color: transparent;
+        flex: 1;
+        z-index: 1;
+    }
+    .s-pic-group{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: end;
+        margin: .5em;
+        z-index: -1;
+    }
+    .s-pic-group .pic{
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+    }
+    .s-pic-group .pic img{
+        width:100%;
+        height: 100%;
+        object-fit:cover;
+        top: 0;
+    }
+    .introduction-block{
+        width: 100%;
+    }
+    .introduction-block article{
+        width: 40%;
+        inset: 0;
+        margin: auto;
+        padding: 5em 0;
+        font-size: 16px;
+    }
+    .introduction-block article:first-child{
+        padding: 10em 0 5em 0;
+    }
+    .introduction-block article:nth-child(2){
+        position: relative;
+    }
+    .introduction-block article:nth-child(2)::before{
+        position: absolute;
+        content: '';
+        width: 120%;
+        border-top: #4AFFD3 1px solid;
+        top: 135px;
+        left: -10%;
+    }
+    .introduction-block article:last-child{
+        display: flex;
+    }
+    .introduction-block article:last-child .decor-bg{
+        width: 72%;
+        background-image: url('production/bgi_production.svg');
+        background-size: cover;
+    }
+    .introduction-block article .left-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .right-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .height-light{
+        color: #FFC42C;
+        padding-bottom: 2em;
+    }
+    .introduction-block article p{
+        line-height: 1.8em;
+        text-indent: 2em;
+        padding-bottom: 2em;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 1em;
+    }
+    .introduction-block article:last-child p{
+        text-indent: 0;
+    }
+    .introduction-block a{
+        width: 180px;
+        display: block;
+        inset: 0;
+        margin:auto ;
+        margin-top: 3em;
+        background-color: #0000;
+        border: #FFC42C 3px solid;
+        padding: .5em 0;
+    }
+    .introduction-block a span.ch{
+        /* width: 100%; */
+        display: block;
+        inset: 0;
+        /* margin: auto; */
+        color: #FFC42C;
+        font-size: 18px;
+        text-align: center;
+        margin:.2em 0 -1em 0 ;
+    }
+    .introduction-block a span.en{
+        display: block;
+        color: #FFC42C;
+        font-size: 12px;
+        /* line-height: 1em; */
+        margin:.2em 0 .2em 0;
+        text-align: center;
+    }
+    </style>
     </style>
 </head>
 <body>
@@ -476,304 +393,156 @@
             </a>
         </nav>
     </header>
-    <div class="about-block">
-        <main>
-            <div class="main-frame"></div>
-        </main>
-        <div class="home-title about">
-            <h2>關於我們</h2>
-            <h3>About Us</h3>
-        </div>
-        <div class="introduction">
-            <article>
-                臺灣藝文媒體界譽為現代戲劇模範生的無名小卒劇團，2016年成立，是臺灣最具歷史與規模的現代戲劇團體。自2020年起，年年榮獲文化部「分級獎勵團隊」，且評鑑成績總是名列前茅，並數次奪得第一名的殊榮。<br>
-                在現任藝術總監規劃下，持續推動「西方經典新詮」、「莎士比亞」及「歐美當代經典」等不同系列的演出計劃，不僅展現臺灣跨文化戲劇製作的高度創意，同時，也積極引介當代臺灣及歐美劇作家的作品。<br>
-                《第十二夜》則是從2018年首演至今，已三度加演，口碑盛讚，被譽為最成熟最爽看的臺灣音樂劇。
-            </article>
-        </div>        
-    </div>
-    <div class="core-member-block">
-        <div class="home-title core-member">
-            <h2>
-                主要成員
-                <svg class="greenlight" width="91" height="1784" viewBox="0 0 91 1784" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="91" height="1784" fill="url(#paint0_diamond_87_3980)"/>
-                    <defs>
-                    <radialGradient id="paint0_diamond_87_3980" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(45.5 892) rotate(90) scale(892 45.5)">
-                    <stop stop-color="#4AFFD3" stop-opacity="0.6"/>
-                    <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
-                    </radialGradient>
-                    </defs>
-                    </svg>
-            </h2>
-            <h3>
-                Core Members
-                <svg class="title-decor" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 88.7H72V91.7H57.3333V88.7Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 77L60 91.6667L57 91.6667L57 77L60 77Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M127.167 88.9659L127.167 21.7661L59.2331 21.766L59.2331 88.9659L127.167 88.9659ZM127.667 21.2661L58.7331 21.266L58.7331 89.4659L127.667 89.4659L127.667 21.2661Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
-                    </svg>                    
-            </h3>
-        </div>
-        <div class="wrap">
-            <section class="category-group">
-                <div class="title">
-                    <button>
-                        <h3>表導</h3>
-                        <h4>Performers</h4>
-                    </button>
-                </div>
-                <div class="title">
-                    <button>
-                        <h3>設計</h3>
-                        <h4>Designers</h4>
-                    </button>
-                </div>
-                <div class="title">
-                    <button>
-                        <h3>行政</h3>
-                        <h4>Administration</h4>
-                    </button>
-                </div>
-            </section>
-            <section class="item-group">
-                <div class="col">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/fufu.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/songjun.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/cingyang.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/elaine.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/manfei.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/lesley.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/sensen.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/ziyiu.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/jiawwen.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="sl">
-        <svg class="sl" width="1920" height="274" viewBox="0 0 1920 274" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M-26 123.448C-11.6667 50.6793 73.7 -65.411 300.5 52.3724C584 199.602 966 358.253 1516 123.448C1956 -64.3964 2289.33 45.1794 2401 123.448" stroke="#4AFFD3" stroke-opacity="0.5" stroke-width="3"/>
-            <path d="M-194 146.566C-75.141 99.8812 210.688 34.5231 403.129 146.566C643.681 286.619 700.193 263.503 936.244 146.566C1172.29 29.6281 1250.31 6.51255 1473.36 146.566C1696.41 286.619 1928.46 338.968 2122 146.566" stroke="#FF2CAA" stroke-opacity="0.5" stroke-width="3"/>
-        </svg>
-    </div>
-    <div class="history-block">
-            <div class="home-title history">
-                <h2>流年記事</h2>
-                <h3>
-                    Production History 
-                    <svg class="title-decor" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M130 22H115.333V19H130V22Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M127 33.6667L127 19L130 19L130 33.6667L127 33.6667Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 22L72 22L72 19L57.3333 19L57.3333 22Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M60 33.6667L60 19L57 19L57 33.6667L60 33.6667Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M130 88.9999L115.333 88.9999L115.333 91.9999L130 91.9999L130 88.9999Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M127 77L127 91.6667L130 91.6667L130 77L127 77Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3333 88.7H72V91.7H57.3333V88.7Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M60 77L60 91.6667L57 91.6667L57 77L60 77Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M127.167 88.9659L127.167 21.7661L59.2331 21.766L59.2331 88.9659L127.167 88.9659ZM127.667 21.2661L58.7331 21.266L58.7331 89.4659L127.667 89.4659L127.667 21.2661Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M91 150L91 4.37114e-08L92 0L92 150L91 150Z" fill="#4AFFD3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
-                        </svg>                    
-                </h3>
+    <div class="production-block">
+        <div class="main">
+            <div class="info"> 
+                <article class="top">
+                    <h2>❮ 屋根裏 ❯</h2>
+                    <h3>The Attic やねうら</h3>
+                
+                    <p>首演資訊 ┃ 2019.05.24 (五)19:00-19:40</p>
+                    <p>┃【國立臺北藝術大學戲劇廳】</p>
+                </article>
+                <article class="btm">
+                    <p>劇 作 家｜坂手洋二</p>
+                    <p>劇本翻譯｜陳重穎</p>
+                    <p>導 演｜重田誠治</p>
+                    <p>攝影｜林効賢、達 悟、鄭文凱<br>（依姓氏筆劃排列）</p>
+                </article>
+                
             </div>
-            <div class="wrap">
-                <div class="year-package">
-                    <div class="year">
-                        <button>
-                            <h3>2023</h3>
-                        </button>
+            <div class="pic-wrap">
+                <div class="l-pic">
+                    <button>
+                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.343628 8.87617L6.98425 15.6944C7.44324 16.1656 8.18542 16.1656 8.63953 15.6944L9.74304 14.5613C10.202 14.0901 10.202 13.328 9.74304 12.8618L5.03601 8.02891L9.74304 3.19602C10.202 2.72477 10.202 1.96273 9.74304 1.49649L8.64441 0.353442C8.18542 -0.117814 7.44324 -0.117814 6.98914 0.353442L0.348511 7.17162C-0.115356 7.64288 -0.115356 8.40491 0.343628 8.87617Z" fill="#FFC42C"/>
+                        </svg>
+                    </button>
+                    <div class="pic">
+                        <img src="pic_ele/attic-1.jpeg" alt="">
                     </div>
-                    <div class="info-group">
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
+                    <button>
+                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74402 8.87617L3.10339 15.6944C2.64441 16.1656 1.90222 16.1656 1.44812 15.6944L0.344604 14.5613C-0.11438 14.0901 -0.11438 13.328 0.344604 12.8618L5.05164 8.02891L0.344604 3.19602C-0.11438 2.72477 -0.11438 1.96273 0.344604 1.49649L1.44324 0.353442C1.90222 -0.117814 2.64441 -0.117814 3.09851 0.353442L9.73914 7.17162C10.203 7.64288 10.203 8.40491 9.74402 8.87617Z" fill="#FFC42C"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="s-pic-group">
+                    <div class="pic">
+                        <img src="pic_ele/attic-3.jpeg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="pic_ele/attic-4.jpeg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="pic_ele/attic-1.jpeg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="pic_ele/attic-7.jpeg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="pic_ele/attic-5.jpeg" alt="">
                     </div>
                 </div>
-                  <div class="year-package"> 
-                    <div class="year">
-                        <button>
-                            <h3>2022</h3>
-                        </button>
-                    </div>
-                    <div class="info-group">
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                        <div class="info">
-                            <span>2023.06</span>
-                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                        </div>
-                    </div>
-                </div>
-               <div class="year-package">
-                    <div class="year">
-                        <button>
-                            <h3>2021</h3>
-                        </button>
-                    </div>
-                </div>
-                <div class="year-package">
-                    <div class="year">
-                        <button>
-                            <h3>2020</h3>
-                        </button>
-                    </div>
-                </div>
-                <div class="year-package">
-                    <div class="year">
-                        <button>
-                            <h3>2019</h3>
-                        </button>
-                    </div>
-                </div>
-                <div class="year-package">
-                    <div class="year">
-                        <button>
-                            <h3>2018</h3>
-                        </button>
-                    </div>
-                </div>
-                 
             </div>
-        </div>
+        </div>    
     </div>
-    <a href="" class="btt">        
-        <div class="btt">
-            <p>Back To Top</p>
-        </div>
-    </a>    
+    <div class="introduction-block">
+        <article>
+            <p class="height-light">「以自己的意識選擇了隻身一人的一天，媲美飛逝虛度的一年……。」</p>
+            <p>一宗自殺懸案，一場偵查之旅，將各地「屋根裏」的擁有者連結起來。逃學的少女、一具不
+                知名的屍體、被軟禁的少女......，一幕幕撲朔迷離的事件，穿越地域、年代、時空界限，
+                相繼在這狹小的屋根裏，依序上演。</p>
+        </article>
+        <article>
+            <svg class="left-greenlight" width="37" height="2053" viewBox="0 0 37 2053" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="37" height="2053" fill="url(#paint0_diamond_108_322)" fill-opacity="0.34"/>
+                <defs>
+                <radialGradient id="paint0_diamond_108_322" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.5 1026.5) rotate(90) scale(1026.5 18.5)">
+                <stop stop-color="#4AFFD3"/>
+                <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
+            </svg>
+            <svg class="right-greenlight" width="37" height="2053" viewBox="0 0 37 2053" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="37" height="2053" fill="url(#paint0_diamond_108_322)" fill-opacity="0.34"/>
+                <defs>
+                <radialGradient id="paint0_diamond_108_322" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.5 1026.5) rotate(90) scale(1026.5 18.5)">
+                <stop stop-color="#4AFFD3"/>
+                <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
+                </svg>
+                
+            <h4>
+                導演理念
+                <svg width="69" height="137" viewBox="0 0 69 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M68.6667 25H54V22H68.6667V25Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.667 36.6667L65.667 22L68.667 22L68.667 36.6667L65.667 36.6667Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333328 25L15 25L15 22L0.333328 22L0.333328 25Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 36.6667L3 22L0 22L-6.41101e-07 36.6667L3 36.6667Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M68.6667 86L54 86L54 89L68.6667 89L68.6667 86Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.667 73.9998L65.667 88.6665L68.667 88.6665L68.667 73.9998L65.667 73.9998Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333328 85.7002H15V88.7002H0.333328V85.7002Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 74.0003L3 88.667L0 88.667L6.41101e-07 74.0003L3 74.0003Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M66.5285 87.8369L66.5285 24.4715L2.47147 24.4715L2.47146 87.8369L66.5285 87.8369ZM67 24L2 24L2 88.3084L67 88.3084L67 24Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33 137L33 4.37117e-08L34 0L34 137L33 137Z" fill="#4AFFD3"/>
+                </svg>
+            </h4>
+
+            <p>「生活就算受狹窄的居住環境等不利因素侷限，但仍可以有廣闊的視野及跳出生活框架的心，
+                只要肯想多一些，走遠一些，所得到極體會到的事物自然豐富充實。」</p>
+            <p>在現今社會或是我們這個時代的環境，往往是在生活節奏匆促且人口密集的城市成長。相對的
+                城市中那些狹小的居住環境也透露著一種壓迫及順從。而這些環境所帶給我們的，在直觀上或
+                許有太多的抱怨及無奈。但於此同時，我們的創作能量卻是超越那窄小的空間之外。回歸到小
+                時候，不知道大家有沒有躲在閣樓或是某個家中的「秘密基地」過呢？而那樣的空間氛圍大多是
+                高度需要低頭進去，坪數也不大的空間。而我們為何會選擇那樣的空間或為最具有想像力及創
+                造力的「秘密基地」？在那樣的空間裡，我們是自由的。在選擇此劇本裡，看到的是與當代社會
+                有較為意象及氛圍形態上的連結，意想不到的事，《屋根裏》卻開始回應這個社會：「流行性疾
+                病所伴隨的社會恐慌。」因此，這些元素也將在本演出中以我們的角度，回應社會。</p>
+            <a href="">
+                <span class="ch">線上節目冊</span><br>
+                <span class="en">Online-Programme </span>
+            </a>
+        </article>
+        <article>
+            <div>
+                <h4>演職人員名單</h4>
+                <p>
+                製 作 人 ｜朱宏章、王世信<br>
+                執行製作｜林家文、林隆圭<br>
+                舞台監督｜鍾宜芳<br>
+                劇 作 家｜坂手洋二<br>
+                劇本翻譯｜陳重穎<br>
+                導 演｜重田誠治<br>
+                舞台設計｜黃湘淳<br>
+                舞台技術設計｜呂 中<br>
+                服裝設計｜石蕙瑄<br>
+                燈光設計｜曹芯慈<br>
+                音樂設計｜施惟中<br>
+                動作設計｜劉文誠<br>
+                平面設計｜李逸塵<br>
+                演 員｜王惟漢、李東霖、陳虹均、賀國熹、黃萱軒、鄧梓澄、賴建岱、蘇耀庭<br>（依姓氏筆劃排列）<br>
+                導演助理｜黃子芸、楊千毅<br>
+                排演助理｜沈佳賢、陳珮欣<br>
+                舞監助理｜周安迪、邱詠恩<br>
+                燈光技術統籌｜歐思鎂<br>
+                行政統籌｜鄭文凱<br>
+                平面攝影｜達 悟
+                </p>
+            </div>
+            
+        </article>
+    </div>
+    
+    <div class="btt">
+        <a href="">       
+             <p>Back</p>
+             <p>To</p>
+             <p>Top</p>
+        </a> 
+    </div>
+
     <footer>
         <div class="row">
             <div class="subscribe">
@@ -794,7 +563,7 @@
                         <a href="">ALL NEWS</a>
                     </li>
                     <li>
-                        <a href="">newsS' GUARANTEE</a>
+                        <a href="">MEMBERS' GUARANTEE</a>
                     </li>
                     <li>
                         <a href="">PARTNERS</a>
@@ -849,10 +618,11 @@
             <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
         </div>
     </footer>
-    <a href="">
-        <div class="donate">
+    
+    <div class="donate">
+        <a href="#">
             <p>Donate</p>
-        </div>
-    </a>    
+        </a>    
+    </div>
 </body>
 </html>

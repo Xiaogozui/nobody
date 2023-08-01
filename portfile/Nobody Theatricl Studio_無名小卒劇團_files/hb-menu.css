@@ -1,0 +1,44 @@
+.hb{
+    width: 20px;
+    height: 20px;
+}
+.hb span{
+    width: 80%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+.hb span:nth-child(1){
+    translate: 0px -10px;
+    rotate: 0deg;
+    transition: translate .3s .3s,
+                rotate .3s 0s;
+}
+.hb span:nth-child(2){
+    opacity: 1;
+    transition: opacity .3s .6s;
+}
+.hb span:nth-child(3){
+    translate: 0px 10px;
+    rotate: 0deg;
+    transition: translate  .3s .3s,
+                rotate .3s 0s;
+}
+#menu-switch:checked + .m-header .hb span:nth-child(1){
+    translate: 0 0;
+    rotate: 45deg;
+    transition: translate  .3s .3s,
+                rotate .3s .6s;
+}
+#menu-switch:checked + .m-header .hb span:nth-child(2){
+    opacity: 0;
+    transition: opacity .3s;
+}
+#menu-switch:checked + .m-header .hb span:nth-child(3){
+    translate: 0 0;
+    rotate: -45deg;
+    transition: translate .3s .3s,
+                rotate .3s .6s;
+}
