@@ -61,7 +61,7 @@
             margin-bottom: 75px;
         }
         .wrap .col:first-child{
-            margin:0 .5em;
+            margin:.5em .5em;
             background-color: #fff;
             padding-right: 1em;
             padding-bottom: 4em;
@@ -70,13 +70,13 @@
         .col:last-child{
             flex: 1;
             /* height: 640px; */
-            margin:0 .5em;
+            margin:.5em .5em;
             display: flex;
             flex-direction: column;
             align-items: center;
             border: #FFC42C 2px solid;
             box-sizing: border-box;
-            padding: 50px 5em;
+            padding: 5em 1em;
         }
         .pic{
             /* background-color: #fff; */
@@ -96,7 +96,7 @@
             color: #aaa;
         }
         .label-title .ch{
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 700;
         }
         .label-title .en{
@@ -130,9 +130,8 @@
             margin: 1.5em 0;
         }
         .col .row:nth-child(8) input{
-            width: 10%;
-            margin-top: .5em;
-            margin-left: .5em;
+            width: 2.8em;
+            margin: 1em .5em 0 1.5em;
         }
         .col .row .subscribe>*{
             display: block;
@@ -149,16 +148,24 @@
             padding: 10px;
             border: transparent;
         }
+        .col .row button:hover{
+            background-color: #FF2CAA;
+            color: #fff;
+        }
+        .col .row button:hover:active{
+            background-color: #4AFFD3;
+            color: #fff;
+        }
         .col .title{
-            margin-bottom: 40px;
+            margin-bottom: 2em;
         }
         .col .title h2{
-            font-size: 24px;
+            font-size: 21px;
             color: #FFC42C;
         }
         article{
             padding: 10px;
-            font-size: 18px;
+            font-size: 13px;
             line-height: 1.8em;
         }
         article p{
@@ -409,14 +416,14 @@
                             <label for="acc" class="ch">信箱</label>
                             <label for="acc" class="en">E-mail Address</label>
                         </div>
-                        <input type="email" id="acc" required>
+                        <input type="email" id="acc"  placeholder="example@icloud.com" required>
                     </div>
                     <div class="row">
                         <div class="label-title">
                             <label for="pw-first" class="ch">密碼</label>
                             <label for="pw-first" class="en">Password</label>
                         </div>
-                        <input type="password" id="pw-first" required>
+                        <input type="password" id="pw-first" placeholder="請輸入6位數以上密碼(含英文字母與數字)" required>
                     </div>
                     <div class="row">
                         <div class="label-title">
@@ -540,10 +547,10 @@
             <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
         </div>
     </footer>
-    <a href="">
-        <div class="donate">
+    <div class="donate">
+        <a href="#">
             <p>Donate</p>
-        </div>
-    </a>
+        </a>
+    </div>
 </body>
 </html>

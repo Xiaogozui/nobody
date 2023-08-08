@@ -120,7 +120,7 @@
         }
         .home-title.core-member h3 .title-decor{
             position: absolute;
-            top: -550%;
+            top: -300%;
             right: 0px;
         }
         .core-member-block .wrap{
@@ -139,12 +139,24 @@
             position: relative;
             border: transparent;
             background-color: transparent;
+            cursor: pointer;
         }
         .category-group .title button::after{
+            display: none;
             position: absolute;
             content: '▷';
             top: 40%;
-            right: -20px;
+            right: -15px;
+            
+        }
+        .category-group .title button:hover::after{
+            display: block;
+            color: #4AFFD3;
+            animation: move .3s linear 0s infinite alternate;
+        }
+        @keyframes move {
+            0%{ right: -15px;}
+            100%{ right: -20px;}
         }
         /* .category-group .title button::after{
             position: absolute;
@@ -162,6 +174,9 @@
         .category-group .title h4{
             font-size: 12px;
             font-weight: 500;
+        }
+        .category-group .title button:hover >*{
+            color: #4AFFD3;
         }
         .core-member-block .wrap .item-group{
             /* background-color: #fff; */
@@ -188,6 +203,10 @@
             width: 150px;
             height: 150px;
             position: relative;
+        }
+        .item-group .item:hover .pic{
+            scale: 105%;
+            animation: zooming .29s 0s infinite alternate-reverse;
         }
         .item-group .item .pic::before{
             width: 90%;
@@ -221,16 +240,18 @@
             margin-top: -4em;
         } 
         .item-group .item .name>*{
-            font-size: 16x ;
-            font-weight: 600;
+            font-size: 16px ;
+            font-weight: 500;
             color: #bbb;
+        } 
+        .item-group .item:hover .name>*{
+            font-weight: 500;
+            color: #4AFFD3;
         } 
         /* =========================================================== */
         /* =========================================================== */
         /* =========================================================== */
         .history-block{
-            /* border: #ddd 1px solid; */
-            /* margin-top: 5em; */
             width: 62.5%;
             inset: 0;
             margin: auto;
@@ -247,11 +268,12 @@
         }
         .home-title.history h3 .title-decor{
             position: absolute;
-            top: -550%;
+            top: -300%;
             right: 150px;
         }
         .history-block .wrap{
             width: 100%;
+            margin-bottom: 5em;
             /* background-color: #faf; */
         }
         .history-block .wrap .year-package{
@@ -259,46 +281,56 @@
             /* background-color:#00f; */
             margin-top: 2em;
             display: flex;
-            justify-content: flex-start;     
         }
         .history-block .wrap .year-package button{
-            padding: 0 5em;
-            /* background-color: #4AFFd0; */
-            margin-right: 2em;
+            width: 50px;
+            /* margin-right: 2em; */
             position: relative;
             border: transparent;
             background-color: transparent;
+            cursor: pointer;
         }
         .history-block .wrap .year-package button h3{
             font-size: 21px;
+            letter-spacing: 2px;
         }
+        /* .history-block .wrap .year-package button:focus h3{
+            color: #FFC42C;
+        } */
         .history-block .wrap .year-package button::after{
-            content: "▷";
+            content: '';
+            border-top: 6px solid transparent;
+            border-left: 9px solid #ddd;
+            border-bottom: 6px solid transparent;
             position: absolute;
-            top: 25%;
-            right: 15%;
+            top: 40%;
+            right: -25px;
+            transition: .2s .2s linear;
         }
-        .history-block .wrap .year-package button::after{
-            content: "▷";
+        .history-block .wrap .year-package button:focus::after{
+            content: '';
+            border-top: 6px solid transparent;
+            border-left: 9px solid #FFC42C;
+            border-bottom: 6px solid transparent;
             position: absolute;
-            top: 25%;
-            right: 15%;
+            top: 40%;
+            right: -25px;
+            transform: rotate(90deg);
+            transition: .2s 0s linear;
         }
+        
         .history-block .wrap .info-group{
+            display: none;
             border-top: #bbb 1px solid;
-            margin-top: 1em;
+            margin: 2em 0 0 4em;
+            padding: 0 0 0 1em;
+            flex: 1;
         }
         .history-block .wrap .info-group .info{
             padding-top: 1em;
         }
-        .history-block .wrap .info-group span{
-            font-size: 3px;
-            margin-top: 2em;
-        }
         .sl{
             width: 100%;
-            /* background-image: url("about/title-decor.svg");
-            background-size: cover; */
         }
         .sl svg{
             width: 100%;
@@ -308,6 +340,30 @@
         }
 
     </style>
+	<script src="./js/jquery-3.7.0.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$('#2023').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2023").slideToggle(1000, 'easeInOutBack');
+                $('#2023::after').css({
+                    'border-top': '6px solid transparent',
+                    'border-left': '9px solid #FFC42C',
+                    'border-bottom': '6px solid transparent',
+                    'position': 'absolute',
+                    'top': '40%',
+                    'right': '-25px',
+                }).animate({
+                    'transform': 'rotate(90deg)',
+                    'color':'#FFC42C',
+                });
+                $('#2023 h3').animate({
+                    'color':'#FFC42C'
+                })
+			})
+		})	
+	</script>    
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -547,98 +603,116 @@
             <section class="item-group">
                 <div class="col">
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/fufu.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/fufu.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/songjun.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/songjun.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/cingyang.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/elaine.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/manfei.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="portfile/lesley.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/cingyang.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col">
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/sensen.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/elaine.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/ziyiu.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/manfei.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="item">
-                        <div class="pic">
-                            <img src="portfile/jiawwen.jpg" alt="">
-                        </div>
-                        <div class="name">
-                            <span>職位</span>
-                            <span>|</span>
-                            <span>姓名</span>
-                        </div>
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/lesley.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/sensen.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/ziyiu.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="portfile/jiawwen.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>職位</span>
+                                <span>|</span>
+                                <span>姓名</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -673,11 +747,11 @@
             <div class="wrap">
                 <div class="year-package">
                     <div class="year">
-                        <button>
+                        <button id="2023">
                             <h3>2023</h3>
                         </button>
                     </div>
-                    <div class="info-group">
+                    <div class="info-group 2023">
                         <div class="info">
                             <span>2023.06</span>
                             <span>Title: Content: Buy yourselves some PQ memories.......</span>
@@ -706,7 +780,7 @@
                 </div>
                   <div class="year-package"> 
                     <div class="year">
-                        <button>
+                        <button id="2022">
                             <h3>2022</h3>
                         </button>
                     </div>
@@ -739,28 +813,28 @@
                 </div>
                <div class="year-package">
                     <div class="year">
-                        <button>
+                        <button id="2021">
                             <h3>2021</h3>
                         </button>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
-                        <button>
+                        <button id="2020">
                             <h3>2020</h3>
                         </button>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
-                        <button>
+                        <button id="2019">
                             <h3>2019</h3>
                         </button>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
-                        <button>
+                        <button id="2018">
                             <h3>2018</h3>
                         </button>
                     </div>
@@ -769,11 +843,13 @@
             </div>
         </div>
     </div>
-    <a href="" class="btt">        
-        <div class="btt">
-            <p>Back To Top</p>
-        </div>
-    </a>    
+    <div class="btt">
+        <a href="">       
+             <p>Back</p>
+             <p>To</p>
+             <p>Top</p>
+        </a> 
+    </div>
     <footer>
         <div class="row">
             <div class="subscribe">
@@ -794,7 +870,7 @@
                         <a href="">ALL NEWS</a>
                     </li>
                     <li>
-                        <a href="">newsS' GUARANTEE</a>
+                        <a href="">MEMBERS' GUARANTEE</a>
                     </li>
                     <li>
                         <a href="">PARTNERS</a>
@@ -849,10 +925,10 @@
             <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
         </div>
     </footer>
-    <a href="">
-        <div class="donate">
+    <div class="donate">
+        <a href="#">
             <p>Donate</p>
-        </div>
-    </a>    
+        </a>
+    </div>
 </body>
 </html>

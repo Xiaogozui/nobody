@@ -6,11 +6,10 @@
     <title>Nobody Theatricl Studio|無名小卒劇團</title>
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="hb-menu.css">
-    <style>
-        .home-blocks.main{
+    <style>.home-blocks.main{
             /* border: #383 1px solid; */
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
             /* background-image: url("ugly_one.jpg"); */
             background-size: cover;
             position: relative;
@@ -191,7 +190,7 @@
             z-index: 2;
         }
         .home-main-btn-group{
-            width: 62.5%;
+            width:80%;
             padding-top: 1em;
             margin: auto;
             display: flex;
@@ -205,34 +204,34 @@
             background-color: #000;
             border: 3px solid #FFF;
             background: rgba(0, 0, 0, 0.50);
-            margin: 10px;
+            margin: .5em;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             text-align: justify-all;
-            padding: 1em ; 
+            padding: .5em 1.8em; 
         }
         .home-main-btn-group-white_border:hover {
             border:3px solid #FFC42C;
-            scale: 110%;
+            scale: 105%;
             animation: zooming .29s 0s infinite alternate-reverse;
         }
         .home-main-btn-group-white_border.yellow_border{
-            padding: 1em;
+            padding: .5em 1.8em;
             border: 3px solid #FFC42C
         }
         .home-main-btn-group-white_border.yellow_border:hover {
             border:3px solid #FF2CAA;
-            scale: 110%;
+            scale: 105%;
             animation: zooming .29s 0s infinite alternate-reverse;
         }
         .home-main-btn-group-white_border .longest{
             width: 300px;
         }
         .home-main-btn-group-white_border p{
-            font-family:Helvetica, sans-serif;
+            /* font-family:'BrownMedium',Helvetica, sans-serif; */
             font-weight: 700;
             padding-bottom: 3px;
             color: #fff;
@@ -253,7 +252,7 @@
         }
         .home-main-btn-group-white_border .en{
             font-size: 14px;
-            font-weight: 550;
+            font-weight: 400;
         }
         .pic-change-btn{
             width: 305px;
@@ -319,17 +318,22 @@
             /* margin-top: 230px; */
         }
         .card_group .card{
-            width: 370px;
-            height: 370px;
+            width: 270px;
+            height: 270px;
             margin: 10px;
             position: relative;
+            overflow: hidden;
         }
         .card_group .card img{
             width:100%;
             height: 100%;
             object-fit:cover;
             top: 0;
-
+            animation: card-zoom 5s 0s infinite alternate;
+        }
+        @keyframes card-zoom{
+              0%{ transform: scale(1.2)};
+            100%{ transform: scale(1)};
         }
         .card_group .card .info_frame{
             transform: scale(0.95);
@@ -349,6 +353,20 @@
             justify-content: space-between;
             align-items: center;
             box-sizing: border-box;
+        }
+        .card_group .card .card-decor{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .card_group .card:hover .card-decor{
+            display: block;
+            scale: 90%;
+            animation: zooming .3s 0s infinite alternate-reverse;
+            pointer-events: none;
         }
         .tag-new_release {
             padding: 5px 20px;
@@ -396,14 +414,23 @@
             padding: 8px 45px;
             text-align: center;
         }
-        .btn-style-18px-12px span p:first-child{
+        .btn-style-18px-12px:hover{
+            border:3px solid #FF2CAA;
+            scale: 105%;
+            animation: zooming .29s 0s infinite alternate-reverse;
+        }
+        .btn-style-18px-12px p:first-child{
             font-size: 16px;
             color: #FFC42C;
             margin-bottom: 5px;
         }
-        .btn-style-18px-12px span p:last-child{
+        
+        .btn-style-18px-12px p:last-child{
             font-size: 13px;
             color: #FFC42C;
+        }
+        .btn-style-18px-12px:hover p{
+            color: #FF2CAA;
         }
         {}
         .home-blocks.ticket{
@@ -422,17 +449,7 @@
             width: 120%;
             margin:auto;
         }
-        .home-title.ticket-shop .wrap{
-            /* background-color: #fff; */
-            display: flex;
-        }
-        .home-title.ticket-shop .wrap>*{
-            display: inline-block;
-            /* border: #383 1px solid; */
-        }
         .home-title.ticket-shop h2{
-            /* border: #383 1px solid; */
-            /* box-sizing: border-box; */
             padding:0 5px ;
             position: relative;
         }
@@ -444,21 +461,6 @@
             position: absolute;
             top: -45px;
             z-index: -1;
-        }
-        .home-ticket_shop .home-title {
-            /* position: absolute; */
-            top: 100px;
-            left: 360px;
-            
-        }
-        .home-ticket_shop .home-title h2{
-            color: #FFC42C;
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .home-ticket_shop .home-title h3{
-            margin-left: 100px;
-            color: #D9D9D9;
         }
         {}
         .ticket_group{
@@ -483,6 +485,7 @@
             height: 160px;
             position: relative;
             margin: .5em;
+            /* flex: 1; */
         }
         .ticket_group .ticket_wrap .pic img{
             width:100%;
@@ -501,18 +504,27 @@
             position: absolute;
             z-index: -1;
         }
+        .ticket_group .pic::after{
+            content: '';
+            height: 100%;
+            right: -1em;
+            border: #4AFFD3 1px solid;
+            position: absolute;
+            z-index: -1;
+        }
         .ticket_group .ticket_wrap .info-row{
             width: 50%;
             display: flex;
             flex-direction: column;
             flex: 1;
-            margin: .5em;
+            margin: .5em .5em .5em 1.5em;
             justify-content: space-between;
         }
         .ticket_group .ticket_wrap .align-bottom{
             /* border: #D9D9D9 1px solid; */
             display: flex;
-            /* flex: 1; */
+            flex-wrap: wrap;
+            flex: 1;
             align-items: end;
             width: 100%;
         }
@@ -529,34 +541,33 @@
             font-size: 21px;
             color: #FFC42C;
         }
-        .ticket_wrap  .hint{
-            /* border: #4AFFD3 1px solid; */
-            font-size: .1rem;
-            padding: 5px 5px 0 5px;
-        }
+        
         .ticket_wrap .align-bottom .num_selects{
             display: flex;
+            margin: .5em .5em 0 0;
+            /* flex-wrap: wrap; */
         }
         .ticket_wrap .select_box{
+            /* flex: 1; */
             background-color: #dddd;
             border: transparent;
             font-size: 16px;
-            margin-right: 5px ;
+            margin-right: .5em ;
             text-align: center;
         }
         .ticket_wrap button{
             /* width: 100%; */
-            background-color: #000;
+            flex: 1;
+            background-color: transparent;
             border: 1px solid #FFC42C;
             padding: 5px 10px;
-            /* margin:0 20px 0 0px; */
         }
         .ticket_wrap button p:first-child{
-            /* font-size: 14px; */
+            font-size: 1.2em;
             color: #FFC42C;
         }
-        .ticket_wrap button p:last-child{
-            /* font-size: 9px; */
+        .ticket_wrap button p:nth-child(2){
+            font-size: 1em;
             color: #FFC42C;
         }
 
@@ -629,12 +640,9 @@
         }
         .mer_group .pic::after{
             content: "";
-            width: 30px;
-            height: 30px;
-            bottom: 0;
-            right: 0;
-            border-right: #4AFFD3 5px solid;
-            border-bottom: #4AFFD3 5px solid;
+            height: 100%;
+            right: -1em;
+            border-right: #4AFFD3 2px solid;
             position: absolute;
             z-index: 1;
         }
@@ -649,14 +657,14 @@
             flex-direction: column;
             justify-content: space-between;
             flex: 1;
-            margin: .5em;
+            margin: .5em .5em .5em 1.5em;
             width: 50%;
         }
         .mer_group .mer_wrap .align-bottom{
             /* border: #D9D9D9 1px solid; */
             display: flex;
             align-items: end;
-            width: 100%;
+            margin: .5em .5em 0 0;
         }
         .info .title p:nth-child(2){
             width: 100%;
@@ -665,12 +673,13 @@
         }
         .mer_wrap .align-bottom .num_selects{
             display: flex;
+
         }
         .mer_wrap .select_box{
             background-color: #dddd;
             border: transparent;
             font-size: 16px;
-            margin-right: 5px ;
+            margin-right: .5em ;
             text-align: center;
         }
         
@@ -689,7 +698,12 @@
             /* font-size: 9px; */
             color: #FFC42C;
         }
-
+        .num_selects button:hover{
+            border: 1px solid #FF2CAA;
+        }
+        .num_selects button:hover p{
+            color: #FF2CAA;
+        }
         {}
         .home-blocks.faq{
             width: 100%;
@@ -760,7 +774,6 @@
             display: flex;
             flex: 1;
             flex-direction: column;
-            /* justify-content: center; */
 
         }
         .faq .container h3{
@@ -776,20 +789,24 @@
             font-size: 13px;
         }
         .faq .arrow{
-            scale: 0.8;
-            width: 20%;
-            height: 20%;
             inset: 0;
             margin: auto;
             display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .faq button{
-            width: 100%;
+            box-sizing: border-box;
+            padding: 0 1em;
             background-color: #0000;
             border: #0000;
-            scale: 50%;
+            /* scale: 200%; */
+        }
+        .faq button p{
+            font-size: 21px;
+        }
+        .faq button:hover p{
+            color: #FFC42C;
+            scale: 1.2;
+            /* animation: zooming 0.3s 0s infinite alternate; */
         }
     </style>
 
@@ -972,7 +989,7 @@
             <div class="premium-image" style="background-image: url('growing.jpg')"></div>
             <div class="pic_premieum-frame">
                 <div class="big-logo">
-                    <a href="#">
+                    <a href="about-us.html">
                         <svg width="206" height="204" viewBox="0 0 206 204" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.25" y="2.25" width="95.9286" height="95.0358" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
                         <rect x="2.25" y="107.607" width="95.9286" height="94.1429" fill="black" fill-opacity="0.2" stroke="#4AFFD3" stroke-width="0.5"/>
@@ -1135,6 +1152,12 @@
                             </span>
                         </div>
                     </a>
+                    <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
+                    </svg>
                 </div>
                 <div class="card">
                     <a href="productions.html">
@@ -1156,6 +1179,12 @@
                             </span>
                         </div>
                     </a>
+                    <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
+                    </svg>
                 </div>
                 <div class="card">
                     <a href="">
@@ -1177,17 +1206,21 @@
                             </span>
                         </div>
                     </a>
+                    <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
+                        <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
+                    </svg>
                 </div>
             </div>         
             <div class="view_more">
-                <div class="btn-style-18px-12px">
-                    <a href="portfolio.html">
-                        <span>
-                            <p>查看更多</p>
-                            <p>View More</p>
-                        </span>
-                    </a>
-                </div>
+                <a href="portfolio.html">
+                    <div class="btn-style-18px-12px">
+                        <p>查看更多</p>
+                        <p>View More</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="home-blocks ticket">
@@ -1410,14 +1443,10 @@
                         <span>如何重置我的密碼？</span>
                         <div class="arrow">
                             <button>
-                                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M-3.11732e-05 13L26.25 25.9904L26.25 0.00961991L-3.11732e-05 13Z" fill="white"/>
-                                </svg>                                 
+                                <p>◀</p>                                 
                             </button>
                             <button>
-                                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M26.796 13L0.546019 25.9904L0.54602 0.00961761L26.796 13Z" fill="white"/>
-                                </svg>
+                                <p>▶</p>
                             </button>
                         </div>
                     </div>

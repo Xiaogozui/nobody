@@ -79,15 +79,22 @@
             justify-content: end;
         }
         .submit button{
-            /* position: absolute; */
             right: 0;
             width: 90px;
             text-align: center;
             background-color: #FFC42C;
+            border: transparent;
             color: #222;
             font-weight: 800;
             padding: 10px;
-            /* margin-right: 1.5em; */
+        }
+        .submit button:hover{
+            background-color: #FF2CAA;
+            border: transparent;
+            color: #fff;
+        }
+        .submit button:hover:active{
+            background-color: #4AFFD3;
         }
         /* ====================================== */
         /* ====================================== */
@@ -455,10 +462,10 @@
             <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
         </div>
     </footer>
-    <a href="">
-        <div class="donate">
+    <div class="donate">
+        <a href="#">
             <p>Donate</p>
-        </div>
-    </a>
+        </a>
+    </div>
 </body>
 </html>

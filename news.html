@@ -49,36 +49,42 @@
         }
         .tag-group{
             width: 100%;
-            padding-bottom: 2px;
             border-bottom: 1px solid #bbb;
             display: flex;
             flex-wrap: wrap;
         }
         .tag-group button{
             color:#bbb;
-            border: 3px solid #bbb;
-            margin-right: -3px;
-            margin-bottom: -3px;
+            border: 1px solid #bbb;
+            /* margin-left: -.5px; */
+            /* margin-bottom: -3px; */
             padding: 1em 20px;
             background-color: transparent;
+        }
+        .tag-group button:hover{
+            color:#FFC42C;
+            border: 3px solid #FFC42C;
+            scale: 1.05;
+            z-index: 1;
         }
         .tag-group button:focus{
             color:#FFC42C;
             border: 3px solid #FFC42C;
+            scale: 1.05;
             z-index: 1;
         }
         .main-news{
-            padding: 1em;
+            padding: 1em 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
             border-bottom: #ddd 1px solid;
         }
         .tag-area {
             /* background-color: #00f; */
             width: 90px;
             height: 100%;
-            margin: .5em;
+            margin: .5em 0;
         }
         .tag-area .tag{
             width: calc(100% - 3px);
@@ -144,7 +150,7 @@
         .card .pic{
             width: calc(370px - .5em);
             border: #4AFFD3 1px solid;
-            margin-right: .5em;
+            margin: 0 .5em;
         }
         .card .pic img{
             width:100%;
@@ -155,7 +161,7 @@
         .card article{
             flex: 1;
             width:47.5%;
-            /* margin-left: .5em; */
+            margin-left: .5em;
             line-height: 2rem;
             display: flex;
             flex-direction: column;
@@ -172,39 +178,46 @@
             font-size: 14px;
         }
         .card article .more p{
-            /* font-size: 10px; */
             text-align: end;
             color: #FFC42C;
         }
-        .news-group section{
-            /* background-color: #19f; */
-            border-bottom :1px solid #bbb ;
-            padding: .5em 0;
+        .card article .more span{
+            display: inline-block;
+            float: right;
+            color: #FFC42C;
         }
-        .news-group .news{
-            margin: 1em;
+        .news-group section{
+            border-bottom :1px solid #bbb ;
+            padding: 1em 0;
             display: flex;
             justify-content: space-between;
-            text-align: center;
+            text-align: start;
         }
         
-        .news-group .news > *{
-            margin: .5em 0;
+        .news-group section > *{
+            /* margin: .5em 0; */
+            display: flex;
+            align-items: center;
         }
-        .news-group .news > * span{
-            font-size: 16px;
-        }
-        .news-group .news .tag p{
+        .news-group section > * span{
+            display: inline-block;
             font-size: 14px;
+        }
+        .news-group section .tag p{
+            font-size: 12px;
             border: #FFC42C 3px solid;
             padding: .5em;
             color: #FFC42C;
-            margin-top: calc(-.5em - 3px);
+            text-align: center;
+            /* margin-top: calc(-.5em - 3px); */
         }
-        .news-group .news .date>*{
-            margin: 0 .5em;
+        .news-group section .date{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            padding: 0 2em;
         }
-        .news-group .news .more span{
+        .news-group section .more span{
             font-size: 12px;
             color: #FFC42C;
             margin: 0 .5em;
@@ -218,6 +231,24 @@
             color: #bbb;
             border:3px solid #bbb;
             background-color: transparent;
+        }
+        .more:hover span{
+            scale:1.05;
+            animation: zooming 0.29s 0s infinite alternate;
+        }
+        .more:hover:active span{
+            color: #4AFFD3;
+        }
+        .news-group button:hover{
+            scale: 1.05;
+            color: #FFC42C;
+            border:3px solid #FFC42C;
+            animation: zooming 0.29s 0s infinite alternate;
+        }
+        .news-group button:hover:active{
+            scale: 1.05;
+            color: #4AFFD3;
+            border:3px solid #4AFFD3;
         }
     </style>
 
@@ -458,9 +489,9 @@
                         <div class="info">
                             <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
                         </div>
-                        <div class="more">
-                            <a href="">
-                            <p> ❮ MORE ❯ </p>
+                        <div>
+                            <a href="" class="more">
+                                <span> ❮ MORE ❯ </span>
                             </a>
                         </div>
                     </article>
@@ -581,7 +612,7 @@
                         <a href="">ALL NEWS</a>
                     </li>
                     <li>
-                        <a href="">newsS' GUARANTEE</a>
+                        <a href="">MEMBERS' GUARANTEE</a>
                     </li>
                     <li>
                         <a href="">PARTNERS</a>
@@ -636,10 +667,10 @@
             <p>© Copyright 2017. Nobody Theatrical Studio Reserved</p>
         </div>
     </footer>
-    <a href="">
-        <div class="donate">
+    <div class="donate">
+        <a href="#">
             <p>Donate</p>
-        </div>
-    </a>    
+        </a>
+    </div>
 </body>
 </html>
