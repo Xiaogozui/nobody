@@ -489,7 +489,6 @@
         return document.getElementById(id); 
     }
 
-
     window.addEventListener("load", function(){
 
         let wrap = document.querySelector(".s-pic-group");
@@ -507,14 +506,28 @@
         $id("btnRight").onclick = function(){
             curIndex++;
             wrap.style.left = -125 * curIndex + "px";
-            if(curIndex === 7){
+            if(curIndex === 5){
                 $id("btnRight").disabled = true;
             }
             $id("btnLeft").disabled = false;
         }
     })
     </script>
-    
+    <script>
+        function showLarge(e){//e是事件物件
+            //e.target:指點按在哪一個物件
+            document.getElementById("large").src = e.target.src;
+        }
+
+        function init(){
+            let smalls = document.getElementsByClassName("small");
+            for(let i=0; i<smalls.length; i++){
+                smalls[i].onclick = showLarge;
+            }
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -716,7 +729,7 @@
                     </button>
                     <div class="bg">
                         <div class="pic">
-                            <img src="pic_ele/attic-1.jpeg" alt="">
+                            <img src="pic_ele/attic-1.jpeg" alt="attic-1" id="large">
                         </div>
                     </div>
                     <button id="btnRight">
@@ -728,28 +741,28 @@
                 <div class="s-pic-group-frame">
                     <div class="s-pic-group">
                         <div class="pic">
-                            <img src="pic_ele/attic-3.jpeg" alt="">
+                            <img src="pic_ele/attic-3.jpeg" alt="attic-3" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-4.jpeg" alt="">
+                            <img src="pic_ele/attic-4.jpeg" alt="attic-4" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-1.jpeg" alt="">
+                            <img src="pic_ele/attic-1.jpeg" alt="attic-1" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-7.jpeg" alt="">
+                            <img src="pic_ele/attic-7.jpeg" alt="attic-7" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-5.jpeg" alt="">
+                            <img src="pic_ele/attic-5.jpeg" alt="attic-5" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-8.jpg" alt="">
+                            <img src="pic_ele/attic-8.jpg" alt="attic-8" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-9.jpg" alt="">
+                            <img src="pic_ele/attic-9.jpg" alt="attic-9" class="small">
                         </div>
                         <div class="pic">
-                            <img src="pic_ele/attic-11.jpg" alt="">
+                            <img src="pic_ele/attic-11.jpg" alt="attic-11" class="small">
                         </div>
                     </div>
                 </div>

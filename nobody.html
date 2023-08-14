@@ -186,7 +186,7 @@
             scale: 0.8;
             padding-top: 80px;
             padding: auto;
-            display: inline-block;
+            display: block;
             margin: auto;
             z-index: 2;
         }
@@ -219,6 +219,8 @@
             animation: zooming .29s 0s infinite alternate-reverse;
         }
         .home-main-btn-group-white_border.yellow_border{
+            margin-top: -2em;
+            margin-bottom: 10em;
             padding: .5em 1.8em;
             border: 3px solid #FFC42C
         }
@@ -1165,9 +1167,16 @@
             width: 70%;
             font-size: 12px;
         }
-        }
+    }
 
     </style>
+    <!-- <script src="jquery-3.7.0.js">
+        $(function () {
+			$('#last-one').click(function(){
+				$('.container span')
+			})
+		})	
+    </script> -->
 
 </head>
 
@@ -1432,7 +1441,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="home-main-btn-group"> 
+                <div class="home-main-btn"> 
                     <a href="nobody_become-a-member.html" id="yellow_border" class="home-main-btn-group-white_border yellow_border">
                         <span>
                             <p class="ch">成為無名小卒之友</p>
@@ -1440,7 +1449,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="pic-change-btn">
+                <!-- <div class="pic-change-btn">
                     <span>
                         <button>
                             <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1463,7 +1472,7 @@
                                 </svg>                            
                         </button>
                     </span>
-                </div>
+                </div> -->
             </div>
         </div>
         <section class="linking-block">
@@ -1895,11 +1904,15 @@
                     <h3>Q</h3>
                     <div class="container">
                         <span>如何重置我的密碼？</span>
+                        <!-- <span>你能做什麼？</span>
+                        <span>會員如何享受獨家優惠？</span>
+                        <span>如何成為會員？</span>
+                        <span>我可以分享我的會員賬戶嗎？</span> -->
                         <div class="arrow">
-                            <button>
+                            <button id="last-one">
                                 <p>◀</p>                                 
                             </button>
-                            <button>
+                            <button id="next-one">
                                 <p>▶</p>
                             </button>
                         </div>
@@ -1908,9 +1921,11 @@
                 <div class="col">
                     <h3>A</h3>
                     <div class="container"> 
-                        <span>
-                            要重置密碼，請回到登錄頁面並點選忘記密碼超連結。按照提供的說明和流程重置您的密碼。
-                        </span>
+                        <span>要重置密碼，請回到登錄頁面並點選忘記密碼超連結。按照提供的說明和流程重置您的密碼。</span>
+                        <!-- <span>我可以回答問題、生成文本、寫作、翻譯、幫助解決問題，以及提供各種主題的資訊。</span>
+                        <span>會員可能會獲得獨家的折扣、促銷活動和特別優惠，這些信息通常會通過郵件、應用程序通知或在會員專區中公布。</span>
+                        <span>您可以成為會員，通常需要在我們的網站或應用程序上進行註冊並選擇訂閱計劃。註冊後，您可以享受相應的會員特權和服務。</span>
+                        <span>會員賬戶通常是個人使用的，不建議分享給他人。一些平台可能限制多人同時使用同一個會員賬戶。</span> -->
                     </div>
                 </div>
             </div>

@@ -286,42 +286,29 @@
             display: flex;
         }
         .history-block .wrap .year-package button{
-            width: 50px;
-            /* margin-right: 2em; */
-            position: relative;
+            width: 75px;
+            display: flex;
+            justify-content: end;
             border: transparent;
             background-color: transparent;
             cursor: pointer;
         }
         .history-block .wrap .year-package button h3{
             font-size: 21px;
-            letter-spacing: 2px;
-        }
-        /* .history-block .wrap .year-package button:focus h3{
-            color: #FFC42C;
-        } */
-        .history-block .wrap .year-package button::after{
-            content: '';
-            border-top: 6px solid transparent;
-            border-left: 9px solid #ddd;
-            border-bottom: 6px solid transparent;
-            position: absolute;
-            top: 40%;
-            right: -25px;
-            transition: .2s .2s linear;
-            &.active {
-            transform: rotate(180deg);
-            border-left: #FFC42C 9px solid;
+            font-family: Arial, Helvetica;
+            letter-spacing:2px;
+            &.color-change{
+                color: #FFC42C;
             }
         }
-        
-        .history-block .wrap .year-package svg {
-            margin: 1em 0 0 1em;
+        .history-block .wrap .year-package button svg {
+            scale: 0.6;
+            margin: 1.8em 0 0 1em;
             transform: rotate(0deg);
             transition: all 0.6s;
 
             &.active {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
             }
         }
         
@@ -574,9 +561,12 @@
         }
         .history-block .wrap .year-package button h3{
             font-size: 16px;
+            color:#ddd;
         }
-        .history-block .wrap .year-package button:focus h3{
-            color: #FFC42C;
+        .history-block .wrap .year-package button svg {
+            scale: 0.5;
+            /* rotate: 90deg; */
+            margin: 1.2em 0 0 1em;
         }
         .history-block .wrap .year-package button::after{
             border-top: 5px solid transparent;
@@ -592,12 +582,7 @@
         }
         
         .history-block .wrap .info-group{
-            display: block;
-            width: 80%;
-            border-top: #bbb 1px solid;
-            margin: .5em 0 0 auto;
-            padding: 0 0 0 1em;
-            flex: 0;
+            display: none;
         }
         .history-block .wrap .info-group .info{
             padding-top: 1em;
@@ -616,11 +601,39 @@
 		$(function () {
 			$('#2023').click(function(){
 				// $('p').slideToggle(1000);
-				$(".2023").slideToggle(1000, 'linear');
-                $('#2023 h3').css({
-                    color: '#FFC42C'
-                });
-                $('button').toggleClass("active")
+				$(".2023").slideToggle(400, 'linear');
+                $('#2023 h3').toggleClass('color-change')
+                $('#2023 svg').toggleClass("active")
+			})
+            $('#2022').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2022").slideToggle(400, 'linear');
+                $('#2022 h3').toggleClass('color-change')
+                $('#2022 svg').toggleClass("active")
+			})
+            $('#2021').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2021").slideToggle(400, 'linear');
+                $('#2021 h3').toggleClass('color-change')
+                $('#2021 svg').toggleClass("active")
+			})
+            $('#2020').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2020").slideToggle(400, 'linear');
+                $('#2020 h3').toggleClass('color-change')
+                $('#2020 svg').toggleClass("active")
+			})
+            $('#2019').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2019").slideToggle(400, 'linear');
+                $('#2019 h3').toggleClass('color-change')
+                $('#2019 svg').toggleClass("active")
+			})
+            $('#2018').click(function(){
+				// $('p').slideToggle(1000);
+				$(".2018").slideToggle(400, 'linear');
+                $('#2018 h3').toggleClass('color-change')
+                $('#2018 svg').toggleClass("active")
 			})
 		})	
 	</script>    
@@ -630,7 +643,7 @@
     <header class="main-header">
         <div class="container">
             <div class="zoom-logo">
-                <a href="#">
+                <a href="nobody.html">
                     <svg id="NB-header-logo" height="132" viewBox="0 0 363 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.766602 8.76685H55.956V63.4453H0.766602V8.76685Z" fill="black" fill-opacity="0.2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M55.7005 9.02235H1.02211V63.1898H55.7005V9.02235ZM0.766602 8.76685V63.4453H55.956V8.76685H0.766602Z" fill="#4AFFD3"/>
@@ -1009,10 +1022,11 @@
                     <div class="year">
                         <button id="2023">
                             <h3>2023</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>    
+   
                     </div>
                     <div class="info-group 2023">
                         <div class="info">
@@ -1045,12 +1059,12 @@
                     <div class="year">
                         <button id="2022">
                             <h3>2022</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>                            
                     </div>
-                    <div class="info-group">
+                    <div class="info-group 2022">
                         <div class="info">
                             <span>2023.06</span>
                             <span>Title: Content: Buy yourselves some PQ memories.......</span>
@@ -1081,40 +1095,144 @@
                     <div class="year">
                         <button id="2021">
                             <h3>2021</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>                            
+                    </div>
+                    <div class="info-group 2021">
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
                         <button id="2020">
                             <h3>2020</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>                            
+                    </div>
+                    <div class="info-group 2020">
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
                         <button id="2019">
                             <h3>2019</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>                            
+                    </div>
+                    <div class="info-group 2019">
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
                     </div>
                 </div>
                 <div class="year-package">
                     <div class="year">
                         <button id="2018">
                             <h3>2018</h3>
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
+                            </svg> 
                         </button>
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7L0.25 13.4952L0.25 0.504809L13 7Z" fill="white"/>
-                        </svg>                            
+                    </div>
+                    <div class="info-group 2018">
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="info">
+                            <span>2023.06</span>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
                     </div>
                 </div>
                  
