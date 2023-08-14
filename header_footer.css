@@ -19,7 +19,7 @@ body{
     z-index: 8;
 }
 .main-header .container{
-    width: 62.5%;
+    width: 65%;
     top: 15%;
     margin: auto;
     display: flex;
@@ -31,6 +31,7 @@ body{
 .zoom-logo svg{
     /* flex: 1; */
     box-sizing: border-box;
+    scale:.8;
     width: 50%;
     height: 50%;
 }
@@ -293,16 +294,23 @@ footer .address .icon-link a svg{
     position: absolute;
     top: -40%;
     left: 38%;
-    transition: color .3s , transform .3s;
+    transition: color .2s;
 }
 .btt:hover {
     background-image:radial-gradient(circle at center ,#fff0 0%, #FF2CAA 100%) ;
-    scale: 110%;
-    animation: zooming .29s 0s infinite alternate-reverse;
+    scale: 105%;
+    animation: zooming .5s 0s infinite alternate-reverse;
+}
+.btt:active {
+    background-image:radial-gradient(circle at center ,#fff0 0%, #4AFFD3 100%);
 }
 .btt:hover:before{
     color: #FF2CAA;
-    animation: move-H .3s 0s infinite alternate;
+    transition: color .2s;
+    animation: move-H .5s 0s infinite alternate;
+}
+.btt:active:before{
+    color: #4AFFD3;
 }
 @keyframes zooming{
       0%{ scale: 1};
@@ -349,8 +357,10 @@ h3{
     .zoom-logo svg{
         /* flex: 1; */
         box-sizing: border-box;
+        scale: 1;
         width: 40%;
         height: 40%;
+        margin-left: 1em;
     }
     .icon-link{
         display: flex;
@@ -592,7 +602,15 @@ h3{
         color: #eee;
         font-size: 24px;
     }
-
+    .home-title h2{
+        display: block;
+        text-align: center;
+    }
+    .home-title h3{
+        display: block;
+        text-align: center;
+        position: relative;
+    }
 
 
 

@@ -6,11 +6,13 @@
     <title>Nobody Theatricl Studio|無名小卒劇團</title>
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="hb-menu.css">
-    <style>.home-blocks.main{
-            /* border: #383 1px solid; */
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .home-blocks.main{
             width: 100%;
-            /* height: 100%; */
-            /* background-image: url("ugly_one.jpg"); */
+            height: 650px;
             background-size: cover;
             position: relative;
             display: flex;
@@ -167,7 +169,6 @@
             }
         }
         .pic_premieum-frame{
-            /* border: #FFC42C 1px solid; */
             top: 0;
             width: 100%;
             height: 100%;
@@ -199,7 +200,6 @@
             z-index: 1;           
         }
         .home-main-btn-group-white_border {
-            /* width: 100%; */
             height: 3.5rem;
             background-color: #000;
             border: 3px solid #FFF;
@@ -231,7 +231,6 @@
             width: 300px;
         }
         .home-main-btn-group-white_border p{
-            /* font-family:'BrownMedium',Helvetica, sans-serif; */
             font-weight: 700;
             padding-bottom: 3px;
             color: #fff;
@@ -277,29 +276,31 @@
             margin: 10px;
             border-radius: 50px;
         }
+        .linking-block{
+            display: none;
+        }
         {}
         .home-blocks.programme{
             margin-top: 50px;
             width: 100%;
         }
         .home-title.programme{
-            /* background-color: #383; */
             width: 62.5%;
             margin: auto;
         }
         .home-title.programme .wrap{
-            /* background-color: #fff; */
             display: flex;
         }
         .home-title.programme .wrap>*{
             display: inline-block;
-            /* border: #383 1px solid; */
         }
         .home-title.programme h2{
-            /* border: #383 1px solid; */
-            /* box-sizing: border-box; */
             padding:0 5px ;
             position: relative;
+        }
+        .home-blocks.programme .green_light{
+            width: 120%;
+            margin:auto;
         }
         .home-title.programme h3{
             margin-top: 0px;
@@ -308,6 +309,7 @@
         .home-title.programme .title_decor{
             position: absolute;
             top: -45px;
+            left: 8em;
             z-index: -1;
         }
         .card_group{
@@ -315,7 +317,6 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 50px 0 0 0;
-            /* margin-top: 230px; */
         }
         .card_group .card{
             width: 270px;
@@ -391,18 +392,14 @@
         .card_group .card .info_frame span:nth-child(3) p{
             color: #FFC42C;
             padding: .1em 0 0 0;
-            /* scale: 50%; */
         }
         .card_group .card .info_frame span:nth-child(3) svg{
             scale: 60%;
             padding: 0 .3em .2em .3em;
         }
         .view_more{
-            /* position: absolute; */
             display: flex;
             justify-content: center;
-            /* left: 0;
-            right: 0; */
             padding: 50px;
             margin: auto;
             text-align: center;
@@ -434,18 +431,13 @@
         }
         {}
         .home-blocks.ticket{
-            /* margin: 100px; */
-            /* border: #FFC42C 1px solid; */
             width: 100%;
         }
         .home-title.ticket-shop{
-            /* background-color: #383; */
             width: 62.5%;
             margin: auto;
         }
         .home-blocks.ticket .green_light{
-            /* padding: -100px;
-            margin-top: -100px; */
             width: 120%;
             margin:auto;
         }
@@ -460,32 +452,27 @@
         .home-title.ticket-shop .title_decor{
             position: absolute;
             top: -45px;
+            left: 4.5em;
             z-index: -1;
         }
         {}
         .ticket_group{
-            /* border: #FFC42C 1px solid; */
             width: 52%;
-            /* padding-top: 200px; */
             margin: auto;
             padding: 50px 0 50px 0;
             flex-wrap: wrap;
         }
         .ticket_group .ticket_wrap{
-            /* background-color: rgb(58, 58, 95); */
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            /* justify-content: center; */
             margin-bottom: 75px;
         }
         .ticket_group .ticket_wrap .pic{
-            /* border: #FFC42C 1px solid; */
             width: 290px;
             height: 160px;
             position: relative;
             margin: .5em;
-            /* flex: 1; */
         }
         .ticket_group .ticket_wrap .pic img{
             width:100%;
@@ -521,7 +508,6 @@
             justify-content: space-between;
         }
         .ticket_group .ticket_wrap .align-bottom{
-            /* border: #D9D9D9 1px solid; */
             display: flex;
             flex-wrap: wrap;
             flex: 1;
@@ -545,10 +531,9 @@
         .ticket_wrap .align-bottom .num_selects{
             display: flex;
             margin: .5em .5em 0 0;
-            /* flex-wrap: wrap; */
         }
         .ticket_wrap .select_box{
-            /* flex: 1; */
+            width: 40px;
             background-color: #dddd;
             border: transparent;
             font-size: 16px;
@@ -556,7 +541,6 @@
             text-align: center;
         }
         .ticket_wrap button{
-            /* width: 100%; */
             flex: 1;
             background-color: transparent;
             border: 1px solid #FFC42C;
@@ -622,7 +606,7 @@
             margin-bottom: 75px;
         }
         .mer_group .pic{
-            width: 285px;
+            width: 200px;
             height: 250px;
             margin: .5em;
             position: relative;
@@ -654,6 +638,7 @@
         }
         .mer_group .mer_wrap .info-row{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
             justify-content: space-between;
             flex: 1;
@@ -676,6 +661,7 @@
 
         }
         .mer_wrap .select_box{
+            width: 40px;
             background-color: #dddd;
             border: transparent;
             font-size: 16px;
@@ -720,6 +706,7 @@
             /* border: #383 1px solid; */
             /* box-sizing: border-box; */
             letter-spacing: .2rem;
+            padding-right: .3em;
             position: relative;
             text-align: center;
         }
@@ -741,6 +728,7 @@
         }
         .home-title.faq h2 .title_decor{
             position: absolute;
+            scale: .9;
             inset: 0;
             margin: auto;
         }
@@ -808,6 +796,377 @@
             scale: 1.2;
             /* animation: zooming 0.3s 0s infinite alternate; */
         }
+        @media screen and (max-width:414px){
+        .home-blocks.main{
+            width: 100%;
+            height: 300px;
+            /* background-image: url("ugly_one.jpg"); */
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .pic_premieum-frame{
+            background-color: #0006;
+            display: block;
+        }
+        .big-logo{
+            display: block;
+            scale: 0.5;
+            padding-top: 80px;
+            width: 50%;
+            inset: 0;
+            margin: auto;
+            z-index: 2;
+        }
+        .home-main-btn-group{
+            display: none;     
+        }
+        .home-main-btn-group-white_border {
+            display: none;
+        }
+        .home-main-btn-group-white_border:hover {
+            border:3px solid #FFC42C;
+            scale: 105%;
+            animation: zooming .29s 0s infinite alternate-reverse;
+        }
+        .home-main-btn-group-white_border.yellow_border{
+            padding: .5em 1.8em;
+            border: 3px solid #FFC42C
+        }
+        .home-main-btn-group-white_border.yellow_border:hover {
+            border:3px solid #FF2CAA;
+            scale: 105%;
+            animation: zooming .29s 0s infinite alternate-reverse;
+        }
+        .home-main-btn-group-white_border .longest{
+            width: 300px;
+        }
+        .home-main-btn-group-white_border p{
+            /* font-family:'BrownMedium',Helvetica, sans-serif; */
+            font-weight: 700;
+            padding-bottom: 3px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .home-main-btn-group-white_border:hover p {
+            color: #FFC42C;
+        } 
+        #yellow_border:hover p{
+            color: #FF2CAA;
+        }   
+        #yellow_border p{
+            color: #FFC42C;
+        }
+        .pic-change-btn{
+            margin-top: -5em;
+            width: 150px;
+        }
+        .pic-change-btn span button{
+            background-color: #0000;
+            border: #0000;
+            scale: .5;
+        }
+        .pic-change-btn span div{
+            width: 5px;
+            height: 5px;
+            background-color: #FFC42C;
+            margin: 5px;
+            border-radius: 50px;
+        }
+        @keyframes scroll{
+            from{transform: translateX(100%)}
+            to{transform: translateX(-100%)}
+        }
+
+        @keyframes scroll2{
+            from{transform: translateX(0%)}
+            to{transform: translateX(-200%)}
+        }
+        .linking-block{
+            display: block;
+            margin-top: 1px;
+            overflow: hidden;
+            border-right:transparent ;
+            border-left:transparent ;
+            border-top: #aaa 1px solid;
+            border-bottom: #aaa 1px solid;
+        }
+        .linking-title{
+            display: flex;
+            border-right:transparent ;
+            border-left:transparent ;
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            margin: -1px 0;
+
+            .link-wrapper{
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                animation: scroll 50s linear infinite;
+
+                &:nth-child(2){
+                animation: scroll2 50s linear infinite;
+                animation-delay: -25s;
+                }
+                .link{
+                    padding: .5em 0;
+                    text-align: center;
+                    width: 290px;
+                    font-family: 'BrownMedium', Helvetica, sans-serif ;
+                    color: #aaa;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+            .link-wrapper.ticket{
+                animation: scroll 40s linear infinite;
+                animation-delay: -5s;
+                &:nth-child(2){
+                    animation: scroll2 40s linear infinite;
+                    animation-delay: -25s;
+                }
+                .link{
+                    width: 200px;
+                }
+            }
+            .link-wrapper.merchandise{
+                animation: scroll 40s linear infinite;
+                &:nth-child(2){
+                    animation: scroll2 40s linear infinite;
+                    animation-delay: -20s;
+                }
+                .link{
+                    width: 190px;
+                }
+            }
+            .link-wrapper.faq{
+                animation: scroll 20s linear infinite;
+                &:nth-child(2){
+                    animation: scroll2 20s linear infinite;
+                    animation-delay: -10s;
+                }
+                .link{
+                    width: 130px;
+                }
+            }
+        }
+        .running:hover .link{
+            color: #4AFFD3;
+        }
+        .running:hover .linking-title{
+            border-top: 1px solid #4AFFD3;
+            border-bottom: 1px solid #4AFFD3;
+        }
+        {}
+        .home-blocks.programme{
+            margin-top: 0;
+        }
+        .home-title.programme h2{
+            width: 100%;
+            padding:0;
+        }
+        .home-title.programme h3{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .home-blocks.programme .green_light{
+            width: 100%;
+            scale: 1.5;
+            margin:auto;
+        }
+        .home-title.programme .title_decor{
+            display: none;
+        }
+        .btn-style-18px-12px:hover{
+            border:3px solid #4AFFD3;
+        }
+        .btn-style-18px-12px:active p{
+            color: #4AFFD3;
+        }
+        {}
+        .home-title.ticket-shop{
+            width: 100%;
+        }
+        .home-blocks.ticket .green_light{
+            width: 100%;
+            margin:auto;
+        }
+        .home-title.ticket-shop h2{
+            padding: 0 ;
+        }
+        .home-title.ticket-shop h3{
+            margin-top: 0;
+            padding: 0;
+        }
+        .home-title.ticket-shop .title_decor{
+            display: none;
+        }
+        {}
+        .ticket_group{
+            width: 80%;
+            padding-bottom: 0%;
+        }
+        .ticket_group .ticket_wrap{
+            /* background-color: rgb(58, 58, 95); */
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 75px;
+        }
+        .ticket_group .pic::before{
+            content: '';
+            width: 95%;
+            height: 95%;
+            left: -3%;
+            top: -5%;
+            border: #4AFFD3 1px solid;
+            background-color: #aaa4;
+            position: absolute;
+            z-index: -1;
+        }
+        .ticket_group .pic::after{
+            content: '';
+            width: 100%;
+            right: 0em;
+            bottom: -1em;
+            border-left: transparent;
+            border-top: transparent;
+            border-right: transparent;
+            border-bottom: #4AFFD3 1px solid;
+            position: absolute;
+            z-index: -1;
+        }
+        .ticket_group .ticket_wrap .info-row{
+            margin-top: 1.5em ;
+        }
+        .ticket_wrap .select_box{
+            width: 40px;
+        }
+        .ticket_wrap .align-bottom .hint{
+            margin: .5em .5em 0 0;
+        }
+        /* --------------------------購物區-------------------------------- */
+        {}
+        .home-blocks.merchandise{
+            width: 100%;
+        }
+        .home-title.merchandise{
+            padding-top: 5em;
+            width: 100%;
+        }
+        .home-title.merchandise h2:nth-child(2){
+            padding-left: 0px;
+            position: relative;
+        }
+        .home-title.merchandise .title_decor{
+            display:none;
+        }
+        .home-title.merchandise h3{
+            padding-left: 0px;
+        }
+        .home-title.merchandise .green_light{
+            width: 100%;
+        }
+        .mer_group{
+            width: 70%;
+            margin: auto;
+            padding: 50px 0 50px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .mer_group .mer_wrap{
+            width: 100%;
+            display: flex;
+            margin-bottom: 75px;
+        }
+        .mer_group .pic{
+            inset: 0;
+            margin: 1.5em auto;
+        }
+        .mer_group .pic::before{
+            content: '';
+            width: 99%;
+            height: 99%;
+            top: -4.5%;
+            left: -4.5%;
+            border: #4AFFD3 1px solid;
+            background-color: #aaa4;
+            position: absolute;
+            z-index: -1;
+        }
+        .mer_group .pic::after{
+            width: 100%;
+            height: 0%;
+            left: 0;
+            bottom: -1.5em;
+            border-right: transparent;
+            border-bottom: #4AFFD3 1px solid;
+        }
+        .mer_group .mer_wrap .info-row{
+            margin: .5em .5em .5em 4em;
+        }
+        .mer_group .mer_wrap .info-row .info{
+            width: 90%;
+        }
+        .mer_wrap .select_box{
+            width: 40px;
+        }
+        {}
+        .home-blocks.faq{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /* padding: 20px 0; */
+        }
+        .home-title.faq{
+            width: 62.5%;
+            margin: auto;
+            text-align: center;
+        }
+        .home-title.faq h2{
+            /* border: #383 1px solid; */
+            /* box-sizing: border-box; */
+            letter-spacing: 0;
+            position: relative;
+            text-align: center;
+            padding-right: .3em;
+        }
+        .home-title.faq h2:after{
+            display: none;
+        }
+        .home-title.faq h2:before{
+            display: none;
+        }
+        .home-title.faq h2 .title_decor{
+            scale: .8;
+        }
+
+        .faq .wrap{
+            width: 95%;
+            margin-bottom: 4em;
+        }
+        .faq .col{
+            padding: .4em;
+        }
+        .faq .col h3{
+            text-align: center;
+            padding: 10px;
+            font-size: 2em;
+        }
+        .faq .col .container{
+            padding: 3em 0;
+        }
+        .faq span{
+            width: 70%;
+            font-size: 12px;
+        }
+        }
+
     </style>
 
 </head>
@@ -818,7 +1177,7 @@
     <header class="main-header">
         <div class="container">
             <div class="zoom-logo">
-                <a href="#">
+                <a href="nobody.html">
                     <svg id="NB-header-logo" height="132" viewBox="0 0 363 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.766602 8.76685H55.956V63.4453H0.766602V8.76685Z" fill="black" fill-opacity="0.2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M55.7005 9.02235H1.02211V63.1898H55.7005V9.02235ZM0.766602 8.76685V63.4453H55.956V8.76685H0.766602Z" fill="#4AFFD3"/>
@@ -980,7 +1339,7 @@
             </a>
         </nav>
     </header>
-        <div class="home-blocks main">
+        <div class="home-blocks main" id="main">
             <div class="premium-image" style="background-image: url('ugly_one.jpg')"></div>
             <div class="premium-image" style="background-image: url('Skirmishes.jpg')"></div>
             <div class="premium-image" style="background-image: url('sleeep.jpg')"></div>
@@ -1043,31 +1402,31 @@
                     </a>                    
                 </div>
                 <div class="home-main-btn-group"> 
-                    <a href="#" class="home-main-btn-group-white_border">
+                    <a href="#programme" class="home-main-btn-group-white_border">
                         <span>
                             <p class="ch">2023 強打新戲</p>
                             <p class="en">PROGRAMMES OF 2023</p>
                         </span>
                     </a>
-                    <a href="nobody_contact.html" class="home-main-btn-group-white_border">
+                    <a href="#ticket" class="home-main-btn-group-white_border">
                         <span>
                             <p class="ch">小卒月票</p>
                             <p class="en">MONTHLY PASS</p>
                         </span>
                     </a>
-                    <a href="news.html" class="home-main-btn-group-white_border">
+                    <!-- <a href="#" class="home-main-btn-group-white_border">
                         <span>
                             <p class="ch">小卒優惠</p>
                             <p class="en">GET TICKETS</p>
                         </span>
-                    </a>
-                    <a href="about-us.html" class="home-main-btn-group-white_border">
+                    </a> -->
+                    <a href="#merchandise" class="home-main-btn-group-white_border">
                         <span>
                             <p class="ch">精選周邊</p>
                             <p class="en">MERCHANDISE</p>
                         </span>
                     </a>
-                    <a href="portfolio.html" class="home-main-btn-group-white_border">
+                    <a href="#faq" class="home-main-btn-group-white_border">
                         <p>
                             <p class="ch">FAQ+</p>
                         </p>
@@ -1107,7 +1466,93 @@
                 </div>
             </div>
         </div>
-        <div class="home-blocks programme">
+        <section class="linking-block">
+            <a href="#programme" class="running">
+                <div class="linking-title">
+                    <div class="link-wrapper programme">
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                    </div>
+                        
+                    <div class="link-wrapper programme">
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                        <div class="link">2023 強打新戲 | PROGRAMMES OF 2023</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#ticket" class="running">
+                <div class="linking-title">
+                    <div class="link-wrapper ticket">
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                    </div>
+                        
+                    <div class="link-wrapper ticket">
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                        <div class="link">小卒月票 | MONTHLY PASS</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#merchandise" class="running">
+                <div class="linking-title">
+                    <div class="link-wrapper merchandise">
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                    </div>
+                        
+                    <div class="link-wrapper merchandise">
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                        <div class="link">精選周邊 | MERCHANDISE</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#faq" class="running">
+                <div class="linking-title">
+                    <div class="link-wrapper faq">
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                    </div>
+                        
+                    <div class="link-wrapper faq">
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                        <div class="link">常見問題 | FAQ+</div>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <div class="home-blocks programme" id="programme">
             <div class="home-title programme">
                 <div class="wrap">
                     <div class="text">
@@ -1127,6 +1572,15 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74228e-08 55L150 55L150 56L0 56L8.74228e-08 55Z" fill="#4AFFD3"/>
                             </svg>                
                         </h2>
+                        <svg class="green_light" width="1673" height="18" viewBox="0 0 1673 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1673" height="18" fill="url(#paint0_radial_72_3640)" fill-opacity="0.75"/>
+                            <defs>
+                            <radialGradient id="paint0_radial_72_3640" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(836.5 9) rotate(90) scale(9 836.5)">
+                            <stop stop-color="#4AFFD3"/>
+                            <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                            </radialGradient>
+                            </defs>
+                        </svg>
                         <h3>PROGRAMMES OF 2023</h3>
                     </div>
                 </div>
@@ -1223,7 +1677,7 @@
                 </a>
             </div>
         </div>
-        <div class="home-blocks ticket">
+        <div class="home-blocks ticket" id="ticket">
             <div class="home-title ticket-shop">
                 <div class="wrap">
                     <div class="text">                
@@ -1251,7 +1705,7 @@
                             <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
                             </radialGradient>
                             </defs>
-                            </svg>
+                        </svg>
                         <h3>TICKET SHOP</h3>
                     </div>
                 </div>
@@ -1311,7 +1765,7 @@
                 </div>    
             </div>
         </div>
-       <div class="home-blocks merchandise">
+       <div class="home-blocks merchandise" id="merchandise">
             <div class="home-title merchandise">
                 <div class="wrap">
                     <div class="text">
@@ -1416,7 +1870,7 @@
                 </div>    
             </div>
         </div>
-      <div class="home-blocks faq">
+      <div class="home-blocks faq" id="faq"> 
             <div class="home-title faq">
                 <h2>&nbsp;FAQ+
                     <svg class="title_decor" width="230" height="150" viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1462,7 +1916,7 @@
             </div>
         </div>
         <div class="btt">
-            <a href="">       
+            <a href="#main">       
                  <p>Back</p>
                  <p>To</p>
                  <p>Top</p>

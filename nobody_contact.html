@@ -129,7 +129,134 @@
             inset: 0;
             margin: auto;
         }
-
+        @media screen and (max-width:414px){
+        .contact-block{
+            padding-top: 0;
+        }
+        .home-title.contact{
+            padding: 6em 0 1.5em;
+            width: 90%;
+            border-bottom: 2px dashed #FFC42C;
+        }
+        .home-title.contact h2{
+            text-align: center;
+        }
+        .home-title.contact .h3{
+            display: block;
+            margin-top: -.5em;
+            padding: 0;
+        }
+        .home-title.contact .h3 h3{
+            text-align: center;
+        }
+        .home-title.contact .h3 .title-decor{
+            display: none;
+        }
+        /* ====================================== */
+        /* ====================================== */
+        .contact-block .wrap{
+            width: 90%;
+            display: block;
+        }
+        .wrap .col:first-child{
+            /* background-color: #f00; */
+            inset: 0;
+            margin: 2em auto;
+            width: 100%;
+        }
+        .label-title .ch{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .label-title{
+            width: 100%;
+        }
+        .label-title .en{
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .row{
+            width: 90%;
+            inset: 0;
+            margin: auto;
+        }
+        .col .row>*{
+            width: 100%;
+            margin: .5em 0 0 0;
+        }
+        .col .row input{
+            background-color: #eee;
+            border: transparent;
+            width: 99%;
+            height: 25px;
+        }
+        .row textarea{
+            background-color: #eee;
+            border: transparent;
+            width: 90%;
+            height: 200px;
+            border: none;
+            margin: 0 1em, 0 -1em;
+        }
+        .submit{
+            /* background-color: #fff; */
+            width: 90%;
+             display: flex;
+            justify-content: end;
+        }
+        .submit button{
+            width: 100%;
+        }
+        /* ====================================== */
+        /* ====================================== */
+        
+        .wrap .col:last-child{
+            display: block;
+            inset: 0;
+            margin: 2em auto 0;
+            padding: 2em 0 0 0;
+            width: 100% ;
+            border-top: #ccc 2px dashed;
+        }
+        .info-title p{
+            inset: 0;
+            margin: auto;
+            padding: 0 1em;
+        }
+        .info-title p span{
+            inset: 0;
+            margin: auto;
+            font-size: 12px;
+        }   
+        .col article{
+            width: 100%;
+            inset: 0;
+            margin: 1em auto 2em;
+            /* padding: 0 2em; */
+        }
+        .col article p{
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: .2em 2em;
+        }
+        .col .map{
+            display: block;
+            width: 90%;
+            inset: 0;
+            margin: auto;
+            aspect-ratio: 300/180;
+            background-color:#ddd9;
+            position: relative;
+        }
+        .map iframe{
+            position: absolute;
+            width: 94%;
+            height: 90%;
+            inset: 0;
+            margin: auto;
+        }
+    }
     </style>
 </head>
 <body>
@@ -137,7 +264,7 @@
     <header class="main-header">
         <div class="container">
             <div class="zoom-logo">
-                <a href="#">
+                <a href="nobody.html">
                     <svg id="NB-header-logo" height="132" viewBox="0 0 363 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.766602 8.76685H55.956V63.4453H0.766602V8.76685Z" fill="black" fill-opacity="0.2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M55.7005 9.02235H1.02211V63.1898H55.7005V9.02235ZM0.766602 8.76685V63.4453H55.956V8.76685H0.766602Z" fill="#4AFFD3"/>
@@ -362,7 +489,7 @@
                         <label class="en">Leave Your Message</label>
                         
                     </div>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id=""></textarea>
                     <div class="submit">   
                         <button>SUBMIT</button>
                     </div>

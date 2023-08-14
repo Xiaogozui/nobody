@@ -12,7 +12,7 @@
         }
         .home-title.news{
             /* background-color: #383; */
-            padding-top: 200px;
+            padding-top: 10em;
             width: 62.50%;
             margin: auto;
         }
@@ -29,7 +29,7 @@
         }
         .home-title.news .h3 h3::after{
             content:'';
-            width: calc(100% - 150px);
+            width: calc(100% - 280px);
             border-bottom: #4AFFD3 1px solid;
             position: absolute;
             top: 40%;
@@ -158,6 +158,9 @@
             object-fit:cover;
             top: 0;
         }
+        .card .tagging{
+            display: none;
+        }
         .card article{
             flex: 1;
             width:47.5%;
@@ -250,6 +253,135 @@
             color: #4AFFD3;
             border:3px solid #4AFFD3;
         }
+        @media screen and (max-width:414px){
+        .news_block{
+            width: 100%;
+            position: relative;
+        }
+        .home-title.news{
+            padding:6em 0 0 0 ;
+        }
+        .home-title.news .h3 h3{
+            width: 100%;
+            display: block;
+            padding: 0;
+        }
+        .home-title.news .h3 .title-decor{
+            display: none;
+        }
+        .wrap{
+            width: 90%;
+            margin: 3em auto;
+        }
+        .tag-group{
+            width: 100%;
+            border-bottom:none;
+            /* border-bottom: 1px solid #bbb; */
+            display: flex;
+            justify-content: flex-start;
+            position: relative;   
+            border-bottom: 2px solid #999;
+        }
+        .tag-group button{
+            color:#bbb;
+            border: 1px solid #bbb;
+            padding: 1em 1.2em;
+            background-color: transparent;
+        }
+        .tag-area {
+            display: none;
+        }
+        .card .tagging{
+            display: flex;
+            padding: .5em 0;
+            margin: 0 3px;
+        }
+        .card .tagging .tag p{
+            padding: 1px 5px;
+        }
+        .card .tagging .date{
+            padding: 0 1em;
+            display:flex;
+            align-items: center;
+        }
+        .card .tagging .date span{
+            box-sizing: border-box;
+            padding: 0 .2em;
+        }
+        .card .pic{
+            height: 250px;
+        }
+        .card article{
+            margin: .5em;
+        }
+        .card article .title p:first-child{
+            margin-top: .5em;
+        }
+        .card article .title p:nth-child(2){
+            margin-top: .2em;
+        }
+        .card article .info p{
+            font-size: 13px;
+            line-height: 1.5em;
+            font-weight: 300;
+            margin: 1em 0 0 0;
+        }
+        .card article .more p{
+            text-align: end;
+            color: #FFC42C;
+        }
+        .news-group section{
+            border-bottom :1px solid #bbb ;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            text-align: start;
+        }
+        .news-group section > *{
+            /* margin: .5em 0; */
+            display: flex;
+            align-items: center;
+        }
+        .news-group section > * span{
+            display: block;
+            font-size: 12px;
+        }
+        .tag p{
+            font-size: 12px;
+            border: #FFC42C 3px solid;
+            padding: .1em;
+            color: #FFC42C;
+            text-align: center;
+            /* margin-top: calc(-.5em - 3px); */
+        }
+        .news-group section .date{
+            box-sizing: border-box;
+            padding-right: 5px;
+            padding-left: 10px;
+        }
+        .news-group section .date span:first-child{
+            position: relative;
+            padding: 0 .1em;
+        }
+        .news-group section .date span:first-child:after{
+            position: absolute;
+            content: '|';
+            width: 10px;
+            height: 10px;
+            right: 40%;
+            bottom: -7px;
+        }
+        .news-group section .date span:nth-child(2){
+            display: none;
+        }
+        .news-group section .more span{
+            width: 50px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #FFC42C;
+            margin: 0 .1em;
+        }
+        }
     </style>
 
 
@@ -259,7 +391,7 @@
     <header class="main-header">
         <div class="container">
             <div class="zoom-logo">
-                <a href="#">
+                <a href="nobody.html">
                     <svg id="NB-header-logo" height="132" viewBox="0 0 363 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.766602 8.76685H55.956V63.4453H0.766602V8.76685Z" fill="black" fill-opacity="0.2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M55.7005 9.02235H1.02211V63.1898H55.7005V9.02235ZM0.766602 8.76685V63.4453H55.956V8.76685H0.766602Z" fill="#4AFFD3"/>
@@ -468,10 +600,16 @@
                         </div>
                         <div class="arrow"></div>
                         <div class="date-card">
-                            <div class="year">2024</div>
+                            <div class="year">
+                                <p>2024</p>
+                            </div>
                             <div class="dd-mm-DD">
-                                <div class="dd-mm">05/MAY</div>
-                                <div class="DD">FRI.&thinsp;</div>
+                                <div class="dd-mm">
+                                    <p>05/MAY</p>
+                                </div>
+                                <div class="DD">
+                                    <p>FRI.&thinsp;</p>
+                                </div>
                             </div>
                         </div>
                         
@@ -485,6 +623,16 @@
                         <div class="title">
                             <p>愛與資訊:Love and Information</p>
                             <p>當代種種生活縮影的一幅瑰麗鏡像</p>
+                        </div>
+                        <div class="tagging">
+                            <div class="tag">
+                                <p>New Release</p>
+                            </div>
+                            <div class="date">
+                                <span>2023-06-27</span>
+                                <span>--</span>
+                                <span>2023-07-01</span>
+                            </div>
                         </div>
                         <div class="info">
                             <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
