@@ -53,7 +53,7 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .tag-group button{
+        .tag-group li{
             color:#bbb;
             border: 1px solid #bbb;
             /* margin-left: -.5px; */
@@ -61,13 +61,17 @@
             padding: 1em 20px;
             background-color: transparent;
         }
-        .tag-group button:hover{
+        .tag-group li:hover{
             color:#FFC42C;
             border: 3px solid #FFC42C;
             scale: 1.05;
             z-index: 1;
         }
-        .tag-group button:focus{
+        .tag-group li:hover a{
+            color:#FFC42C;
+            scale: 1.05;
+        }
+        .tag-group li.active{
             color:#FFC42C;
             border: 3px solid #FFC42C;
             scale: 1.05;
@@ -248,6 +252,10 @@
             border:3px solid #FFC42C;
             animation: zooming 0.29s 0s infinite alternate;
         }
+        .news-group button:hover {
+            color: #FFC42C;
+            animation: zooming 0.29s 0s infinite alternate;
+        }
         .news-group button:hover:active{
             scale: 1.05;
             color: #4AFFD3;
@@ -282,7 +290,7 @@
             position: relative;   
             border-bottom: 2px solid #999;
         }
-        .tag-group button{
+        .tag-group li{
             color:#bbb;
             border: 1px solid #bbb;
             padding: 1em 1.2em;
@@ -383,8 +391,17 @@
         }
         }
     </style>
-
-
+    <script src="js/jquery-3.7.0.js">
+        $(function(){
+            var $li = $('ul.tag-group li');
+                $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.pages').hide();
+        
+                $li.click(function(){
+                    $($(this).find('a').attr('href')).show().siblings('.pages').hide();
+                    $(this).addClass('active').siblings('.active').removeClass('active');
+                });
+        });
+    </script>
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -573,173 +590,497 @@
             </div>
         </div>
         <div class="wrap">
-            <div class="tag-group">
-                    <button>All</button>
-                    <button>New Release</button>
-                    <button>Information</button>
-                    <button>Announcement</button>
-            </div>
-            <div class="main-news">
-                <section class="tag-area">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <div class="date-card">
-                            <div class="year">
-                                <p>2023</p>
-                            </div>
-                            <div class="dd-mm-DD">
-                                <div class="dd-mm">
-                                    <p>04/JUL</p>
-                                </div>
-                                <div class="DD">
-                                    <p>TUE.&thinsp;</p>
-                                </div>
-                            </div>
+            <ul class="tag-group">
+                <li><a href="#pageNewRelease">New Release</a></li>
+                <li><a href="#pageInfo">Information</a></li>
+                <li><a href="#pageAnn">Announcement</a></li>
+            </ul>
+            <div id="pageNewRelease" class="pages">
+                <div class="main-news">
+                    <section class="tag-area">
+                        <div class="tag">
+                            <p>New Release</p>
                         </div>
-                        <div class="arrow"></div>
-                        <div class="date-card">
-                            <div class="year">
-                                <p>2024</p>
-                            </div>
-                            <div class="dd-mm-DD">
-                                <div class="dd-mm">
-                                    <p>05/MAY</p>
+                        <div class="date">
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2023</p>
                                 </div>
-                                <div class="DD">
-                                    <p>FRI.&thinsp;</p>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>04/JUL</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>TUE.&thinsp;</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="arrow"></div>
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2024</p>
+                                </div>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>05/MAY</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>FRI.&thinsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                </section>
-                <section class="card">
-                    <div class="pic">
-                        <img src="pic_ele/love-info.jpeg" alt="">
-                    </div>
-                    <article>
+                    </section>
+                    <section class="card">
+                        <div class="pic">
+                            <img src="pic_ele/love-info.jpeg" alt="">
+                        </div>
+                        <article>
+                            <div class="title">
+                                <p>愛與資訊:Love and Information</p>
+                                <p>當代種種生活縮影的一幅瑰麗鏡像</p>
+                            </div>
+                            <div class="tagging">
+                                <div class="tag">
+                                    <p>Announcement</p>
+                                </div>
+                                <div class="date">
+                                    <span>2023-06-27</span>
+                                    <span>--</span>
+                                    <span>2023-07-01</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
+                            </div>
+                            <div>
+                                <a href="love&info.html" class="more">
+                                    <span> ❮ MORE ❯ </span>
+                                </a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <div class="news-group">
+                    <section class="news">
+                        <div class="tag">
+                            <p>New Release</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
                         <div class="title">
-                            <p>愛與資訊:Love and Information</p>
-                            <p>當代種種生活縮影的一幅瑰麗鏡像</p>
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
                         </div>
-                        <div class="tagging">
-                            <div class="tag">
-                                <p>New Release</p>
-                            </div>
-                            <div class="date">
-                                <span>2023-06-27</span>
-                                <span>--</span>
-                                <span>2023-07-01</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
-                        </div>
-                        <div>
-                            <a href="love&info.html" class="more">
+                        <div class="more">
+                            <a href="">
                                 <span> ❮ MORE ❯ </span>
                             </a>
                         </div>
-                    </article>
-                </section>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>New Release</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>New Release</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>New Release</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>New Release</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <button>View More</button>
+                </div>
             </div>
-            <div class="news-group">
-                <section class="news">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <span>2023-06-27</span>
-                        <span>--</span>
-                        <span>2023-07-01</span>
-                    </div>
-                    <div class="title">
-                        <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                    </div>
-                    <div class="more">
-                        <a href="">
-                            <span> ❮ MORE ❯ </span>
-                        </a>
-                    </div>
-                </section>
-                <section class="news">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <span>2023-06-27</span>
-                        <span>--</span>
-                        <span>2023-07-01</span>
-                    </div>
-                    <div class="title">
-                        <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                    </div>
-                    <div class="more">
-                        <a href="">
-                            <span> ❮ MORE ❯ </span>
-                        </a>
-                    </div>
-                </section>
-                <section class="news">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <span>2023-06-27</span>
-                        <span>--</span>
-                        <span>2023-07-01</span>
-                    </div>
-                    <div class="title">
-                        <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                    </div>
-                    <div class="more">
-                        <a href="">
-                            <span> ❮ MORE ❯ </span>
-                        </a>
-                    </div>
-                </section>
-                <section class="news">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <span>2023-06-27</span>
-                        <span>--</span>
-                        <span>2023-07-01</span>
-                    </div>
-                    <div class="title">
-                        <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                    </div>
-                    <div class="more">
-                        <a href="">
-                            <span> ❮ MORE ❯ </span>
-                        </a>
-                    </div>
-                </section>
-                <section class="news">
-                    <div class="tag">
-                        <p>New Release</p>
-                    </div>
-                    <div class="date">
-                        <span>2023-06-27</span>
-                        <span>--</span>
-                        <span>2023-07-01</span>
-                    </div>
-                    <div class="title">
-                        <span>Title: Content: Buy yourselves some PQ memories.......</span>
-                    </div>
-                    <div class="more">
-                        <a href="">
-                            <span> ❮ MORE ❯ </span>
-                        </a>
-                    </div>
-                </section>
-                <button>View More</button>
+            <div id="pageInfo" class="pages">
+                <div class="main-news">
+                    <section class="tag-area">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2023</p>
+                                </div>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>04/JUL</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>TUE.&thinsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow"></div>
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2024</p>
+                                </div>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>05/MAY</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>FRI.&thinsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <section class="card">
+                        <div class="pic">
+                            <img src="pic_ele/love-info.jpeg" alt="">
+                        </div>
+                        <article>
+                            <div class="title">
+                                <p>愛與資訊:Love and Information</p>
+                                <p>當代種種生活縮影的一幅瑰麗鏡像</p>
+                            </div>
+                            <div class="tagging">
+                                <div class="tag">
+                                    <p>Information</p>
+                                </div>
+                                <div class="date">
+                                    <span>2023-06-27</span>
+                                    <span>--</span>
+                                    <span>2023-07-01</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
+                            </div>
+                            <div>
+                                <a href="love&info.html" class="more">
+                                    <span> ❮ MORE ❯ </span>
+                                </a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <div class="news-group">
+                    <section class="news">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Information</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <button>View More</button>
+                </div>
+            </div>
+            <div id="pageAnn" class="pages">
+                <div class="main-news">
+                    <section class="tag-area">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2023</p>
+                                </div>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>04/JUL</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>TUE.&thinsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow"></div>
+                            <div class="date-card">
+                                <div class="year">
+                                    <p>2024</p>
+                                </div>
+                                <div class="dd-mm-DD">
+                                    <div class="dd-mm">
+                                        <p>05/MAY</p>
+                                    </div>
+                                    <div class="DD">
+                                        <p>FRI.&thinsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <section class="card">
+                        <div class="pic">
+                            <img src="pic_ele/love-info.jpeg" alt="">
+                        </div>
+                        <article>
+                            <div class="title">
+                                <p>愛與資訊:Love and Information</p>
+                                <p>當代種種生活縮影的一幅瑰麗鏡像</p>
+                            </div>
+                            <div class="tagging">
+                                <div class="tag">
+                                    <p>Announcement</p>
+                                </div>
+                                <div class="date">
+                                    <span>2023-06-27</span>
+                                    <span>--</span>
+                                    <span>2023-07-01</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p>《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
+                            </div>
+                            <div>
+                                <a href="love&info.html" class="more">
+                                    <span> ❮ MORE ❯ </span>
+                                </a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <div class="news-group">
+                    <section class="news">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="news">
+                        <div class="tag">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="date">
+                            <span>2023-06-27</span>
+                            <span>--</span>
+                            <span>2023-07-01</span>
+                        </div>
+                        <div class="title">
+                            <span>Title: Content: Buy yourselves some PQ memories.......</span>
+                        </div>
+                        <div class="more">
+                            <a href="">
+                                <span> ❮ MORE ❯ </span>
+                            </a>
+                        </div>
+                    </section>
+                    <button>View More</button>
+                </div>
             </div>
         </div>
     </div>    
+            </div>
     <footer>
         <div class="row">
             <div class="subscribe">
