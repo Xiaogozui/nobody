@@ -4,206 +4,532 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="header_footer.css"> 
+    <link rel="shortcut icon" href="">
     <style>
-        html{
-            scroll-behavior: smooth;
+    html{
+        scroll-behavior: smooth;
+    }
+    .production-block{
+        /* border: #383 1px solid; */
+        width: 100%;
+        /* height: 100%; */
+        background-image: url("pic_ele/LOVE.jpg");
+        background-size: cover;
+        position: relative;
+    }
+    .main{
+        width: 70%;
+        /* height: 500px; */
+        /* background-color: #fff; */
+        padding-top: 150px;
+        inset: 0;
+        margin: auto;
+        /* margin-bottom: 20em; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main .info{
+        /* width: 30%; */
+        margin: .5em ;
+        background-color: #000b;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main .info .top{
+        padding: 1.8em;
+        line-height: 3em;
+    }
+    .main .info .top.mobile{
+        display: none;
+    }
+    .main .info .top p{
+        font-size: 13px;
+        line-height: 1.8em;
+    }
+    .main .info .btm{
+            font-size: 13px;
+            padding: 1.8em;
+            line-height: 1.8em;
+    }
+    .main .info .btm p:first-child{
+            text-indent: -1em;
+            padding: 1em 1em 0em 0em;
+    }
+    .main .info .top p:last-child{
+            text-indent: -1em;
+            padding: 0em 3em 1em 5.3em;
+    }
+    .main .info .btm p:first-child{
+            text-indent: -1em;
+            padding: 1em 1em 0em 1em;
+    }
+    .pic-wrap{
+        margin: .5em ;
+        padding: 0 1em;
+        background-color: #000a;
+        width: 50%;
+        display: flex;
+        /* flex: 1; */
+        flex-direction: column;
+        position: relative;
+        /* overflow: hidden; */
+    }
+    .pic-wrap::after{
+        content: "";
+        width: 7%;
+        height: 100%;
+        background-image:linear-gradient(90deg, #000 0% ,#0000 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        pointer-events: none;
+    }
+    .pic-wrap::before{
+        content: "";
+        width: 7%;
+        height: 100%;
+        background-image:linear-gradient(270deg, #000 0% ,#0000 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .l-pic{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+    }
+    .l-pic .bg{
+        width: 85%;
+        margin: .5em;
+        /* border: 1px solid; */
+        background: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080);
+        background-size: 100% 1200%;
+        animation: animatedgradient 5s linear infinite alternate;
+    }
+    .l-pic .pic{
+        padding: .2em;
+    }
+    @keyframes animatedgradient {
+        0% {
+            background-position: 0% 0%;
         }
-        .portfolio-block{
-            width: 100%;
-            position: relative;
+        100% {
+            background-position: 0% 100%;
         }
-        .home-title.portfolio{
-            /* background-color: #383; */
-            padding-top: 8em;
-            width: 59%;
-            margin: auto;
-        }
-        .home-title.portfolio h3{
-            width: 100%;
-            display: flex;
-            /* padding-left: 150px; */
-            position: relative;
-        }
-        .card_group{
-            width: 62.3%;
-            inset: 0;
-            /* right: 0; */
-            margin: -5em auto 0 auto;
-            display: flex;
-            flex-direction: row-reverse;
-            flex-wrap: wrap;
-            align-items: end;
-            margin-bottom: 5%;
-        }
-        .card_group .card{
-            /* flex: 1; */
-            width: 252px;
-            height: 252px;
-            margin: 5px;
-            position: relative;
-            overflow: hidden;
-        }
-        .card_group .card img{
-            width:100%;
-            height: 100%;
-            object-fit:cover;
-            top: 0;
-            animation: card-zoom 5s 0s infinite alternate;
-        }
-        @keyframes card-zoom{
-              0%{ transform: scale(1.2)};
-            100%{ transform: scale(1)};
-        }
-        .card_group .card .info_frame{
-            transform: scale(0.95);
-            background: #0008;
-            border: #FFC42C 1px solid;
-            position: absolute;
-            padding: 20px;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-        }
-        .card_group .card .card-decor{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-        }
-        .card_group .card:hover .card-decor{
-            display: block;
-            scale: 90%;
-            animation: zooming .3s 0s infinite alternate-reverse;
-            pointer-events: none;
-        }
-        .tag-new_release {
-            padding: .5em 1.5em;
-            font-size: .5em;
-            border: 2px solid #FFC42C;
-            color: #FFC42C;
-        }
-        
-        .card_group .card .info_frame span:nth-child(2){
-            font-size: 16px;
-            /* text-align: justify-all; */
-        }
-        .card_group .card .info_frame span p:first-child{
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-        .card_group .card .info_frame span:nth-child(3)>*{
-            padding-top: 2em;
-        }
-        .card_group .card .info_frame span:nth-child(3) div{
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .card_group .card .info_frame span:nth-child(3) div p{
-            color: #FFC42C;
-            font-size: 12px;
-            font-weight: 300;
-        }
-        .card_group .card .info_frame span:nth-child(3) span{
-            color: #ddd;
-            font-size: 9px;
-            letter-spacing: .1em;
-        }
-        .card_group .card:first-child {
-            width: 514px;
-            height: 514px;
-            margin: 5px;
-        }
-        .card_group .card:first-child .card-decor{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            display: none;
-        }
-        .card_group .card:hover .card-decor{
-            display: block;
-            scale: 95%;
-            animation: zooming .3s 0s infinite alternate-reverse;
-            pointer-events: none;
-        }
-        .card_group .card:first-child .info_frame{
-            justify-content: center;
-        }
-        .card_group .card:first-child .info_frame>*{
-            margin: 3em;
-            /* font-weight: 600; */
-        }
-    @media screen and (max-width:414px){
-        .portfolio-block{
-            width: 100%;
-            position: relative;
-        }
-        .home-title.portfolio h2{
-            display: block;
-            text-align: center;
-        }
-        .home-title.portfolio h3{
-            display: block;
-            text-align: center;
-            position: relative;
-        }
-        .home-title.portfolio h3::after{
-            content: '';
-            position: absolute;
-            width: 120%;
-            bottom: -.5em;
-            right: -10%;
-            border-bottom: #40E0D0 2px solid;
-        }
-      .card_group{
-            display: block;
-            width: 90%;
-            inset: 0;
-            margin: 10% auto;
-        }
-        .card_group .card{
-            inset: 0;
-            margin: 1em auto;
-            width: 300px;
-            height: 300px;
-            position: relative;
-            z-index: 2;
-        }
-        .card_group .card:first-child {
-            inset: 0;
-            margin: auto;
-            width: 300px;
-            height: 300px;
-        }
-        .card_group .card:first-child .info_frame{
-            justify-content: space-between;
-            border: 2px solid ;
-            border-image: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080)1;
-        }
-        .card_group .card:first-child .info_frame span:first-child{
-            margin: 0;
-        }
-        .card_group .card:first-child .info_frame span:last-child{
-            margin: 0;
-        }
+    }
+    .pic img{
+        vertical-align: top;
+        width:100%;
+        object-fit:cover;
+        top: 0;
+    }
+    .pic-wrap .l-pic button{
+        scale: .8;
+        border: transparent;
+        background-color: transparent;
+        flex: 1;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .pic-wrap .l-pic button:hover{
+        scale: 110%;
+        animation: zooming .29s 0s infinite alternate-reverse;
+    }
+    .s-pic-group-frame{
+        position: relative;
+        overflow: hidden;
+        /* border: #FF0080 1px solid; */
+        width: 100%;
+        height: calc(107px + 5px);
+        margin-bottom: 1em;
+    }
+    .s-pic-group{
+        inset: 0;
+        margin: 2px auto;
+        position: absolute;
+        width:calc(960px + 40px);
+        /* left: calc(-50% - 1em); */
+        height: 107px;
+        /* background-color: #000; */
+        /* border: #FF0080 1px solid; */
         
     }
+    .s-pic-group .pic{
+        z-index: 2;
+        display: inline;
+        float: left;
+        width: 120px;
+        height: 100%;
+        margin: 0 2.5px;
+        position: relative;
+    }
+    .s-pic-group .pic::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 101%;
+        height: 101%;
+        right: -.5%;
+        top: -.5%;
+        background: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080);
+        background-size: 100% 1200%;
+        animation: animatedgradient 8s linear infinite alternate;
+    }
+    .s-pic-group .pic img{
+        width:100%;
+        height: 100%;
+        object-fit:cover;
+        top: 0;
+    }
+    /* .s-pic-group-frame{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        margin-bottom: 1em;
+    }
+    .s-pic-group{
+        position: absolute;
+        width:200%;
+        left: calc(-50% - 1em);
+        height: 107px;
+    }
+    .s-pic-group .pic{
+        display: inline;
+        float: left;
+        width: 20%;
+        height: 100%;
+        margin: 0 .2em;
+    }
+    .s-pic-group .pic img{
+        width:100%;
+        height: 100%;
+        object-fit:cover;
+        top: 0;
+    } */
+    .introduction-block{
+        width: 100%;
+    }
+    .introduction-block article{
+        width: 40%;
+        inset: 0;
+        margin: auto;
+        padding: 5em 0;
+        font-size: 16px;
+    }
+    .introduction-block article:first-child{
+        padding: 10em 0 5em 0;
+    }
+    .introduction-block article:nth-child(2){
+        position: relative;
+    }
+    .introduction-block article:nth-child(2)::before{
+        position: absolute;
+        content: '';
+        width: 120%;
+        border-top: #4AFFD3 1px solid;
+        top: 135px;
+        left: -10%;
+    }
+    .introduction-block article:last-child{
+        display: flex;
+    }
+    .introduction-block article:last-child .decor-bg{
+        width: 72%;
+        background-image: url('production/bgi_production.svg');
+        background-size: cover;
+    }
+    .introduction-block article .left-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .right-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .height-light{
+        color: #FFC42C;
+        padding-bottom: 2em;
+    }
+    .introduction-block article p{
+        line-height: 1.8em;
+        text-indent: 2em;
+        padding-bottom: 2em;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 1em;
+    }
+    .introduction-block article:last-child p{
+        text-indent: 0;
+    }
+    .introduction-block a{
+        width: 180px;
+        display: block;
+        inset: 0;
+        margin:auto ;
+        margin-top: 3em;
+        background-color: #0000;
+        border: #FFC42C 3px solid;
+        padding: .5em 0;
+    }
+    .introduction-block a:hover{
+        scale:105%;
+        animation: zooming .3s 0s infinite alternate;
+    }
+    .introduction-block a:active{
+        border: #4AFFD3 3px solid;
+        scale:105%;
+        animation: zooming .3s 0s infinite alternate;
+    }
+    .introduction-block a span.ch{
+        /* width: 100%; */
+        display: block;
+        inset: 0;
+        /* margin: auto; */
+        color: #FFC42C;
+        font-size: 18px;
+        text-align: center;
+        margin:.2em 0 -1em 0 ;
+    }
+    .introduction-block a span.en{
+        display: block;
+        color: #FFC42C;
+        font-size: 12px;
+        /* line-height: 1em; */
+        margin:.2em 0 .2em 0;
+        text-align: center;
+    }
+    .introduction-block a:active span{
+        color: #4AFFD3;
+    }
+    /* ------------------------------------------------------------- */
+    @media screen and (max-width:414px){
+    .main{
+        width: 100%;
+        inset: 0;
+        margin: auto;
+        padding-top: 3em;
+    }
+    .main .info{
+        width: 90%;
+        background-color: transparent;
+        padding: 1em 0 2em 0;
+        margin: auto;
+        display: flex;
+        flex: none;
+    }
+    .main .info .top{
+        display: none;
+    }
+    .main .info .top.mobile{
+        display: block;
+        line-height: 3em;
+        text-align: center;
+        position: relative;
+    }
+    .main .info .top.mobile p:nth-child(3){
+        font-size: 18px;
+        padding: .5em;
+        position: relative;
+    }
+    .main .info .top.mobile p:nth-child(3):after{
+        content: '';
+        width: 50%;
+        height: 1px;
+        border: #ccc 1px solid;
+        bottom: .25em;
+        right: 25%;
+        position: absolute;
+    }
+    .main .info .top.mobile::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080);
+        background-size: 100% 1200%;
+        position: absolute;
+        bottom: -.5em;
+        right: 0;
+        animation: animatedgradient 8s linear infinite alternate;
+    }
+    .main .info .top.mobile p:last-child{
+        padding: 0;
+        text-indent: 0;
+    }
+    .main .info .btm{
+        display: none;
+    }
+    .pic-wrap{
+        width: 90%;
+        display: block;
+        flex:none;
+        background-color: #0000;
+        margin: 0;
+    }
+    .pic-wrap::before{
+        display: none;
+    }
+    .pic-wrap::after{
+        display: none;
+    }
+    .l-pic{
+        display: none;
+    }
+    .pic-wrap .l-pic button{
+        display: none;
+    }
+    .s-pic-group-frame{
+        /* border: #FF0080 1px solid; */
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        margin-bottom: 1em;
+        background-color: #0000;
+    }
+    .s-pic-group{
+        border: #40E0D0 1px solid;
+        inset: 0;
+        padding-top: 0;
+        margin: auto;
+        position: relative;
+        width:90%;
+        height: 200px;
+        border: none
+    }
+    .s-pic-group .pic{
+        /* border: 2px solid #40E0D0; */
+        /* border-image: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080); */
+        display: block;
+        width: 95%;
+        inset: 0;
+        margin: .8em ;
+        position: relative;
+    }
+    .s-pic-group .pic::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100.8%;
+        height: 101%;
+        top: -0.5%;
+        right: -0.4%;
+        background: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080);
+        background-size: 100% 1200%;
+        animation: animatedgradient 8s linear infinite alternate;
+    }
+    .introduction-block article{
+        width: 80%;
+        inset: 0;
+        margin: auto;
+        /* padding: 1em 0; */
+        font-size: 12px;
+    }
+    .introduction-block article:first-child{
+        padding: 5em 0 0 0;
+    }
+    .introduction-block article:nth-child(2)::before{
+        position: absolute;
+        content: '';
+        width: 120%;
+        border-top: #4AFFD3 1px solid;
+        top: 115px;
+        left: -10%;
+    }
+    .introduction-block article:last-child{
+        display: flex;
+    }
+    .introduction-block article .left-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .right-greenlight{
+        height: 150%;
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        pointer-events: none;
+    }
+    .introduction-block article .height-light{
+        color: #FFC42C;
+        padding-bottom: 2em;
+    }
+    .introduction-block article p{
+        padding-bottom: 1em;
+    }
+   
+    }
+    @media screen and (min-width:768px){
+
+    }
     </style>
+    <script src="js/jquery-3.7.0.js"></script>
+    <script>
+    </script>
+    <script>        
+    function $id(id){ 
+        return document.getElementById(id); 
+    }
+
+    window.addEventListener("load", function(){
+
+        let wrap = document.querySelector(".s-pic-group");
+        let curIndex = 0;
+        //-----------------------------------------btnLeft.onclick
+        $id("btnLeft").onclick = function(){
+            curIndex--;
+            wrap.style.left = -125 * curIndex + "px";
+            if(curIndex === 0){
+                $id("btnLeft").disabled = true;
+            }
+            $id("btnRight").disabled = false;
+        }
+        //-----------------------------------------btnRight.onclick
+        $id("btnRight").onclick = function(){
+            curIndex++;
+            wrap.style.left = -125 * curIndex + "px";
+            if(curIndex === 5){
+                $id("btnRight").disabled = true;
+            }
+            $id("btnLeft").disabled = false;
+        }
+    })
+    </script>
+    <script>
+        function showLarge(e){//e是事件物件
+            //e.target:指點按在哪一個物件
+            document.getElementById("large").src = e.target.src;
+        }
+
+        function init(){
+            let smalls = document.getElementsByClassName("small");
+            for(let i=0; i<smalls.length; i++){
+                smalls[i].onclick = showLarge;
+            }
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
 </head>
 <body>
-<div class="bgimg">        
     <input type="checkbox" id="menu-switch">
     <header class="main-header">
         <div class="container">
@@ -370,614 +696,170 @@
             </a>
         </nav>
     </header>
-    <div class="portfolio-block" id="top-title">
-        <div class="home-title portfolio">
-            <h2>歷年製作</h2>
-            <h3>Portfolio</h3>
-        </div>
+    <div class="production-block" id="production">
+        <div class="main">
+            <div class="info"> 
+                <article class="top">
+                    <h2>❮ 愛與資訊 ❯</h2>
+                    <h3>Love and Information</h3>
+                    <p>首演資訊 ┃ 2019.12.14 (五)14:30-15:40</p>
+                    <p>┃【國立臺北藝術大學戲劇廳】</p>
+                </article>
+                <article class="top mobile">
+                    <h2>❮ 愛與資訊 ❯</h2>
+                    <h3>Love and Information</h3>
+                    <p>首演資訊</p>
+                    <p>2019.12.14 (五)14:30-15:40</p>
+                    <p>【國立臺北藝術大學戲劇廳】</p>
+                </article>
+                <article class="btm">
+                    <p>劇 作 家｜ Caryl Churchill</p>
+                    <p>劇本翻譯｜張家瑋</p>
+                    <p>導 演｜陳致霖</p>
+                    <p>攝影｜CHE-MING LIN、周守真、洪千玉<br>（依姓氏筆劃排列）</p>
+                </article>
+                
+            </div>
+            <div class="pic-wrap">
+                <div class="l-pic">
+                    <button id="btnLeft">
+                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.343628 8.87617L6.98425 15.6944C7.44324 16.1656 8.18542 16.1656 8.63953 15.6944L9.74304 14.5613C10.202 14.0901 10.202 13.328 9.74304 12.8618L5.03601 8.02891L9.74304 3.19602C10.202 2.72477 10.202 1.96273 9.74304 1.49649L8.64441 0.353442C8.18542 -0.117814 7.44324 -0.117814 6.98914 0.353442L0.348511 7.17162C-0.115356 7.64288 -0.115356 8.40491 0.343628 8.87617Z" fill="#FFC42C"/>
+                        </svg>
+                    </button>
+                    <div class="bg">
+                        <div class="pic">
+                            <img src="pic_ele/lni-1.jpg" alt="lni-1" id="large">
+                        </div>
+                    </div>
+                    <button id="btnRight">
+                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74402 8.87617L3.10339 15.6944C2.64441 16.1656 1.90222 16.1656 1.44812 15.6944L0.344604 14.5613C-0.11438 14.0901 -0.11438 13.328 0.344604 12.8618L5.05164 8.02891L0.344604 3.19602C-0.11438 2.72477 -0.11438 1.96273 0.344604 1.49649L1.44324 0.353442C1.90222 -0.117814 2.64441 -0.117814 3.09851 0.353442L9.73914 7.17162C10.203 7.64288 10.203 8.40491 9.74402 8.87617Z" fill="#FFC42C"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="s-pic-group-frame">
+                    <div class="s-pic-group">
+                        <div class="pic">
+                            <img src="pic_ele/lni-2.jpg" alt="lni-2" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-3.jpg" alt="lni-3" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-4.jpg" alt="lni-4" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-5.jpg" alt="lni-5" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-6 .jpg" alt="lni-6" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-7.jpg" alt="lni-7" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-8.jpg" alt="lni-8" class="small">
+                        </div>
+                        <div class="pic">
+                            <img src="pic_ele/lni-1.jpg" alt="lni-9" class="small">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </div>
-    <div class="card_group">
-        <div class="card">
-            <a href="productions.html">
-                <img src="pic_ele/屋根裡＿簡介圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">New Release</span>
-                    <span>
-                        <p>屋根裏</p>
-                        <p>The Attic やねうら</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="568" height="568" viewBox="0 0 568 568" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M457.939 4H564V110.061" stroke="#4AFFD3" stroke-width="8"/>
-                <path d="M110.061 4H3.99994V110.061" stroke="#4AFFD3" stroke-width="8"/>
-                <path d="M457.939 564H564V457.939" stroke="#4AFFD3" stroke-width="8"/>
-                <path d="M110.061 564H3.99994V457.939" stroke="#4AFFD3" stroke-width="8"/>
-            </svg>                
-        </div>
-        <div class="card">
-            <a href="#">
-                <img src="pic_ele/tn_醜男子 版頭NEW.jpg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">New Release</span>
-                    <span>
-                        <p>醜男子</p>
-                        <p>THE UGLY ONE</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
+    <div class="introduction-block">
+        <article>
+            <p class="height-light">當代種種生活縮影的一幅瑰麗鏡像</p>
+            <p>
+                《愛與資訊》（Love and Information）是劇作家邱吉爾（Caryl Churchill）於 2012 年完成的劇本。
+                令人驚訝的是，當時已年過七旬的邱吉爾早在此作中展現對資訊社會的種種洞見，使得文本既使由今日的眼光來看，
+                仍是當代種種生活縮影的一幅瑰麗鏡像。</p>
+        </article>
+        <article>
+            <svg class="left-greenlight" width="37" height="2053" viewBox="0 0 37 2053" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="37" height="2053" fill="url(#paint0_diamond_108_322)" fill-opacity="0.34"/>
+                <defs>
+                <radialGradient id="paint0_diamond_108_322" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.5 1026.5) rotate(90) scale(1026.5 18.5)">
+                <stop stop-color="#4AFFD3"/>
+                <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
             </svg>
-        </div>
-        <div class="card">
+            <svg class="right-greenlight" width="37" height="2053" viewBox="0 0 37 2053" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="37" height="2053" fill="url(#paint0_diamond_108_322)" fill-opacity="0.34"/>
+                <defs>
+                <radialGradient id="paint0_diamond_108_322" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.5 1026.5) rotate(90) scale(1026.5 18.5)">
+                <stop stop-color="#4AFFD3"/>
+                <stop offset="1" stop-color="#4AFFD3" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
+                </svg>
+                
+            <h4>
+                演出介紹
+                <svg width="69" height="137" viewBox="0 0 69 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M68.6667 25H54V22H68.6667V25Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.667 36.6667L65.667 22L68.667 22L68.667 36.6667L65.667 36.6667Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333328 25L15 25L15 22L0.333328 22L0.333328 25Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 36.6667L3 22L0 22L-6.41101e-07 36.6667L3 36.6667Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M68.6667 86L54 86L54 89L68.6667 89L68.6667 86Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.667 73.9998L65.667 88.6665L68.667 88.6665L68.667 73.9998L65.667 73.9998Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333328 85.7002H15V88.7002H0.333328V85.7002Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 74.0003L3 88.667L0 88.667L6.41101e-07 74.0003L3 74.0003Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M66.5285 87.8369L66.5285 24.4715L2.47147 24.4715L2.47146 87.8369L66.5285 87.8369ZM67 24L2 24L2 88.3084L67 88.3084L67 24Z" fill="#4AFFD3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33 137L33 4.37117e-08L34 0L34 137L33 137Z" fill="#4AFFD3"/>
+                </svg>
+            </h4>
+
+            <p>《愛與資訊》（Love and Information）除了台詞內容，此作在結構上的創寫也是令許多創作者卻步的一大挑戰——首先，
+                劇本由七個章節構成，每個章節中各有七個場景。劇作家指明，各個章節的順序不可調動，而章節內的場景順序則是依照製作需求可任意變更。
+                另外，末尾處有數個「隨機」場景，可以發生在演出的任何時刻。然而，如果看進劇本內文，可以發現劇本中各個場景皆只列出語言的內容，
+                而沒有標示任何角色——我們可以發現，邱吉爾對《愛與資訊》的種種設計，都讓劇作的核心看似一道道費解卻教人嚮往的謎題。</p>
+            <p>總體而言，尋找製作與劇作的邏輯平衡與此作在當代的意義（進而延伸到其劇場美學的展現）是創作時至關重要，亦使整個團隊臨淵履冰的。
+                以 2019 年北藝大冬季公演的版本來說，我們試圖以時間為經緯，將各個場景視作對每個當下正在空氣分子間傳遞著的千萬訊息進行取樣。
+                藉此，進而呈現當代社會裡、各種不同尺寸的螢幕前，格局冷漠卻內在澎湃、數位充滿卻行為限縮的萬千生命。</p>
+            <p>對當代社會來說，「資訊爆炸」早已是個過氣的描述。而傳統劇場相對這個過於緊湊的世界而言，從創作到觀演，方方面面都是個「緩慢」的存在。
+                然而，我們仍相信在劇場裡獨有一種魔幻，可以超越特效、影像（或是所有這類「跟得上時代」的技術），對我們身處的社會進行拼貼、堆疊、重組，
+                甚至能以戲劇性的詩意來展現扁平化世代可能有的另類圖像。</p>
             <a href="">
-                <img src="pic_ele/Skirmishes劇照_3.jpg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">New Release</span>
-                    <span>
-                        <p>親密衝突</p>
-                        <p>SKIRMISHES</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
+                <span class="ch">線上節目冊</span><br>
+                <span class="en">Online-Programme </span>
             </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/almost_縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>Almost, Maine</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/B＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>少年B</p>
-                        <p>Boy B</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/brighton-beach.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>布萊頓海濱回憶錄</p>
-                        <p>Brighton Beach Memoirs</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/I Hate Hamlet 版頭 (1).jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>我討厭哈姆雷特</p>
-                        <p>I Hate Hamlet</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="love&info.html">
-                <img src="pic_ele/LOVE.jpg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>愛與資訊</p>
-                        <p>Love＆Information</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/macbeth.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>關於馬克白</p>
-                        <p>About Macbeth</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/小紅帽＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>小紅帽</p>
-                        <p>Le Petit Chaperon rouge</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/山羊＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>山羊</p>
-                        <p>The Goat Or Who is Sylvia?</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/瓦圖＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>瓦圖‧方塔</p>
-                        <p>Wa tu • fang ta</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/守夜人＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>守夜人</p>
-                        <p>Vigils</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/安靜＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>大家安靜</p>
-                        <p>Noises off</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/米蒂亞_縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>米蒂亞</p>
-                        <p>Medea</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/沃伊采克＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>嘸伊嘸采</p>
-                        <p>Woyzeck</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/狂睡＿縮圖.jpg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>狂睡五百年</p>
-                        <p>Five Hundred years of ZZZ...</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/果醬先生＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>果醬先生</p>
-                        <p>Mr. Marmalade</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/星球＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>第十一號星球</p>
-                        <p>The 11TH Planet</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/家族盤列＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>家族排列</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/塑像＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>塑像</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/轉大人＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>轉大人</p>
-                        <p>The Grown-up</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/麗南鎮＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>麗南鎮的美人</p>
-                        <p>The Beauty Queen of Leenane</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/變身怪醫＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>變身怪醫</p>
-                        <p>酒と涙とジキルとハイド</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
-        <div class="card">
-            <a href="">
-                <img src="pic_ele/鷹貓會＿縮圖.jpeg" alt="">
-                <div class="info_frame">
-                    <span class="tag-new_release">A Blockbuster</span>
-                    <span>
-                        <p>鷹貓會</p>
-                        <p>When the Cat Meets the Falcon</p>
-                    </span>
-                    <span>
-                        <span>2023/JUL-2023/AUG</span>
-                        <div class="div">
-                            <p>❮&nbsp;VIEW&nbsp;❯</p>
-                        </div>
-                    </span>
-                </div>
-            </a>
-            <svg class="card-decor" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M217 3H267V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 3H3V53" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M217 267H267V217" stroke="#4AFFD3" stroke-width="6"/>
-            <path d="M53 267H3V217" stroke="#4AFFD3" stroke-width="6"/>
-            </svg>
-        </div>
+        </article>
+        <article>
+            <div>
+                <h4>演職人員名單</h4>
+                <p>
+                製 作 人 ｜朱宏章、王世信<br>
+                執行製作｜林家文、林隆圭<br>
+                舞台監督｜鍾宜芳<br>
+                劇 作 家｜坂手洋二<br>
+                劇本翻譯｜陳重穎<br>
+                導 演｜重田誠治<br>
+                舞台設計｜黃湘淳<br>
+                舞台技術設計｜呂 中<br>
+                服裝設計｜石蕙瑄<br>
+                燈光設計｜曹芯慈<br>
+                音樂設計｜施惟中<br>
+                動作設計｜劉文誠<br>
+                平面設計｜李逸塵<br>
+                演 員｜王惟漢、李東霖、陳虹均、賀國熹、黃萱軒、鄧梓澄、賴建岱、蘇耀庭<br>（依姓氏筆劃排列）<br>
+                導演助理｜黃子芸、楊千毅<br>
+                排演助理｜沈佳賢、陳珮欣<br>
+                舞監助理｜周安迪、邱詠恩<br>
+                燈光技術統籌｜歐思鎂<br>
+                行政統籌｜鄭文凱<br>
+                平面攝影｜達 悟
+                </p>
+            </div>
+            
+        </article>
     </div>
     
     <div class="btt">
-        <a href="#top-title">       
+        <a href="#production">       
              <p>Back</p>
              <p>To</p>
              <p>Top</p>
@@ -1065,7 +947,5 @@
             <p>Donate</p>
         </a>    
     </div>
-
-    
 </body>
 </html>
