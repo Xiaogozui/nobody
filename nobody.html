@@ -7,36 +7,37 @@
     <script src="./js/jquery-3.7.0.js"></script>
     <script src="./js/jquery.textillate.js"></script>
     <script src="./js/jquery.lettering.js"></script>
+    <link rel="stylesheet" href="./css/animate.css">
     <script>
         $(function(){
-            $('.line-1').textillate({
+            $('#line-1').textillate({
                 loop: true,
-                // minDisplayTime: 4000,
-                in: {effect: "rollIn"},
-                out:{effect: "bounce"},
+                initialDelay: 500,
+                minDisplayTime: 3000,
+                in: {effect: "fadwInDownBig"},
+                out:{effect: "bounceOut"},
              })
-            
-            $('.line-2').textillate({
-                initialDelay: 1000,
+            $('#line-2').textillate({
+                initialDelay: 1500,
                 loop:true,
                 minDisplayTime: 3000,
                 in: {effect: 'rollIn'},
                 out: {effect: 'bounce'},
             })
-            $('.line-3').textillate({
-                initialDelay: 2000,
+            $('#line-3').textillate({
+                initialDelay: 2500,
                 loop:true,
                 minDisplayTime: 2000,
                 in: {effect: 'rollIn'},
-                
                 out: {effect: 'bounce'},
             })
         })
                 
     </script>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="hb-menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <style>
         html{
             scroll-behavior: smooth;
@@ -863,7 +864,9 @@
             margin: auto;
             font-size: 21px;
             font-weight: 400;
+            margin: .5em;
             color: #ccc;
+            text-transform: uppercase
         }
         .big-logo .line-2{
             transition-delay: 2s; 
@@ -1423,9 +1426,9 @@
                         </svg>
                     </a> 
                     <div class="poem">
-                        <h2 class="line-1">I'm nobody! Who are you?</h2> 
-                        <h2 class="line-2">Are you nobody too?</h2>
-                        <h2 class="line-3"> Then there's a pair of us! – don't tell!</h2>
+                        <h2 id="line-1">I'm nobody! Who are you?</h2> 
+                        <h2 id="line-2">Are you nobody too?</h2>
+                        <h2 id="line-3"> Then there's a pair of us! – don't tell!</h2>
                     </div>
                 </div>
                 <div class="btn-wrap">

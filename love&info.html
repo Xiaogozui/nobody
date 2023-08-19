@@ -100,14 +100,10 @@
         z-index: 2;
         pointer-events: none;
     }
-    .l-pic{
-        display: flex;
-        justify-content: center;
-        margin: 1em 0;
-    }
     .l-pic .bg{
-        width: 85%;
-        margin: .5em;
+        width: 100%;
+        inset: 0;
+        margin: .5em auto;
         /* border: 1px solid; */
         background: linear-gradient(180deg, #8f41e9,#40E0D0, #FF8C00, #FF0080);
         background-size: 100% 1200%;
@@ -130,7 +126,7 @@
         object-fit:cover;
         top: 0;
     }
-    .pic-wrap .l-pic button{
+    .pic-wrap .s-pic-group-frame button{
         scale: .8;
         border: transparent;
         background-color: transparent;
@@ -138,7 +134,7 @@
         z-index: 1;
         cursor: pointer;
     }
-    .pic-wrap .l-pic button:hover{
+    .pic-wrap .s-pic-group-frame button:hover{
         scale: 110%;
         animation: zooming .29s 0s infinite alternate-reverse;
     }
@@ -163,10 +159,11 @@
     }
     .s-pic-group .pic{
         z-index: 2;
-        display: inline;
+        display: block;
         float: left;
         width: 120px;
         height: 100%;
+        padding: 1px;
         margin: 0 2.5px;
         position: relative;
     }
@@ -722,23 +719,19 @@
             </div>
             <div class="pic-wrap">
                 <div class="l-pic">
-                    <button id="btnLeft">
-                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.343628 8.87617L6.98425 15.6944C7.44324 16.1656 8.18542 16.1656 8.63953 15.6944L9.74304 14.5613C10.202 14.0901 10.202 13.328 9.74304 12.8618L5.03601 8.02891L9.74304 3.19602C10.202 2.72477 10.202 1.96273 9.74304 1.49649L8.64441 0.353442C8.18542 -0.117814 7.44324 -0.117814 6.98914 0.353442L0.348511 7.17162C-0.115356 7.64288 -0.115356 8.40491 0.343628 8.87617Z" fill="#FFC42C"/>
-                        </svg>
-                    </button>
                     <div class="bg">
                         <div class="pic">
                             <img src="pic_ele/lni-1.jpg" alt="lni-1" id="large">
                         </div>
                     </div>
-                    <button id="btnRight">
+                </div>
+
+                <div class="s-pic-group-frame">
+                    <button id="btnLeft">
                         <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.74402 8.87617L3.10339 15.6944C2.64441 16.1656 1.90222 16.1656 1.44812 15.6944L0.344604 14.5613C-0.11438 14.0901 -0.11438 13.328 0.344604 12.8618L5.05164 8.02891L0.344604 3.19602C-0.11438 2.72477 -0.11438 1.96273 0.344604 1.49649L1.44324 0.353442C1.90222 -0.117814 2.64441 -0.117814 3.09851 0.353442L9.73914 7.17162C10.203 7.64288 10.203 8.40491 9.74402 8.87617Z" fill="#FFC42C"/>
+                            <path d="M0.343628 8.87617L6.98425 15.6944C7.44324 16.1656 8.18542 16.1656 8.63953 15.6944L9.74304 14.5613C10.202 14.0901 10.202 13.328 9.74304 12.8618L5.03601 8.02891L9.74304 3.19602C10.202 2.72477 10.202 1.96273 9.74304 1.49649L8.64441 0.353442C8.18542 -0.117814 7.44324 -0.117814 6.98914 0.353442L0.348511 7.17162C-0.115356 7.64288 -0.115356 8.40491 0.343628 8.87617Z" fill="#FFC42C"/>
                         </svg>
                     </button>
-                </div>
-                <div class="s-pic-group-frame">
                     <div class="s-pic-group">
                         <div class="pic">
                             <img src="pic_ele/lni-2.jpg" alt="lni-2" class="small">
@@ -765,6 +758,11 @@
                             <img src="pic_ele/lni-1.jpg" alt="lni-9" class="small">
                         </div>
                     </div>
+                    <button id="btnRight">
+                        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74402 8.87617L3.10339 15.6944C2.64441 16.1656 1.90222 16.1656 1.44812 15.6944L0.344604 14.5613C-0.11438 14.0901 -0.11438 13.328 0.344604 12.8618L5.05164 8.02891L0.344604 3.19602C-0.11438 2.72477 -0.11438 1.96273 0.344604 1.49649L1.44324 0.353442C1.90222 -0.117814 2.64441 -0.117814 3.09851 0.353442L9.73914 7.17162C10.203 7.64288 10.203 8.40491 9.74402 8.87617Z" fill="#FFC42C"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>    
