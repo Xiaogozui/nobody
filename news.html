@@ -61,21 +61,30 @@
             padding: 1em 20px;
             background-color: transparent;
         }
+        .tag-group li button{
+            background-color: transparent;
+            border: transparent;
+        }
         .tag-group li:hover{
             color:#FFC42C;
-            border: 3px solid #FFC42C;
-            scale: 1.05;
+            border: 1px solid #FFC42C;
             z-index: 1;
         }
-        .tag-group li:hover a{
+        .tag-group li:hover button{
             color:#FFC42C;
-            scale: 1.05;
         }
-        .tag-group li.active{
+        .tag-group li.TabActive{
             color:#FFC42C;
-            border: 3px solid #FFC42C;
-            scale: 1.05;
-            z-index: 1;
+            border: 1px solid #FFC42C;
+            button{
+                color: #FFC42C;
+            } 
+        }
+        .pages{
+            display: none;
+        }
+        .pages.ContActive{
+            display: block;
         }
         .main-news{
             padding: 1em 0;
@@ -391,16 +400,42 @@
         }
         }
     </style>
-    <script src="js/jquery-3.7.0.js">
-        $(function(){
-            var $li = $('ul.tag-group li');
-                $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.pages').hide();
-        
-                $li.click(function(){
-                    $($(this).find('a').attr('href')).show().siblings('.pages').hide();
-                    $(this).addClass('active').siblings('.active').removeClass('active');
-                });
-        });
+    <script>
+        window.onload = function() {
+            tabClick()
+        }
+
+        function tabClick() {
+            let tab = document.querySelectorAll(".wrap ul li");
+            let cont = document.querySelectorAll(".pages");
+            if (tab && cont) {
+                for (let i = 0; i < tab.length; i++) {
+                    addClickEvent(i);
+                }
+
+                function addClickEvent(i) {
+                    tab[i].addEventListener('click', function() {
+                        setTabClass(i);
+                        setContClass(i);
+                    });
+                }
+
+                function setTabClass(num) {
+                    for (let i = 0; i < tab.length; i++) {
+                        tab[i].classList.remove('TabActive');
+                    }
+                    tab[num].classList.add('TabActive');
+                }
+
+                function setContClass(num) {
+                    for (let i = 0; i < cont.length; i++) {
+                        cont[i].classList.remove('ContActive');
+                    }
+                    cont[num].classList.add('ContActive');
+                }
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -591,11 +626,11 @@
         </div>
         <div class="wrap">
             <ul class="tag-group">
-                <li><a href="#pageNewRelease">New Release</a></li>
-                <li><a href="#pageInfo">Information</a></li>
-                <li><a href="#pageAnn">Announcement</a></li>
+                <li class="TabActive"><button href="#pageNewRelease">New Release</button></li>
+                <li><button href="#pageInfo">Information</button></li>
+                <li><button href="#pageAnn">Announcement</button></li>
             </ul>
-            <div id="pageNewRelease" class="pages">
+            <div class="pages ContActive">
                 <div class="main-news">
                     <section class="tag-area">
                         <div class="tag">
@@ -756,7 +791,7 @@
                     <button>View More</button>
                 </div>
             </div>
-            <div id="pageInfo" class="pages">
+            <div class="pages">
                 <div class="main-news">
                     <section class="tag-area">
                         <div class="tag">
@@ -917,7 +952,7 @@
                     <button>View More</button>
                 </div>
             </div>
-            <div id="pageAnn" class="pages">
+            <div class="pages">
                 <div class="main-news">
                     <section class="tag-area">
                         <div class="tag">
