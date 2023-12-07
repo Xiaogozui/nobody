@@ -85,6 +85,8 @@
         }
         .pages.ContActive{
             display: block;
+            overflow: hidden;
+            max-height: 550px;
         }
         .main-news{
             padding: 1em 0;
@@ -238,7 +240,7 @@
             color: #FFC42C;
             margin: 0 .5em;
         }
-        .news-group button{
+        .toggleBtn{
             display: block;
             inset: 0;
             margin: auto;
@@ -255,17 +257,17 @@
         .more:hover:active span{
             color: #4AFFD3;
         }
-        .news-group button:hover{
+        .toggleBtn:hover{
             scale: 1.05;
             color: #FFC42C;
             border:3px solid #FFC42C;
             animation: zooming 0.29s 0s infinite alternate;
         }
-        .news-group button:hover {
+        .toggleBtn:hover {
             color: #FFC42C;
             animation: zooming 0.29s 0s infinite alternate;
         }
-        .news-group button:hover:active{
+        .toggleBtn:hover:active{
             scale: 1.05;
             color: #4AFFD3;
             border:3px solid #4AFFD3;
@@ -400,43 +402,7 @@
         }
         }
     </style>
-    <script>
-        window.onload = function() {
-            tabClick()
-        }
-
-        function tabClick() {
-            let tab = document.querySelectorAll(".wrap ul li");
-            let cont = document.querySelectorAll(".pages");
-            if (tab && cont) {
-                for (let i = 0; i < tab.length; i++) {
-                    addClickEvent(i);
-                }
-
-                function addClickEvent(i) {
-                    tab[i].addEventListener('click', function() {
-                        setTabClass(i);
-                        setContClass(i);
-                    });
-                }
-
-                function setTabClass(num) {
-                    for (let i = 0; i < tab.length; i++) {
-                        tab[i].classList.remove('TabActive');
-                    }
-                    tab[num].classList.add('TabActive');
-                }
-
-                function setContClass(num) {
-                    for (let i = 0; i < cont.length; i++) {
-                        cont[i].classList.remove('ContActive');
-                    }
-                    cont[num].classList.add('ContActive');
-                }
-            }
-        }
-
-    </script>
+    <script src="js/newsTabAndCont.js"></script>
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -788,7 +754,7 @@
                             </a>
                         </div>
                     </section>
-                    <button>View More</button>
+                    <!-- <button>View More</button> -->
                 </div>
             </div>
             <div class="pages">
@@ -949,7 +915,7 @@
                             </a>
                         </div>
                     </section>
-                    <button>View More</button>
+                    <!-- <button>View More</button> -->
                 </div>
             </div>
             <div class="pages">
@@ -1110,9 +1076,10 @@
                             </a>
                         </div>
                     </section>
-                    <button>View More</button>
+                    <!-- <button>View More</button> -->
                 </div>
             </div>
+            <button onclick="toggleContent()" class="toggleBtn">View More</button>
         </div>
     </div>    
             </div>
